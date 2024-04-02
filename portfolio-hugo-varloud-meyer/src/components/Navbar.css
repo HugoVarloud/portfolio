@@ -103,6 +103,8 @@ body {
   .menu-icon {
     display: block;
     cursor: pointer;
+    display: flex;
+    justify-content: flex-end;
   }
 
   .nav-elements {
@@ -111,7 +113,7 @@ body {
     top: 60px;
     background-color: #ffffff;
     width: 0px;
-    height: calc(100vh - 60px);
+    height: calc(103vh - 60px);
     transition: all 0.3s ease-in;
     overflow: hidden;
   }
@@ -206,7 +208,7 @@ body {
     top: 35px;
     background-color: #ffffff;
     width: 0px;
-    height: calc(100vh - 60px);
+    height: calc(103vh - 60px);
     transition: all 0.3s ease-in;
     overflow: hidden;
   }
