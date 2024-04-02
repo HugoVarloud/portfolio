@@ -60,12 +60,6 @@ body {
   z-index: 1000; /* Ensuring it appears above other content */
 }
 
-.logo {
-}
-
-.nav-elements {
-}
-
 .nav-elements ul {
   display: flex;
   justify-content: space-between;
@@ -133,10 +127,6 @@ body {
   }
 }
 
-
-
-
-
 .container {
   max-width: 1100px;
   margin: 0 auto;
@@ -147,14 +137,8 @@ body {
   height: 100%;
 }
 
-.logo {
-}
-
 .menu-icon {
   display: none;
-}
-
-.nav-elements {
 }
 
 .nav-elements ul {

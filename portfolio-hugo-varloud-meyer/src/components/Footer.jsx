@@ -43,7 +43,7 @@ const Footer = () => {
             </Box>
             <nav className="footer-nav-list">
               <ul className="footer-list">
-                <li> © 2024 un site de Hugo Varloud-Meyer </li>
+                <li className="signature"> © 2024 un site de Hugo Varloud-Meyer </li>
               </ul>
             </nav>
         </footer>
