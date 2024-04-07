@@ -8,10 +8,12 @@ function App() {
     <>
       <div className="App">
         <Navbar />
-        <Section id="section1" title="Accueil" />
-        <Section id="section2" title="Projet" />
-        <Section id="section3" title="Experience" />
-        <Section id="section4" title="Contact" />
+        <body>
+          <Section id="section1" title="Accueil" />
+          <Section id="section2" title="Projet" />
+          <Section id="section3" title="Experience" />
+          <Section id="section4" title="Contact" />
+        </body>
         <Footer />
       </div>
     </>
