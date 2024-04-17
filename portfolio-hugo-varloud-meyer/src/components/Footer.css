@@ -6,7 +6,8 @@
   justify-content: center;
   display: flex;
   flex-direction: column;
-  z-index: -1
+  z-index: -1;
+  box-shadow: 0 4px 2px -2px gray;
 }
 
 .social-section{
@@ -29,10 +30,10 @@
 }
 
 .social-btns .btn.facebook:before {
-  background-color: #0866ff;
+  background-color: #3d63b4;
 }
 .social-btns .btn.facebook .fa {
-  color: #0866ff;
+  color: #3d63b4;
 }
 .social-btns .btn.github:before {
   background-color: #000000;

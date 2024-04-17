@@ -2,24 +2,32 @@
     width: 100vw;
     height: 100vh;
     background: #d2fcd7;
+    z-index: auto;
 }
 
 .section2 {
     width: 100vw;
     height: 100vh;
     background: #ffffff;
+    z-index: 3;
 }
 
 .section3 {
     width: 100vw;
     height: 100vh;
     background: #f4c8ff;
+    z-index: 2;
 }
 
 .section4 {
     width: 100vw;
     height: 100vh;
     background: #ffffff;
+    z-index: 3;
+}
+
+.section4 .section-title {
+    box-shadow: 0px 10px 10px -10px rgb(176 176 176 / 75%);
 }
 
 .section-title {
