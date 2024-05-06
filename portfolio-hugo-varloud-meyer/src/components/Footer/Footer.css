@@ -1,0 +1,133 @@
+.footer-menu {
+  grid-area: footer;
+  background-color: #ecf0f1;
+  height: 500px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  z-index: -1;
+  box-shadow: 0 4px 2px -2px gray;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-attachment: fixed;
+  background-image: url(https://scx2.b-cdn.net/gfx/news/2017/longtermfate.jpg);
+  background-position: center;
+  background-size: cover;
+  color: var(--color);
+  row-gap: 4rem;
+  text-align: center;
+}
+
+.social-section{
+  display: flex;
+  flex: 1;
+}
+
+.social-btns .btn,
+.social-btns .btn:before,
+.social-btns .btn .fa {
+  transition: all 0.35s;
+  transition-timing-function: cubic-bezier(0.31, -0.105, 0.43, 1.59);
+}
+.social-btns .btn:before {
+  top: 90%;
+  left: -110%;
+}
+.social-btns .btn .fa {
+  transform: scale(1);
+}
+
+.social-btns .btn.facebook:before {
+  background-color: #3d63b4;
+}
+.social-btns .btn.facebook .fa {
+  color: #3d63b4;
+}
+.social-btns .btn.github:before {
+  background-color: #000000;
+}
+.social-btns .btn.github .fa {
+  color: #000000;
+}
+.social-btns .btn.instagram:before {
+  background:linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);
+}
+.social-btns .btn.instagram .fa {
+  color:#e1306c;
+
+}
+.social-btns .btn.linkedin:before {
+  background-color: #0a66c2;
+}
+.social-btns .btn.linkedin .fa {
+  color: #0a66c2;
+}
+.social-btns .btn:focus:before,
+.social-btns .btn:hover:before {
+  top: -10%;
+  left: -10%;
+}
+.social-btns .btn:focus .fa,
+.social-btns .btn:hover .fa {
+  color: #fff;
+  transform: scale(1);
+}
+.social-btns {
+  height: 90px;
+  margin: auto;
+  font-size: 0;
+  text-align: center;
+}
+.social-btns .btn {
+  display: inline-block;
+  background-color: #fff;
+  width: 90px;
+  height: 90px;
+  line-height: 90px;
+  margin: 0 10px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  border-radius: 28%;
+  box-shadow: 0 5px 15px -5px rgba(0,0,0,0.1);
+  opacity: 0.99;
+}
+.social-btns .btn:before {
+  content: '';
+  width: 120%;
+  height: 120%;
+  position: absolute;
+  transform: rotate(45deg);
+}
+.social-btns .btn .fa {
+  font-size: 38px;
+  vertical-align: middle;
+}
+
+.footer-nav-list {
+  bottom: 0;
+}
+
+.footer-list {
+  list-style: none;
+  display: flex;
+  padding: 0px;
+}
+
+.signature {
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+@media (max-width: 600px) {
+  .social-btns .btn{
+    width: 70px;
+    height: 70px;
+    line-height: 70px;
+  }
+
+}
