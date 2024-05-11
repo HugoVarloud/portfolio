@@ -29,4 +29,6 @@
     background-color: #fafafa;
     margin: auto;
     padding: 50px;
+    display: flex;
+    align-items: center;
 }
