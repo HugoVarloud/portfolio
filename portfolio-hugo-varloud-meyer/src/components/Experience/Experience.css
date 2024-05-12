@@ -26,9 +26,7 @@
 .experienceSection {
     width: 100vw;
     height: 100vh;
-    background-color: #fafafa;
-    margin: auto;
-    padding: 50px;
+    background-color: #ffffff;
     display: flex;
     align-items: center;
 }
