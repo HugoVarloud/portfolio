@@ -30,3 +30,13 @@
     display: flex;
     align-items: center;
 }
+
+
+@media (max-width: 600px) {
+    .xpText {
+        font-size: 0.70rem;
+    }
+    .timeLineListElement {
+        height: 90vh;
+    }
+}

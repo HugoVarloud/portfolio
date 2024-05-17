@@ -3,42 +3,32 @@ import "./Projects.css";
 import { useScroll, useTransform, motion } from 'framer-motion';
 
 const slider1 = [
-  {
-      color: "#d7d4cf",
+    {
+      src: "site5.jpeg"  
+    },
+    {
+      src: "site5.jpeg"  
+    },
+    {
       src: "site5.jpeg"
-  },
-  {
-      color: "#e5e0e1",
+    },
+    {
       src: "site5.jpeg"
-  },
-  {
-      color: "#d7d4cf",
-      src: "site5.jpeg"
-
-  },
-  {
-      color: "#d6d7dc",
-      src: "site5.jpeg"
-
-  }
+    }
 ]
 
 const slider2 = [
   {
-      color: "#d6d7dc",
-      src: "site5.jpeg"
+    src: "site5.jpeg"
   },
   {
-      color: "#e5e0e1",
-      src: "site5.jpeg"
+    src: "site5.jpeg"
   },
   {
-      color: "#d7d4cf",
-      src: "site5.jpeg"
+    src: "site5.jpeg"
   },
   {
-      color: "#e1dad6",
-      src: "site5.jpeg"
+    src: "site5.jpeg"
   }
 ]
 

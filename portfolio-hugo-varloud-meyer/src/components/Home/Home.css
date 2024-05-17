@@ -1,10 +1,11 @@
 .home-container {
     display: flex;
-    height: 101vh;
-    width: 100vw;
+    height: 98vh;
     flex-direction: column;
     align-items: center;
     background-color: #999d9e;
+    border: 8px solid white;
+    border-radius: 30px;
 }
 
 .section1 {
@@ -15,6 +16,86 @@
     background-repeat: no-repeat;
     background-position: center;
 }
+
+.globe {
+    position: absolute;
+    font-size: 30px;
+    max-width: 60%;
+    color: #194a73;
+    background-color: white;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 22px 0 0 22px;
+    top: 55%;
+    right: 0;
+    font-weight: 200;
+
+    &:before,
+    &:after{ 
+      content: '';
+      position: absolute;
+      display: block;
+      height: 30px;
+      width: 30px;
+      right: 0;
+      background-size: cover;
+      
+    }
+    
+    &:before {
+      top: -30px;
+      background-image: url('data:image/svg+xml,<svg viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 22C12.1503 22 22 12.1503 22 0V22H0Z" fill="white"/></svg>');
+      right: 8px;
+    }
+    
+    &:after {
+      bottom: -30px;
+      background-image: url('data:image/svg+xml,<svg viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M22 22C22 9.84973 12.1503 -5.31105e-07 -9.61651e-07 0L22 -9.61651e-07L22 22Z" fill="white"/></svg>');
+      right: 8px;
+    }
+}
+
+.globe2 {
+    position: absolute;
+    font-size: 36px;
+    max-width: 60%;
+    color: #194a73;
+    background-color: white;
+    padding: 20px;
+    border-radius: 22px 0 0 22px;
+    top: 71%;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    right: 0;
+    font-weight: 100;
+
+    &:before,
+    &:after{ 
+      content: '';
+      position: absolute;
+      display: block;
+      height: 30px;
+      width: 30px;
+      right: 0;
+      background-size: cover;
+      
+    }
+    
+    &:before {
+      top: -30px;
+      background-image: url('data:image/svg+xml,<svg viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 22C12.1503 22 22 12.1503 22 0V22H0Z" fill="white"/></svg>');
+      right: 8px;
+    }
+    
+    &:after {
+      bottom: -30px;
+      background-image: url('data:image/svg+xml,<svg viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M22 22C22 9.84973 12.1503 -5.31105e-07 -9.61651e-07 0L22 -9.61651e-07L22 22Z" fill="white"/></svg>');
+      right: 8px;
+    }
+}
+
 
 @media (max-width: 600px) {
     .section-container {
