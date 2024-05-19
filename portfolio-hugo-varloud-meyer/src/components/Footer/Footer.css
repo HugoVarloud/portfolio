@@ -1,8 +1,8 @@
 .footer-menu {
   grid-area: footer;
-  background-color: #999d9e;
+  background-color: #1c1d20;
   /* background-image: url('https://images.pexels.com/photos/10834393/pexels-photo-10834393.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'); */
-  height: 650px;
+  height: 550px;
   width: 100vw;
   justify-content: center;
   display: flex;
@@ -23,6 +23,7 @@
 /* SOCIAL SECTION STYLE */
 .social-section{
   display: flex;
+  flex-direction: column;
   flex: 1;
 }
 
@@ -76,17 +77,17 @@
   transform: scale(1);
 }
 .social-btns {
-  height: 90px;
-  margin-top: auto;
+  height: 70px;
+  margin-top: 0;
   font-size: 0;
   text-align: center;
 }
 .social-btns .btn {
   display: inline-block;
-  background-color: #ffffff45;
-  width: 90px;
-  height: 90px;
-  line-height: 90px;
+  background-color: #ffffff03;
+  width: 70px;
+  height: 70px;
+  line-height: 70px;
   margin: 0 10px;
   text-align: center;
   position: relative;

@@ -34,8 +34,8 @@ const Footer = () => {
   return (
     <>
       <footer className="footer-menu">
-        <Grid container spacing={2}    marginTop="50px">
-          <Grid item xs={6}>
+        <Grid container spacing={2} marginTop="30px" marginBottom="170px">
+          <Grid item xs={4}>
             <h3>Services</h3>
             <ul className="bottom-list">
               <li>Web Design</li>
@@ -43,7 +43,7 @@ const Footer = () => {
               <li>Hosting</li>
             </ul>
           </Grid>
-          <Grid item xs={6}>
+          <Grid item xs={4}>
             <h3>Contact</h3>
             <ul className="bottom-list">
               <li>hugo.varloud@gmail.com</li>
@@ -51,29 +51,31 @@ const Footer = () => {
               <li>Levallois-Perret, 92300</li>
             </ul>
           </Grid>
-          <Grid item xs={12}>
+          <Grid item xs={4}>
             <div>
               <h3>Contactez-moi</h3>
               <p className="bottom-text-section">Libérez le potentiel de vos projets digitaux avec des solutions sur mesure conçues spécialement pour vous.</p>
             </div>
           </Grid>
         </Grid>
+        <div>
         <div className="social-section">
-              <div className="social-btns">
-                {socialLinks.map((link, index) => (
-                  <a target="_blank" key={index} className={link.class} href={link.url}>
-                    {link.icon}
-                  </a>
-                ))}
-              </div>
-            </div>
-            <div className="footer-nav-list">
-              <nav>
-                <ul className="footer-list">
-                  <li className="signature"> © 2024 un site de Hugo Varloud-Meyer </li>
-                </ul>
-              </nav>
-            </div>
+          <div className="social-btns">
+            {socialLinks.map((link, index) => (
+              <a target="_blank" key={index} className={link.class} href={link.url}>
+                {link.icon}
+              </a>
+            ))}
+          </div>
+        </div>
+        <div className="footer-nav-list">
+          <nav>
+            <ul className="footer-list">
+              <li className="signature"> © 2024 un site de Hugo Varloud-Meyer </li>
+            </ul>
+          </nav>
+        </div>
+        </div>
       </footer>
     </>
   );
