@@ -34,30 +34,30 @@ const Footer = () => {
   return (
     <>
       <footer className="footer-menu">
-        <Grid container spacing={2} marginTop="30px" marginBottom="170px">
-          <Grid item xs={4}>
+        <div container className="contact">
+          <div className="bottom-list-container">
             <h3>Services</h3>
             <ul className="bottom-list">
               <li>Web Design</li>
               <li>Fullstack Development</li>
               <li>Hosting</li>
             </ul>
-          </Grid>
-          <Grid item xs={4}>
+          </div>
+          <div className="bottom-list-container">
+              <h3>Contactez-moi</h3>
+              <ul className="bottom-list">
+                <li>Libérez le potentiel de vos projets digitaux avec des solutions sur mesure conçues spécialement pour vous.</li>
+              </ul>
+          </div>
+          <div className="bottom-list-container">
             <h3>Contact</h3>
             <ul className="bottom-list">
               <li>hugo.varloud@gmail.com</li>
               <li>+33 6 13 02 80 26</li>
               <li>Levallois-Perret, 92300</li>
             </ul>
-          </Grid>
-          <Grid item xs={4}>
-            <div>
-              <h3>Contactez-moi</h3>
-              <p className="bottom-text-section">Libérez le potentiel de vos projets digitaux avec des solutions sur mesure conçues spécialement pour vous.</p>
-            </div>
-          </Grid>
-        </Grid>
+          </div>
+        </div>
         <div>
         <div className="social-section">
           <div className="social-btns">

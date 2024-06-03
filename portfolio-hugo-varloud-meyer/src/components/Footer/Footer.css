@@ -1,8 +1,6 @@
 .footer-menu {
   grid-area: footer;
   background-color: #1c1d20;
-  /* background-image: url('https://images.pexels.com/photos/10834393/pexels-photo-10834393.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'); */
-  height: 550px;
   width: 100vw;
   justify-content: center;
   display: flex;
@@ -16,9 +14,11 @@
   background-size: cover;
   text-align: center;
   color: #fff;
-  
 }
 
+.contact {
+  display: flex;
+}
 
 /* SOCIAL SECTION STYLE */
 .social-section{
@@ -128,6 +128,10 @@
 }
 
 
+.bottom-list-container {
+  width: 300px;
+  margin: 42px;
+}
 
 .bottom-list {
   list-style: none;
@@ -153,7 +157,14 @@
 
 
 /* MOBILE VERSION */
-@media (max-width: 600px) {
+@media (max-width: 1150px) {
+  .contact {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
   .social-btns .btn{
     width: 70px;
     height: 70px;

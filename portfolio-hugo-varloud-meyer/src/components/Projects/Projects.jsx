@@ -4,31 +4,31 @@ import { useScroll, useTransform, motion } from 'framer-motion';
 
 const slider1 = [
     {
-      src: "site5.jpeg"  
+      src: "https://placehold.co/300x200/000000/FFFFFF/png"  
     },
     {
-      src: "site5.jpeg"  
+      src: "https://placehold.co/300x200/000000/FFFFFF/png"  
     },
     {
-      src: "site5.jpeg"
+      src: "https://placehold.co/300x200/000000/FFFFFF/png"
     },
     {
-      src: "site5.jpeg"
+      src: "https://placehold.co/300x200/000000/FFFFFF/png"
     }
 ]
 
 const slider2 = [
   {
-    src: "site5.jpeg"
+    src: "https://placehold.co/300x200/000000/FFFFFF/png"
   },
   {
-    src: "site5.jpeg"
+    src: "https://placehold.co/300x200/000000/FFFFFF/png"
   },
   {
-    src: "site5.jpeg"
+    src: "https://placehold.co/300x200/000000/FFFFFF/png"
   },
   {
-    src: "site5.jpeg"
+    src: "https://placehold.co/300x200/000000/FFFFFF/png"
   }
 ]
 
@@ -44,32 +44,32 @@ const Section = () => {
   const height = useTransform(scrollYProgress, [0, 0.9], [50, 0])
   return (
       <div ref={container} className="slidingImages">
-        <motion.div style={{x: x1}} className="slider">
-                {
-                    slider1.map( (project, index) => {
-                        return <div key={index} className="project" style={{backgroundColor: project.color}} >
-                            <div className="imageContainer">
-                                <img className='webSiteImage' src={`/src/assets/${project.src}`}/>
-                            </div>
-                        </div>
-                    })
-                }
-            </motion.div>
-            <motion.div style={{x: x2}} className="slider">
-                {
-                    slider2.map( (project, index) => {
-                        return <div key={index} className="project" style={{backgroundColor: project.color}} >
-                            <div key={index} className="imageContainer">
-                                <img className='webSiteImage' src={`/src/assets/${project.src}`}/>
-                            </div>
-                        </div>
-                    })
-                }
-            </motion.div>
-            <motion.div style={{height}} className="circleContainer">
-                <div className="circle"></div>
-            </motion.div>
-        </div>
+          <motion.div style={{x: x1}} className="slider">
+              {
+                  slider1.map( (project, index) => {
+                      return <div key={index} className="project" style={{backgroundColor: project.color}} >
+                          <div className="imageContainer">
+                              <img className='webSiteImage' src={project.src}/>
+                          </div>
+                      </div>
+                  })
+              }
+          </motion.div>
+          <motion.div style={{x: x2}} className="slider">
+              {
+                  slider2.map( (project, index) => {
+                      return <div key={index} className="project" style={{backgroundColor: project.color}} >
+                          <div key={index} className="imageContainer">
+                              <img className='webSiteImage' src={project.src}/>
+                          </div>
+                      </div>
+                  })
+              }
+          </motion.div>
+          <motion.div style={{height}} className="circleContainer">
+              <div className="circle"></div>
+          </motion.div>
+      </div>
   );
 };
 

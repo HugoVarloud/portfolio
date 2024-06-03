@@ -7,8 +7,8 @@
     margin-top: 100px;
     background-color: white;
     z-index: 1;
-    margin-bottom: 100px;
 }
+
 .slider {
     position: absolute;
     top: 0;
@@ -68,8 +68,9 @@
     .slidingImages .slider {
         display: flex;
         position: relative;
-        gap: 3vw;
-        width: 120vw;
-        left: -30vw;
+        gap: 0vw;
+        width: 150vw;
+        left: -35vw;
+        margin-top: 15px;
     }
 }

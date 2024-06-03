@@ -4,8 +4,8 @@ import "./Home.css";
 const Home = () => {
   return (
     <div className='home-container'>
-         <p className='globe'>Freelance</p>
-         <p className='globe2'>Développeur Fullstack</p>
+         <p className='globe'>Développeur Fullstack</p>
+         <p className='globe2'>Freelance</p>
       <section className="section1">
       </section> 
     </div>

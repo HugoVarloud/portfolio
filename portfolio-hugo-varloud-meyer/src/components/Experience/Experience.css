@@ -7,7 +7,7 @@
     background-attachment: fixed;
     background-position: center;
     background-size: cover;
-    background: #f4fdff;
+    background: #ffffff;
     row-gap: 4rem;
     text-align: center;
 }
@@ -31,8 +31,10 @@
     align-items: center;
 }
 
-
-@media (max-width: 600px) {
+@media (max-width: 900px) {
+    .section-container {
+        margin-top: 30px;
+    }
     .xpText {
         font-size: 0.70rem;
     }
