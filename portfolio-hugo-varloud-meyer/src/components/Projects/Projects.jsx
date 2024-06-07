@@ -4,31 +4,31 @@ import { useScroll, useTransform, motion } from 'framer-motion';
 
 const slider1 = [
     {
-      src: "https://placehold.co/300x200/000000/FFFFFF/png"  
+      src: "https://picsum.photos/id/15/300/200"  
     },
     {
-      src: "https://placehold.co/300x200/000000/FFFFFF/png"  
+      src: "https://picsum.photos/id/119/300/200"  
     },
     {
-      src: "https://placehold.co/300x200/000000/FFFFFF/png"
+      src: "https://picsum.photos/id/29/300/200"
     },
     {
-      src: "https://placehold.co/300x200/000000/FFFFFF/png"
+      src: "https://picsum.photos/id/48/300/200"
     }
 ]
 
 const slider2 = [
   {
-    src: "https://placehold.co/300x200/000000/FFFFFF/png"
+    src: "https://picsum.photos/id/0/300/200"
   },
   {
-    src: "https://placehold.co/300x200/000000/FFFFFF/png"
+    src: "https://picsum.photos/id/154/300/200"
   },
   {
-    src: "https://placehold.co/300x200/000000/FFFFFF/png"
+    src: "https://picsum.photos/id/372/300/200"
   },
   {
-    src: "https://placehold.co/300x200/000000/FFFFFF/png"
+    src: "https://picsum.photos/id/11/300/200"
   }
 ]
 
