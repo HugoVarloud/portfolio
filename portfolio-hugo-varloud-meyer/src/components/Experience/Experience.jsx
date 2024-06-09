@@ -30,7 +30,7 @@ const Section = () => {
             </TimelineOppositeContent>
             <TimelineSeparator>
               <TimelineConnector />
-                  <Avatar alt="Engie" src="/src/assets/engie-logo.png" />
+                  <Avatar alt="Engie" src="/assets/engie-logo.png" />
               <TimelineConnector />
             </TimelineSeparator>
             <TimelineContent sx={{ py: '12px', px: 2 }}>
@@ -50,7 +50,7 @@ const Section = () => {
             </TimelineOppositeContent>
             <TimelineSeparator>
               <TimelineConnector />
-                    <Avatar alt="SFR" src="/src/assets/sfr-logo.svg" />
+                    <Avatar alt="SFR" src="/assets/sfr-logo.svg" />
               <TimelineConnector />
             </TimelineSeparator>
             <TimelineContent sx={{ py: '12px', px: 2 }}>
@@ -70,7 +70,7 @@ const Section = () => {
             </TimelineOppositeContent>
             <TimelineSeparator>
               <TimelineConnector />
-                <Avatar alt="Engie" src="/src/assets/epitech-logo.jpeg" />
+                <Avatar alt="Engie" src="/assets/epitech-logo.jpeg" />
               <TimelineConnector/>
             </TimelineSeparator>
             <TimelineContent sx={{ py: '12px', px: 2 }}>
@@ -91,7 +91,7 @@ const Section = () => {
             </TimelineOppositeContent>
             <TimelineSeparator>
               <TimelineConnector/>
-                <Avatar alt="Engie" src="/src/assets/atixis-logo.jpeg" />
+                <Avatar alt="Engie" src="/assets/atixis-logo.jpeg" />
               <TimelineConnector />
             </TimelineSeparator>
             <TimelineContent sx={{ py: '12px', px: 2 }}>

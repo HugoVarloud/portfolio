@@ -15,10 +15,10 @@ const Navbar = () => {
         <div className="container">
           <div className={`nav-elements  ${showNavbar && 'active'}`}>
             <ul>
-              <li><a href="#home-container">Accueil</a></li>
-              <li><a href="#experienceSection">Expérience</a></li>
-              <li><a href="#slidingImages">Projets</a></li>
-              <li><a href="#footer-menu">Contact</a></li>
+              <li><a href="home-container">Accueil</a></li>
+              <li><a href="section-container">Expérience</a></li>
+              <li><a href="slidingImages">Projets</a></li>
+              <li><a href="footer-menu">Contact</a></li>
               <li></li>
             </ul>
           </div>
