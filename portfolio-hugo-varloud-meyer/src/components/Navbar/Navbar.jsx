@@ -1,34 +1,93 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
+import { AnimatePresence, motion } from "framer-motion";
+import { useClickAway } from "react-use";
 import "./Navbar.css";
-import MenuIcon from '@mui/icons-material/Menu';
-import { Link } from "react-router-dom";
+import { Squash as Hamburger } from "hamburger-react";
+import { BiHomeAlt2 } from "react-icons/bi";
+import { FiSearch } from "react-icons/fi";
+import { PiChatCircleBold } from "react-icons/pi";
+import { IoPricetagsOutline } from "react-icons/io5";
+import { IoMdClose } from "react-icons/io";
 
 const Navbar = () => {
-  const [showNavbar, setShowNavbar] = useState(false)
+  const [isOpen, setOpen] = useState(false);
+  const ref = useRef(null);
+  useClickAway(ref, () => setOpen(false));
+  const routes = [
+    {
+      title: "Accueil",
+      href: "#accueil",
+      Icon: BiHomeAlt2,
+    },
+    {
+      title: "Experience",
+      href: "#experience",
+      Icon: FiSearch,
+    },
+    {
+      title: "Projets",
+      href: "#projects",
+      Icon: IoPricetagsOutline,
+    },
+    {
+      title: "Contacts",
+      href: "#contacts",
+      Icon: PiChatCircleBold,
+    },
+  ];
 
-  const handleShowNavbar = () => {
-    setShowNavbar(!showNavbar)
-  }
-  
   return (
     <header className="navigation-menu">
       <nav className="navbar">
-        <div className="container">
-          <div className={`nav-elements  ${showNavbar && 'active'}`}>
-            <ul className="nav-links">
-              <li><a href="#accueil" className="nav-link">Accueil</a></li>
-              <li><a href="#experience" className="nav-link">Expérience</a></li>
-              <li><a href="#projects" className="nav-link">Projets</a></li>
-              <li><a href="#contacts" className="nav-link">Contact</a></li>
-              <li></li>
-            </ul>
-          </div>
-        </div>
         <div className="title-container">
           <h1>© Code by Hugo</h1>
         </div>
-        <div className="menu-icon" onClick={handleShowNavbar}>
-          <MenuIcon />
+        <div ref={ref}>
+          <div className="menu-icon">
+            <Hamburger toggled={isOpen} toggle={setOpen} size={25} />
+          </div>
+          <AnimatePresence>
+            {isOpen && (
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.2 }}
+                className="openMenu"
+              >
+                <div className="close-icon" onClick={() => setOpen(false)}>
+                  <IoMdClose size={35} />
+                </div>
+                <ul>
+                  {routes.map((route, idx) => {
+                    const { Icon } = route;
+
+                    return (
+                      <motion.li
+                        initial={{ scale: 0, opacity: 0 }}
+                        animate={{ scale: 1, opacity: 1 }}
+                        transition={{
+                          type: "spring",
+                          stiffness: 260,
+                          damping: 20,
+                          delay: 0.1 + idx / 10,
+                        }}
+                        key={route.title}
+                      >
+                        <a
+                          onClick={() => setOpen(false)}
+                          href={route.href}
+                          className="menuItemName"
+                        >
+                          <span>{route.title}</span>
+                        </a>
+                      </motion.li>
+                    );
+                  })}
+                </ul>
+              </motion.div>
+            )}
+          </AnimatePresence>
         </div>
       </nav>
     </header>
