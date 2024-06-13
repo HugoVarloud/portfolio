@@ -4,34 +4,23 @@ import { motion } from 'framer-motion';
 const projects = [
   {
     title: "ENGIE",
+    description: "2024 - Travail à l'évolution de leur plateforme B2C sur laquelle on retrouve les informations clients et les services et équipement proposé par l'entreprise.",
     src: "/public/assets/engie-logo.png",
   },
   {
-
     title: "SFR",
-
-    src: "/public/assets/sfr-logo.svg",
-
-    color: "#8C8C8C"
-
+    description: "2021 - Développement d'un Saas ayant pour but de gérer les étiquettes points de vente et générer les produits, remises et plans de financement.",
+    src: "/public/assets/sfr-logo.svg"
   },
   {
-
     title: "EPITECH",
-
-    src: "/public/assets/epitech-logo.jpeg",
-
-    color: "#EFE8D3"
-
+    description: "2021 - Diplôme d’Expert en technologies de l’information en ingénierie logicielle enregistré au RNCP de niveau 7.",
+    src: "/public/assets/epitech-logo.jpeg"
   },
   {
-
     title: "ATIXIS",
-
-    src: "/public/assets/atixis-logo.jpeg",
-
-    color: "#706D63"
-
+    description: "2020 - Stage de fin d'étude dans une entreprise de pilotage de projet immobillier. Création d'un CRM custom pour répondre aux besoins métier de l'entreprise.",
+    src: "/public/assets/atixis-logo.jpeg"
   }
 ];
 
@@ -58,8 +47,10 @@ const Section = () => {
             projects.map( (project, index) => {
               return (
                 <div onMouseEnter={() => {setModal({active: true, index})}} onMouseLeave={() => {setModal({active: false, index})}} className={styles.project}>
-                    <h2>{project.title}</h2>
-                    {/* <p className='experience-section-text'>Design & Development</p> */}
+                    <div>
+                      <h2>{project.title}</h2>
+                      <p className={styles.experienceDescription}>{project.description}</p>
+                    </div>
                     <div className={styles.experienceSectionImgContainer}>
                       <img className={styles.experienceSectionImg} src={project.src} alt={project.title} />
                     </div>
@@ -93,95 +84,3 @@ const Section = () => {
 };
 
 export default Section;
-
-
-
-
-
-
-
-
-// <Timeline className='timeLineListElement' position="alternate">
-// <TimelineItem>
-//   <TimelineOppositeContent
-//     sx={{ m: 'auto 0' }}
-//     align="right"
-//     variant="body2"
-//     color="text.secondary"
-//   >
-//     2024
-//   </TimelineOppositeContent>
-//   <TimelineSeparator>
-//     <TimelineConnector />
-//         <Avatar alt="Engie" src="/src/assets/engie-logo.png" />
-//     <TimelineConnector />
-//   </TimelineSeparator>
-//   <TimelineContent sx={{ py: '12px', px: 2 }}>
-//     <Typography gutterBottom variant="h5">
-//       Engie (Acensi)
-//     </Typography>
-//     <p className='xpText'>Travail à l'évolution de leur plateforme B2C sur laquelle on retrouve les informations clients et les services et équipement proposé par l'entreprise.</p>
-//   </TimelineContent>
-// </TimelineItem>
-// <TimelineItem>
-//   <TimelineOppositeContent
-//     sx={{ m: 'auto 0' }}
-//     variant="body2"
-//     color="text.secondary"
-//   >
-//     2021
-//   </TimelineOppositeContent>
-//   <TimelineSeparator>
-//     <TimelineConnector />
-//           <Avatar alt="SFR" src="/src/assets/sfr-logo.svg" />
-//     <TimelineConnector />
-//   </TimelineSeparator>
-//   <TimelineContent sx={{ py: '12px', px: 2 }}>
-//     <Typography variant="h6" component="span">
-//       SFR (Acensi)
-//     </Typography>
-//     <p className='xpText'>Développement d'un Saas ayant pour but de géréer les produits, remises et plans de financement. Le coeur de métier de l'application réside dans l'édition d'étiquettes produits en fonction du point de vente.</p>
-//   </TimelineContent>
-// </TimelineItem>
-// <TimelineItem>
-// <TimelineOppositeContent
-//     sx={{ m: 'auto 0' }}
-//     variant="body2"
-//     color="text.secondary"
-//   >
-//     2021
-//   </TimelineOppositeContent>
-//   <TimelineSeparator>
-//     <TimelineConnector />
-//       <Avatar alt="Engie" src="/src/assets/epitech-logo.jpeg" />
-//     <TimelineConnector/>
-//   </TimelineSeparator>
-//   <TimelineContent sx={{ py: '12px', px: 2 }}>
-//     <Typography variant="h6" component="span">
-//       Epitech
-//     </Typography>
-//     <p className='xpText'>Diplôme d’Expert en technologies de l’information visé par le ministère de l’Enseignement supérieur et de la Recherche Titre d’Expert en ingénierie logicielle enregistré au RNCP niveau 7.</p>
-//   </TimelineContent>
-// </TimelineItem>
-// <TimelineItem>
-// <TimelineOppositeContent
-//     sx={{ m: 'auto 0' }}
-//     align="right"
-//     variant="body2"
-//     color="text.secondary"
-//   >
-//     2020
-//   </TimelineOppositeContent>
-//   <TimelineSeparator>
-//     <TimelineConnector/>
-//       <Avatar alt="Engie" src="/src/assets/atixis-logo.jpeg" />
-//     <TimelineConnector />
-//   </TimelineSeparator>
-//   <TimelineContent sx={{ py: '12px', px: 2 }}>
-//     <Typography variant="h6" component="span">
-//       Atixis
-//     </Typography>
-//     <p className='xpText'>Stage de fin d'étude dans une entreprise ayant piloté la construction du centre de formation du PSG. Création d'un CRM custom pour répondre aux besoins métier de l'entreprise.</p>
-//   </TimelineContent>
-// </TimelineItem>
-// </Timeline>
