@@ -11,26 +11,26 @@
 .section1 {
     width: 65vw;
     height: 101vh;
-    background-image: url(https://placehold.co/400x600/000000/FFFFFF/png);
+    /* background-image: url(https://dennissnellenberg.com/assets/img/DSC07033.jpg); */
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
 }
 
 .globe {
-    position: absolute;
-    font-size: 30px;
-    max-width: 60%;
-    color: #194a73;
-    background-color: white;
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    border-radius: 22px 0 0 22px;
-    top: 55%;
-    right: 0;
-    font-weight: 100;
+  position: absolute;
+  font-size: 30px;
+  max-width: 60%;
+  color: #194a73;
+  background-color: white;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-radius: 22px 0 0 22px;
+  top: -10%;
+  right: 74px;
+  font-weight: 100;
 
     &:before,
     &:after{ 
@@ -45,32 +45,33 @@
     }
     
     &:before {
-      top: -30px;
-      background-image: url('data:image/svg+xml,<svg viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 22C12.1503 22 22 12.1503 22 0V22H0Z" fill="white"/></svg>');
-      right: 8px;
+      bottom: -30.5px;
+      background-image: url(data:image/svg+xml,<svg viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M22 22C22 9.84973 12.1503 -5.31105e-07 -9.61651e-07 0L22 -9.61651e-07L22 22Z" fill="white"/></svg>);
+      right: 10px;
     }
     
     &:after {
-      bottom: -30px;
+      bottom: -31px;
       background-image: url('data:image/svg+xml,<svg viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M22 22C22 9.84973 12.1503 -5.31105e-07 -9.61651e-07 0L22 -9.61651e-07L22 22Z" fill="white"/></svg>');
       right: 8px;
     }
 }
 
 .globe2 {
-    position: absolute;
-    font-size: 30px;
-    max-width: 60%;
-    color: #194a73;
-    background-color: white;
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    border-radius: 22px 0 0 22px;
-    top: 71%;
-    right: 0;
-    font-weight: 100;
+  position: absolute;
+  font-size: 30px;
+  max-width: 40%;
+  color: rgb(255, 255, 255);
+  background-color: white;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  top: -5%;
+  height: 75px;
+  right: 0px;
+  font-weight: 100;
+  border-radius: 22px 0px 0px 22px;
 
     &:before,
     &:after{ 
