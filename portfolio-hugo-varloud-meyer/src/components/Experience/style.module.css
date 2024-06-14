@@ -45,7 +45,13 @@
 } */
 
 
-
+.sectionContainer {
+    display: flex;
+    justify-content: center;
+}
+.experienceSection {
+    width: 90%;
+}
 .experienceSectionImg {
     width: 100px;
 }
@@ -68,10 +74,6 @@
 }
 .project:last-of-type{
     border-bottom: 1px solid rgb(201, 201, 201);
-}
-
-.project:hover{
-    opacity: 0.5;
 }
 
 .project:hover h2{

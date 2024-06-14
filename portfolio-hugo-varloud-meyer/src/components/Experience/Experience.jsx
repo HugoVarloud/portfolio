@@ -1,15 +1,14 @@
 import React, { useState } from 'react';
 import styles from './style.module.css';
-import { motion } from 'framer-motion';
 const projects = [
   {
     title: "ENGIE",
     description: "2024 - Travail à l'évolution de leur plateforme B2C sur laquelle on retrouve les informations clients et les services et équipement proposé par l'entreprise.",
-    src: "/public/assets/engie-logo.png",
+    src: "/public/assets/engie-logo.webp",
   },
   {
     title: "SFR",
-    description: "2021 - Développement d'un Saas ayant pour but de gérer les étiquettes points de vente et générer les produits, remises et plans de financement.",
+    description: "2021 - Développement d'un Saas ayant pour but de gérer les étiquettes et générer les produits, remises et plans de financement des 800 points de vente SFR.",
     src: "/public/assets/sfr-logo.svg"
   },
   {
@@ -26,13 +25,9 @@ const projects = [
 
 
 const scaleAnimation = {
-
   initial: {scale: 0, x:"-50%", y:"-50%"},
-
   enter: {scale: 1, x:"-50%", y:"-50%", transition: {duration: 0.4, ease: [0.76, 0, 0.24, 1]}},
-
   closed: {scale: 0, x:"-50%", y:"-50%", transition: {duration: 0.4, ease: [0.32, 0, 0.67, 0]}}
-
 }
 
 const Section = () => {
@@ -40,13 +35,13 @@ const Section = () => {
   const { active, index } = modal;
 
   return (
-    <div className='section-container'>
-      <section className='experienceSection'>
+    <div className={styles.sectionContainer}>
+      <section className={styles.experienceSection}>
         <div className={styles.body}>
           {
             projects.map( (project, index) => {
               return (
-                <div onMouseEnter={() => {setModal({active: true, index})}} onMouseLeave={() => {setModal({active: false, index})}} className={styles.project}>
+                <div key={project.title} className={styles.project}>
                     <div>
                       <h2>{project.title}</h2>
                       <p className={styles.experienceDescription}>{project.description}</p>
