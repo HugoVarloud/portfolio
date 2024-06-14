@@ -31,9 +31,6 @@ const scaleAnimation = {
 }
 
 const Section = () => {
-  const [modal, setModal] = useState({active: false, index: 0})
-  const { active, index } = modal;
-
   return (
     <div className={styles.sectionContainer}>
       <section className={styles.experienceSection}>
@@ -43,7 +40,7 @@ const Section = () => {
               return (
                 <div key={project.title} className={styles.project}>
                     <div>
-                      <h2>{project.title}</h2>
+                      <h2 className={styles.titleList}>{project.title}</h2>
                       <p className={styles.experienceDescription}>{project.description}</p>
                     </div>
                     <div className={styles.experienceSectionImgContainer}>

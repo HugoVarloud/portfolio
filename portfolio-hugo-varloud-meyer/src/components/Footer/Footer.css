@@ -1,20 +1,21 @@
 .footer-menu {
   background-color: #1c1d20;
+  height: 100vh;
   width: 100vw;
   display: flex;
-  box-shadow: 0 4px 2px -2px gray;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   background-attachment: fixed;
   background-position: center;
   background-size: cover;
   text-align: center;
   color: #fff;
+  justify-content: space-between;
 }
 
 .contact {
   display: flex;
+  margin-top: 200px;
 }
 
 /* SOCIAL SECTION STYLE */
@@ -105,6 +106,9 @@
   vertical-align: middle;
 }
 
+
+/* END OF SOCIAL SECTION */
+
 .footer-nav-list {
   bottom: 0;
 }
@@ -126,7 +130,7 @@
 
 
 .bottom-list-container {
-  width: 300px;
+  width: 30%;
   margin: 30px;
 }
 
@@ -154,13 +158,20 @@
 
 
 /* MOBILE VERSION */
-@media (max-width: 1150px) {
+@media (max-width: 800px) {
   .contact {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    margin: 0px;
   }
+
+  .bottom-list-container {
+    width: 70%;
+    margin: 30px;
+    font-size: 15px;
+}
 
   .social-btns .btn{
     width: 70px;

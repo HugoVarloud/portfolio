@@ -149,3 +149,27 @@
 .cursorLabel{
     background-color: transparent;
 }
+
+@media (max-width: 900px) {
+    .sectionContainer {
+        width: 100vw;
+    }
+    .project {
+        display: flex;
+        padding: 10px 10px 10px 50px;
+        border-top: 1px solid rgb(201, 201, 201);
+        cursor: pointer;
+        transition: all 0.2s;
+        font-size: 15px;
+    }
+    .titleList {
+        font-size: 35px;
+        margin: 0px;
+    }
+    .experienceDescription {
+        width: 95%;
+    }
+    .experienceSectionImg {
+        display: none;
+    }
+}

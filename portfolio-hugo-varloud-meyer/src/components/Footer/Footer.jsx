@@ -55,6 +55,7 @@ const Footer = () => {
               <li>hugo.varloud@gmail.com</li>
               <li>+33 6 13 02 80 26</li>
               <li>Levallois-Perret, 92300</li>
+              <li>France</li>
             </ul>
           </div>
         </div>
