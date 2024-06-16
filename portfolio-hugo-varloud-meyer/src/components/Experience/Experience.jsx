@@ -34,6 +34,7 @@ const Section = () => {
   return (
     <div className={styles.sectionContainer}>
       <section className={styles.experienceSection}>
+        <h1>Expérience</h1>
         <div className={styles.body}>
           {
             projects.map( (project, index) => {
