@@ -61,9 +61,11 @@
     color: #aeaeae;
 }
 
+.titleExperience {
+    font-weight: 400;
+}
 
-
-.project{
+.project {
     display: flex;
     justify-content: space-between;
     align-items: center;
