@@ -4,31 +4,31 @@ import { useScroll, useTransform, motion } from 'framer-motion';
 
 const slider1 = [
     {
-      src: "https://picsum.photos/id/15/300/200"  
+      src: "/assets/site1.jpeg"  
     },
     {
-      src: "https://picsum.photos/id/119/300/200"  
+      src: "/assets/site2.jpeg"  
     },
     {
-      src: "https://picsum.photos/id/29/300/200"
+      src: "/assets/site4.png"
     },
     {
-      src: "https://picsum.photos/id/48/300/200"
+      src: "/assets/site3.webp"
     }
 ]
 
 const slider2 = [
   {
-    src: "https://picsum.photos/id/0/300/200"
+    src: "/assets/site7.png"  
   },
   {
-    src: "https://picsum.photos/id/154/300/200"
+    src: "/assets/site6.webp"  
   },
   {
-    src: "https://picsum.photos/id/372/300/200"
+    src: "/assets/site5.jpeg"
   },
   {
-    src: "https://picsum.photos/id/11/300/200"
+    src: "/assets/site8.jpeg"
   }
 ]
 
