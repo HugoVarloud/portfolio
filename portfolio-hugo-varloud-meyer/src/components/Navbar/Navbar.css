@@ -36,13 +36,7 @@ body {
 }
 
 .navigation-menu ul li a:hover {
-  background-color: #71717142;
-  border-radius: 22px;
   transform: scale(1.50);
-}
-
-.menuItemName {
-  border-radius: 20px;
 }
 
 .title-container {
