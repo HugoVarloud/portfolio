@@ -1,11 +1,13 @@
 .home-container {
     display: flex;
-    height: 98vh;
+    height: 65vh;
     flex-direction: column;
     align-items: center;
     background-color: #999d9e;
-    border: 8px solid white;
-    border-radius: 30px;
+    margin-top: 0.5%;
+    margin-left: 0.5%;
+    margin-right: 0.5%;
+    border-radius: 30px 30px 0% 30px;
 }
 
 .section1 {
@@ -16,6 +18,76 @@
     background-repeat: no-repeat;
     background-position: center;
 }
+/* CURVE PART START */
+
+.left {
+    position: absolute;
+    width: 30%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.curve {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #999d9e;
+}
+
+.cover {
+    position: absolute;
+    width: 100%;
+    height: 270px;
+    background-color: #ffffff;
+    border-top-right-radius: 30px;
+    z-index: 1;
+}
+
+.right {
+    position: absolute;
+    top: 0;
+    padding: 1rem;
+    width: -webkit-fill-available;
+    left: 30%;
+    height: 228px;
+    min-height: 20px;
+    background-color: #999d9e;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    margin-right: 0.5%;
+}
+
+.bottomDiv {
+    position: relative;
+    width: var(--width);
+    height: 200px;
+    padding-top: 30px;
+    max-width: var(--max-width);
+    background-color: rgb(255, 255, 255);
+    display: flex;
+}
+
+.textPart {
+    background-color: black;
+    color: #ffffff;
+    width: 90%;
+    height: 100%;
+    z-index: 5;
+    position: absolute;
+    margin: 5%;
+    border-radius: 30px;
+}
+
+.textPart ul {
+    list-style-type: none;
+    padding: 15px;
+    margin: 0;
+    font-size: 17px;
+    font-weight: 400;
+}
+
+/* CURVE PART END */
 
 @media (max-width: 780px) {
     .section-container {
@@ -41,6 +113,10 @@
         background-color: #999d9e;
         height: 100vh;
         border: 0px solid white;
+        margin-top: 0%;
+        margin-left: 0%;
+        margin-right: 0%;
+        border-radius: 0%;
     }
 
     .section1 {
@@ -53,11 +129,11 @@
         background-position: center center;
     }
 
-    .globe {
+    /* MAKE INVISIBLE THE DESKTOP PART */
+    
+    .bottomDiv {
         display: none;
     }
-    .globe2 {
-        display: none;
-        font-size: 30px;
-    }
+
+    /* END OF THE CURVED DESTOP PART HIDDING */
 }
