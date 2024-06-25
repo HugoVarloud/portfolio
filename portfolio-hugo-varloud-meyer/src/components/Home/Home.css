@@ -137,7 +137,7 @@
 
 /* CURVE PART END */
 
-@media (max-width: 1125px), (max-height: 670px) {
+@media (max-width: 1200px), (max-height: 670px) {
     .section-container {
         display: flex;
         height: 101vh;
