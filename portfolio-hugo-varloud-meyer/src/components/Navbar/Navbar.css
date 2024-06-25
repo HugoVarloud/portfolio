@@ -54,9 +54,9 @@ body {
   height: 48px;
   width: 48px;
   position: fixed;
-  right: 25px;
-  top: 20px;
-  z-index: 5;
+  right: 1%;
+  top: 1%;
+  z-index: 9;
   background-color: #999d9e;
   color: white;
   border-radius: 30px;

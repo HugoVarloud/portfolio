@@ -7,6 +7,10 @@ const Home = () => {
     <div className='home-container'>
       <section className="section1"></section> 
     </div>
+      <div className='topDiv'></div>
+      <div className='topLeft'></div>
+      <div className='topMiddle'></div>
+      <div className='topRight'></div>
       <div className='bottomDiv'>
         <div className='left'>
           <div className='curve'></div>
