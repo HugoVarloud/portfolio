@@ -16,15 +16,17 @@ const Home = () => {
           <div className='curve'></div>
           <div className='cover'></div>
           <div className='textPart'>
-            <ul>
-              <li>Look</li>
-              <li>If you had one shot</li>
-              <li>or one opportunity</li>
-              <li>To seize everything you ever wanted</li>
-              <li>in one moment</li>
-              <li>Would you capture it</li>
-              <li>or just let it slip?</li>
-            </ul>
+            <div class="animated-title">
+              <div class="text-top">
+                <div>
+                  <span>Full Stack Developer</span>
+                  <span>UI/UX Designer</span>
+                </div>
+              </div>
+              <div class="text-bottom">
+                <div>Contact Me !</div>
+              </div>
+            </div>
           </div>
         </div>
         <div className='right'>
