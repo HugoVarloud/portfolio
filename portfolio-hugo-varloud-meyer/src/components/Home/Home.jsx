@@ -1,16 +1,18 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import "./Home.css";
 
 const Home = () => {
   return (
     <>
-    <div className='home-container'>
-      <section className="section1"></section> 
-    </div>
-      <div className='topDiv'></div>
-      <div className='topLeft'></div>
-      <div className='topMiddle'></div>
-      <div className='topRight'></div>
+      <div className='home-container'>
+        <section className="section1"></section> 
+      </div>
+      <div className='topDiv'>
+        <div className='topLeft'>
+          <div className='topCover'></div>
+        </div>
+        <div className='topRight'></div>
+      </div>
       <div className='bottomDiv'>
         <div className='left'>
           <div className='curve'></div>
