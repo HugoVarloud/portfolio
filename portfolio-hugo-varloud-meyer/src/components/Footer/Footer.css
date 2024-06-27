@@ -169,7 +169,11 @@
     width: 70%;
     margin: 30px;
     font-size: 15px;
-}
+  }
+
+  .footer-menu {
+    height: 100vh;
+  }
 
   .social-btns .btn{
     width: 70px;
