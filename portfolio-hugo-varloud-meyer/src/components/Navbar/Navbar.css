@@ -88,15 +88,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  z-index: 5;
-}
-
-.close-icon {
-  position: absolute;
-  top: 25px;
-  right: 30px;
-  cursor: pointer;
-  color: white;
+  z-index: 8;
 }
 
 .navigation-menu ul li a {
