@@ -40,7 +40,7 @@ body {
 }
 
 .title-container {
-  margin: 16px 25px;
+  margin: 25px 50px;
 }
 
 .title-container h1 {
@@ -127,10 +127,9 @@ body {
     margin: 10px 25px;
   }
 
-  /* .menu-icon {
-    right: 2%;
+  .menu-icon {
     top: 2%;
-  } */
+  }
 
   .close-icon {
     top: 20px;
