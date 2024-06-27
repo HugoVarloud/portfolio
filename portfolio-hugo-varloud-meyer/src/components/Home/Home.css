@@ -26,7 +26,7 @@
 
 .topDiv {
     position: absolute;
-    width: 6.1vw;
+    width: 6vw;
     height: 100vh;
     background-color: #fff;
     right: 1vw;
@@ -55,8 +55,9 @@
 
 .topCover {
     position: absolute;
-    width: 100%;
-    height: 100%;
+    width: 6vw;
+    height: 10vh;
+    right: 0;
     background-color: #ffffff;
     border-bottom-left-radius: 30px;
     z-index: 1;
