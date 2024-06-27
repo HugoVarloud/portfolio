@@ -55,13 +55,9 @@ const Navbar = () => {
                 transition={{ duration: 0.2 }}
                 className="openMenu"
               >
-                <div className="close-icon" onClick={() => setOpen(false)}>
-                  <IoMdClose size={35} />
-                </div>
+                
                 <ul>
                   {routes.map((route, idx) => {
-                    const { Icon } = route;
-
                     return (
                       <motion.li
                         initial={{ scale: 0, opacity: 0 }}
