@@ -8,7 +8,7 @@ const Home = () => {
       <div className='home-container'>
         <section className="section1"></section> 
       </div>
-    </div>
+
       <div className='topDiv'>
         <div className='topLeft'>
           <div className='topCover'></div>
@@ -37,6 +37,7 @@ const Home = () => {
           <div className='services'>
           </div>
         </div>
+      </div>
       </div>
     </>
   );
