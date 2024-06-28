@@ -2,6 +2,7 @@
 
 .home-wrapper {
     max-width: 100%;
+    height: 100%;
 }
 
 .home-container {
@@ -133,13 +134,14 @@
 }
 
 .bottomDiv {
-    position: relative;
-    width: var(--width);
+    position: absolute;
+    width: 100%;
     height: 200px;
     padding-top: 30px;
     max-width: var(--max-width);
-    background-color: rgb(255, 255, 255);
+    background-color: #fff;
     display: flex;
+    top: 66vh;
 }
 
 .textPart {
