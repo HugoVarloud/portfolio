@@ -117,6 +117,7 @@
     max-width: 100%;
     background-color: rgb(255, 255, 255);
     display: flex;
+    top: 66vh;
 }
 
 .textPart {
