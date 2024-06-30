@@ -2,7 +2,7 @@
 
 .home-wrapper {
     max-width: 100%;
-    height: 100%;
+    height: 100vh;
 }
 
 .home-container {
@@ -68,30 +68,6 @@
     z-index: 1;
 }
 
-/*
-.topCover {
-    position: absolute;
-    width: 100%;
-    height: 270px;
-    background-color: #ffffff;
-    border-top-right-radius: 30px;
-    z-index: 1;
-}
-
-.topRight {
-    position: absolute;
-    top: 0;
-    padding: 1rem;
-    width: -webkit-fill-available;
-    left: 30%;
-    height: 228px;
-    min-height: 20px;
-    background-color: #999d9e;
-    border-bottom-left-radius: 30px;
-    border-bottom-right-radius: 30px;
-    margin-right: 0.5%;
-} */
-
 /* END OF TOP RIGHT CORNER CUVER */
 
 /* CURVE BOTTOM PART START */
@@ -107,7 +83,7 @@
 .curve {
     position: absolute;
     width: 100%;
-    height: 100%;
+    height: 10%;
     background-color: #999d9e;
 }
 
@@ -125,7 +101,8 @@
     top: 0;
     width: 67vw;
     left: 30%;
-    height: 33vh;
+    height: -webkit-fill-available;
+    margin-bottom: 1%;
     min-height: 20px;
     background-color: #999d9e;
     border-bottom-left-radius: 30px;
@@ -134,24 +111,23 @@
 }
 
 .bottomDiv {
-    position: absolute;
+    position: relative;
     width: 100%;
-    height: 200px;
-    padding-top: 30px;
-    max-width: var(--max-width);
-    background-color: #fff;
+    height: 34vh;
+    max-width: 100%;
+    background-color: rgb(255, 255, 255);
     display: flex;
-    top: 66vh;
 }
 
 .textPart {
     background-color: #606364;
     color: #ffffff;
-    width: 90%;
+    width: 93%;
     height: 30vh;
     z-index: 1;
     position: absolute;
-    margin: 5%;
+    margin-top: 3%;
+    margin-left: 4%;
     border-radius: 30px;
 }
 
