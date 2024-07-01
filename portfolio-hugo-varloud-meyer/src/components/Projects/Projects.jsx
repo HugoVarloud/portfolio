@@ -10,10 +10,10 @@ const slider1 = [
       src: "/assets/site2.jpeg"  
     },
     {
-      src: "/assets/site4.png"
+      src: "/assets/projects/not-venomous.png"
     },
     {
-      src: "/assets/site3.webp"
+      src: "/assets/projects/Atixis.png"
     }
 ]
 
@@ -22,10 +22,10 @@ const slider2 = [
     src: "/assets/site7.png"  
   },
   {
-    src: "/assets/site6.webp"  
+    src: "/assets/projects/sfrd.png"  
   },
   {
-    src: "/assets/site5.jpeg"
+    src: "/assets/projects/engie.png"
   },
   {
     src: "/assets/site8.jpeg"
