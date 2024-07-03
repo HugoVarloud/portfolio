@@ -6,7 +6,6 @@ import { useLanguageContext } from '../../context/languageContext';
 const Home = () => {
   const {t} = useTranslation();
   const selectedLang = useLanguageContext().i18n.language;
-  console.log(selectedLang);
   return (
     <>
       <div className='home-wrapper'>
