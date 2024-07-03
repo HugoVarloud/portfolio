@@ -7,7 +7,7 @@ import { BiHomeAlt2 } from "react-icons/bi";
 import { FiSearch } from "react-icons/fi";
 import { PiChatCircleBold } from "react-icons/pi";
 import { IoPricetagsOutline } from "react-icons/io5";
-import { IoMdClose } from "react-icons/io";
+import LanguageSelector from "../LanguageSelector/LanguageSelector";
 
 const Navbar = () => {
   const [isOpen, setOpen] = useState(false);
@@ -48,6 +48,7 @@ const Navbar = () => {
           </div>
           <AnimatePresence>
             {isOpen && (
+              <>
               <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
@@ -55,7 +56,6 @@ const Navbar = () => {
                 transition={{ duration: 0.2 }}
                 className="openMenu"
               >
-                
                 <ul>
                   {routes.map((route, idx) => {
                     return (
@@ -81,7 +81,9 @@ const Navbar = () => {
                     );
                   })}
                 </ul>
+                <LanguageSelector></LanguageSelector>
               </motion.div>
+              </>
             )}
           </AnimatePresence>
         </div>

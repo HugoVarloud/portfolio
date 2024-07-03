@@ -5,9 +5,11 @@ import FacebookIcon from '@mui/icons-material/Facebook';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import InstagramIcon from '@mui/icons-material/Instagram';
-import { Container, Grid, Typography } from "@mui/material";
+import { t } from "i18next";
+import { useLanguageContext } from "../../context/languageContext";
 
 const Footer = () => {
+  const selectedLang = useLanguageContext().i18n.language;
   const socialLinks = [
     {
       icon: <FacebookIcon className="fa fa-facebook" />,
@@ -36,21 +38,21 @@ const Footer = () => {
       <footer className="footer-menu">
         <div container className="contact">
           <div className="bottom-list-container">
-            <h3>Services</h3>
+            <h3>{t(`${selectedLang}.Contact.ServicesTitle`)}</h3>
             <ul className="bottom-list">
-              <li>Web Design</li>
-              <li>Fullstack Development</li>
-              <li>Hosting</li>
+              <li>{t(`${selectedLang}.Contact.ServiceListItem.WebDesign`)}</li>
+              <li>{t(`${selectedLang}.Contact.ServiceListItem.FullstackDevelopment`)}</li>
+              <li>{t(`${selectedLang}.Contact.ServiceListItem.Hosting`)}</li>
             </ul>
           </div>
           <div className="bottom-list-container">
-              <h3>Contactez-moi</h3>
+              <h3>{t(`${selectedLang}.Contact.ContactCallTitle`)}</h3>
               <ul className="bottom-list">
-                <li>Libérez le potentiel de vos projets digitaux avec des solutions sur mesure conçues spécialement pour vous.</li>
+                <li>{t(`${selectedLang}.Contact.ContactCallText`)}</li>
               </ul>
           </div>
           <div className="bottom-list-container">
-            <h3>Contact</h3>
+            <h3>{t(`${selectedLang}.Contact.InfosTitle`)}</h3>
             <ul className="bottom-list">
               <li>hugo.varloud@gmail.com</li>
               <li>+33 6 13 02 80 26</li>
@@ -72,7 +74,7 @@ const Footer = () => {
         <div className="footer-nav-list">
           <nav>
             <ul className="footer-list">
-              <li className="signature"> © 2024 un site de Hugo Varloud-Meyer </li>
+              <li className="signature">{t(`${selectedLang}.Contact.Signature`)}</li>
             </ul>
           </nav>
         </div>
