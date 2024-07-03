@@ -6,6 +6,12 @@ body {
   font-family: 'Poppins', sans-serif;
 }
 
+.translation-module {
+  top: 30vh;
+  left: -44vw;
+  width: 70px;
+}
+
 .navigation-menu ul {
   list-style: none;
   padding: 0;
@@ -127,6 +133,12 @@ body {
     margin: 10px 25px;
   }
 
+  .translation-module {
+    top: 30vh;
+    left: -43vw;
+    width: 70px;
+  }
+
   .menu-icon {
     top: 1.5%;
     right: 2%;
@@ -137,4 +149,28 @@ body {
     right: 20px;
   }
 
+}
+
+@media (max-width: 825px) {
+  .translation-module {
+    left: -40vw;
+  }
+}
+
+@media (max-width: 520px) {
+  .translation-module {
+    left: -38vw;
+  }
+}
+
+@media (max-height: 700px) {
+  .translation-module {
+    top: 25vh;
+  }
+}
+
+@media (max-height: 545px) {
+  .translation-module {
+    top: 20vh;
+  }
 }

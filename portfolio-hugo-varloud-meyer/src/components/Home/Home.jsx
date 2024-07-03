@@ -1,7 +1,12 @@
 import React from 'react';
 import "./Home.css";
+import { useTranslation } from 'react-i18next';
+import { useLanguageContext } from '../../context/languageContext';
 
 const Home = () => {
+  const {t} = useTranslation();
+  const selectedLang = useLanguageContext().i18n.language;
+  console.log(selectedLang);
   return (
     <>
       <div className='home-wrapper'>
@@ -23,12 +28,12 @@ const Home = () => {
                 <div class="animated-title">
                   <div class="text-top">
                     <div>
-                      <span>Full Stack Developer</span>
-                      <span>UI/UX Designer</span>
+                      <span>{t(`${selectedLang}.Home.Occupation`)}</span>
+                      <span>{t(`${selectedLang}.Home.DesignEnthusiast`)}</span>
                     </div>
                   </div>
                   <div class="text-bottom">
-                    <div>Contact Me !</div>
+                    <div>{t(`${selectedLang}.Home.ContactMe`)}</div>
                   </div>
                 </div>
               </div>
