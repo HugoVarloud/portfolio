@@ -1,4 +1,10 @@
 {
+    "Menu": {
+        "Home": "Home",
+        "Experience": "Experience",
+        "Projects": "Projects",
+        "Contacts": "Contacts"
+    },
     "Home": {
         "Occupation": "Full Stack Developer",
         "DesignEnthusiast": "UX/UI Enthusiast",
@@ -7,7 +13,7 @@
     "Experience": {
         "Title": "Experience",
         "ENGIE": "2024 - Working on the development of Engie Home Service B2C platform, which includes customer information and the services and equipment offered by the company.",
-        "SFR": "Development of a SaaS aimed at managing labels and generating products, discounts, and financing plans for the 800 SFR retail locations.",
+        "SFR": "2021 - Development of a SaaS aimed at managing labels and generating products, discounts, and financing plans for the 800 SFR retail locations.",
         "EPITECH": "2021 - Degree in Information Technology Engineering with a specialization in Software Engineering, registered at the RNCP at level 7.",
         "ATIXIS": "2020 - Final year internship at a real estate project management company. Created a custom CRM to meet the company's business needs."
     },

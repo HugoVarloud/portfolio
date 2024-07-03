@@ -8,14 +8,17 @@ import { FiSearch } from "react-icons/fi";
 import { PiChatCircleBold } from "react-icons/pi";
 import { IoPricetagsOutline } from "react-icons/io5";
 import LanguageSelector from "../LanguageSelector/LanguageSelector";
+import { t } from "i18next";
+import { useLanguageContext } from "../../context/languageContext";
 
 const Navbar = () => {
   const [isOpen, setOpen] = useState(false);
   const ref = useRef(null);
+  const selectedLang = useLanguageContext().i18n.language;
   useClickAway(ref, () => setOpen(false));
   const routes = [
     {
-      title: "Accueil",
+      title: "Home",
       href: "#accueil",
       Icon: BiHomeAlt2,
     },
@@ -25,7 +28,7 @@ const Navbar = () => {
       Icon: FiSearch,
     },
     {
-      title: "Projets",
+      title: "Projects",
       href: "#projects",
       Icon: IoPricetagsOutline,
     },
@@ -75,7 +78,7 @@ const Navbar = () => {
                           href={route.href}
                           className="menuItemName"
                         >
-                          <span>{route.title}</span>
+                          <span>{t(`${selectedLang}.Menu.${route.title}`)}</span>
                         </a>
                       </motion.li>
                     );

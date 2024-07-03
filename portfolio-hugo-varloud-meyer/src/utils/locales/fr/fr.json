@@ -1,4 +1,10 @@
 {
+    "Menu": {
+        "Home": "Accueil",
+        "Experience": "Expérience",
+        "Projects": "Projets",
+        "Contacts": "Contacts"
+    },
     "Home": {
         "Occupation": "Développeur Full Stack",
         "DesignEnthusiast": "Passionée d'UI/UX",
