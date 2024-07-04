@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import styles from './style.module.css';
 import { t } from 'i18next';
 import { useLanguageContext } from '../../context/languageContext';

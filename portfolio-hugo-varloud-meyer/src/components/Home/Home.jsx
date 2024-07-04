@@ -24,14 +24,14 @@ const Home = () => {
               <div className='curve'></div>
               <div className='cover'></div>
               <div className='textPart'>
-                <div class="animated-title">
-                  <div class="text-top">
+                <div className="animated-title">
+                  <div className="text-top">
                     <div>
                       <span>{t(`${selectedLang}.Home.Occupation`)}</span>
                       <span>{t(`${selectedLang}.Home.DesignEnthusiast`)}</span>
                     </div>
                   </div>
-                  <div class="text-bottom">
+                  <div className="text-bottom">
                     <div>{t(`${selectedLang}.Home.ContactMe`)}</div>
                   </div>
                 </div>
