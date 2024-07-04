@@ -1,6 +1,5 @@
 import React from "react";
 import "./Footer.css";
-import Box from '@mui/material/Box';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
@@ -36,7 +35,7 @@ const Footer = () => {
   return (
     <>
       <footer className="footer-menu">
-        <div container className="contact">
+        <div className="contact">
           <div className="bottom-list-container">
             <h3>{t(`${selectedLang}.Contact.ServicesTitle`)}</h3>
             <ul className="bottom-list">
