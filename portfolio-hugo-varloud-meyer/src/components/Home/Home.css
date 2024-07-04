@@ -18,12 +18,16 @@
 }
 
 .section1 {
-    width: 65vw;
-    height: 101vh;
-    /* background-image: url(https://dennissnellenberg.com/assets/img/DSC07033.jpg); */
+    width: 42vw;
+    height: 95vh;
+    background-image: url(/assets/hugo.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+    position: absolute;
+    z-index: 1;
+    bottom: 1vh;
+    left: 42vw;
 }
 
 /* CURVE BOTTOM PART START */
@@ -214,7 +218,91 @@
  
 /*  */
 
-@media (max-width: 1200px), (max-height: 670px) {
+@media (max-width: 850px) {
+    .section1 {
+        width: 65vw;
+        height: 101vh;
+        background-image: url(/assets/hugo.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+
+        z-index: 1;
+        bottom: 0vh;
+        left: 0vw;
+    }
+    .title-container {
+        z-index: 2;
+    }
+}
+
+@media (max-width: 1200px) {
+    .section-container {
+        display: flex;
+        height: 101vh;
+        width: 100vw;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-attachment: fixed;
+        background-position: center;
+        background-size: cover;
+        color: var(--color);
+        row-gap: 4rem;
+        text-align: center;
+        background-color: #999d9e;
+    }
+
+    .home-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: #999d9e;
+        height: 100vh;
+        border: 0px solid white;
+        margin-top: 0%;
+        margin-left: 0%;
+        margin-right: 0%;
+        border-radius: 0%;
+        width: 100vw;
+        margin: 0;
+    }
+
+    .section1 {
+        height: 100vh;
+        width: 70vw;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-color: #9a9e9f;
+        background-position: center center;
+        z-index: 1;
+        bottom: 0vh;
+        left: 21vw;
+    }
+
+    .title-container {
+        z-index: 2;
+    }
+
+    /* MAKE INVISIBLE THE DESKTOP PART */
+
+    .bottomDiv {
+        display: none;
+    }
+
+    .topDiv {
+        display: none;
+    }
+    .topRight {
+        display: none;
+    }
+    .topMiddle {
+        display: none;
+    }
+}
+
+@media (max-width: 800px), (max-height: 670px) {
     .section-container {
         display: flex;
         height: 101vh;
@@ -254,6 +342,25 @@
         background-position: center;
         background-color: #9a9e9f;
         background-position: center center;
+        z-index: 1;
+        bottom: 0vh;
+        left: 0vw;
+    }
+
+    /* .section1 {
+        width: 65vw;
+        height: 101vh;
+        background-image: url(/assets/hugo.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+
+        z-index: 1;
+        bottom: 0vh;
+        left: 0vw;
+    } */
+    .title-container {
+        z-index: 2;
     }
 
     /* MAKE INVISIBLE THE DESKTOP PART */
