@@ -305,7 +305,7 @@
 @media (max-width: 800px), (max-height: 670px) {
     .section-container {
         display: flex;
-        height: 101vh;
+        height: 100%;
         width: 100vw;
         flex-direction: column;
         align-items: center;
