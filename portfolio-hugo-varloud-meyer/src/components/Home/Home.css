@@ -226,7 +226,7 @@
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
-
+        position: absolute;
         z-index: 1;
         bottom: 0%;
         left: 0vw;
@@ -279,6 +279,7 @@
         z-index: 1;
         bottom: 0%;
         left: 21vw;
+        position: absolute;
     }
 
     .title-container {
@@ -345,6 +346,7 @@
         z-index: 1;
         bottom: 0;
         left: 0vw;
+        position: absolute;
     }
 
     /* .section1 {
