@@ -221,14 +221,14 @@
 @media (max-width: 850px) {
     .section1 {
         width: 65vw;
-        height: 101vh;
+        height: 100%;
         background-image: url(/assets/hugo.png);
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
 
         z-index: 1;
-        bottom: 0vh;
+        bottom: 0%;
         left: 0vw;
     }
     .title-container {
@@ -239,7 +239,7 @@
 @media (max-width: 1200px) {
     .section-container {
         display: flex;
-        height: 101vh;
+        height: 100%;
         width: 100vw;
         flex-direction: column;
         align-items: center;
@@ -277,7 +277,7 @@
         background-color: #9a9e9f;
         background-position: center center;
         z-index: 1;
-        bottom: 0vh;
+        bottom: 0%;
         left: 21vw;
     }
 
