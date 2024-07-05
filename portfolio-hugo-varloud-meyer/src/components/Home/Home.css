@@ -13,7 +13,7 @@
     background-color: #999d9e;
     margin-top: 1%;
     margin-left: 1%;
-    border-radius: 30px 30px 0%;
+    border-radius: 30px 30px 0;
     width: 93%;
 }
 
@@ -28,10 +28,10 @@
     z-index: 1;
     bottom: 1vh;
     left: 42vw;
+    padding-bottom: env(safe-area-inset-bottom); /* Adjust for safe area on iPhone */
 }
 
 /* CURVE BOTTOM PART START */
-
 
 .topDiv {
     position: absolute;
@@ -72,7 +72,7 @@
     z-index: 1;
 }
 
-/* END OF TOP RIGHT CORNER CUVER */
+/* END OF TOP RIGHT CORNER CURVE */
 
 /* CURVE BOTTOM PART START */
 
@@ -145,78 +145,77 @@
 
 /* CURVE PART END */
 
-
 /* BOTTOM LEFT TEXT ANIMATION START */
 
- @keyframes showTopText {
-	 0% {
-		 transform: translate3d(0, 100%, 0);
-	}
-	 40%, 60% {
-		 transform: translate3d(0, 50%, 0);
-	}
-	 100% {
-		 transform: translate3d(0, 0, 0);
-	}
+@keyframes showTopText {
+    0% {
+        transform: translate3d(0, 100%, 0);
+    }
+    40%, 60% {
+        transform: translate3d(0, 50%, 0);
+    }
+    100% {
+        transform: translate3d(0, 0, 0);
+    }
 }
- @keyframes showBottomText {
-	 0% {
-		 transform: translate3d(0, -100%, 0);
-	}
-	 100% {
-		 transform: translate3d(0, 0, 0);
-	}
+@keyframes showBottomText {
+    0% {
+        transform: translate3d(0, -100%, 0);
+    }
+    100% {
+        transform: translate3d(0, 0, 0);
+    }
 }
- .animated-title {
-	 color: #ffffff;
-	 font-family: Roboto, Arial, sans-serif;
-	 height: 300px;
-	 left: 50%;
-	 position: absolute;
-	 top: 60%;
-	 transform: translate(-50%, -50%);
-	 width: 300px;
+.animated-title {
+    color: #ffffff;
+    font-family: Roboto, Arial, sans-serif;
+    height: 300px;
+    left: 50%;
+    position: absolute;
+    top: 60%;
+    transform: translate(-50%, -50%);
+    width: 300px;
 }
- .animated-title > div {
-	 height: 50%;
-	 overflow: hidden;
-	 position: absolute;
-	 width: 100%;
+.animated-title > div {
+    height: 50%;
+    overflow: hidden;
+    position: absolute;
+    width: 100%;
 }
- .animated-title > div div {
-	 font-size: 25px;
-	 padding: 20px;
-	 position: absolute;
+.animated-title > div div {
+    font-size: 25px;
+    padding: 20px;
+    position: absolute;
 }
- .animated-title > div div span {
-	 display: block;
+.animated-title > div div span {
+    display: block;
 }
- .animated-title > div.text-top {
-	 border-bottom: 1px solid #ffffff;
-	 top: 0;
+.animated-title > div.text-top {
+    border-bottom: 1px solid #ffffff;
+    top: 0;
 }
- .animated-title > div.text-top div {
-	 animation: showTopText 1s;
-	 animation-delay: 0.5s;
-	 animation-fill-mode: forwards;
-	 bottom: 0;
-	 transform: translate(0, 100%);
+.animated-title > div.text-top div {
+    animation: showTopText 1s;
+    animation-delay: 0.5s;
+    animation-fill-mode: forwards;
+    bottom: 0;
+    transform: translate(0, 100%);
 }
- .animated-title > div.text-top div span:first-child {
-	 color: #a8a8a8;
+.animated-title > div.text-top div span:first-child {
+    color: #a8a8a8;
 }
- .animated-title > div.text-bottom {
-	 bottom: 0;
+.animated-title > div.text-bottom {
+    bottom: 0;
 }
- .animated-title > div.text-bottom div {
-	 animation: showBottomText 0.5s;
-	 animation-delay: 1.75s;
-	 animation-fill-mode: forwards;
-	 top: 0;
-	 transform: translate(0, -100%);
+.animated-title > div.text-bottom div {
+    animation: showBottomText 0.5s;
+    animation-delay: 1.75s;
+    animation-fill-mode: forwards;
+    top: 0;
+    transform: translate(0, -100%);
 }
- 
-/*  */
+
+/* Media Queries */
 
 @media (max-width: 850px) {
     .section1 {
@@ -228,8 +227,9 @@
         background-position: center;
         position: absolute;
         z-index: 1;
-        bottom: 0%;
+        bottom: 0;
         left: 0vw;
+        padding-bottom: env(safe-area-inset-bottom); /* Adjust for safe area on iPhone */
     }
     .title-container {
         z-index: 2;
@@ -268,25 +268,9 @@
         margin: 0;
     }
 
-    .section1 {
-        height: 100vh;
-        width: 70vw;
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center;
-        background-color: #9a9e9f;
-        background-position: center center;
-        z-index: 1;
-        bottom: 0%;
-        left: 21vw;
-        position: absolute;
-    }
-
     .title-container {
         z-index: 2;
     }
-
-    /* MAKE INVISIBLE THE DESKTOP PART */
 
     .bottomDiv {
         display: none;
@@ -342,44 +326,10 @@
         background-repeat: no-repeat;
         background-position: center;
         background-color: #9a9e9f;
-        background-position: center center;
         z-index: 1;
         bottom: 0;
         left: 0vw;
         position: absolute;
+        padding-bottom: env(safe-area-inset-bottom);
     }
-
-    /* .section1 {
-        width: 65vw;
-        height: 101vh;
-        background-image: url(/assets/hugo.png);
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center;
-
-        z-index: 1;
-        bottom: 0vh;
-        left: 0vw;
-    } */
-    .title-container {
-        z-index: 2;
-    }
-
-    /* MAKE INVISIBLE THE DESKTOP PART */
-
-    .bottomDiv {
-        display: none;
-    }
-
-    .topDiv {
-        display: none;
-    }
-    .topRight {
-        display: none;
-    }
-    .topMiddle {
-        display: none;
-    }
-
-    /* END OF THE CURVED DESTOP PART HIDDING */
 }
