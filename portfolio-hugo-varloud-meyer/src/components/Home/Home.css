@@ -229,24 +229,6 @@
  
 /*  */
 
-@media (max-width: 850px) {
-    .section1 {
-        width: 65vw;
-        height: 100%;
-        /* background-image: url(/assets/hugo.png); */
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center;
-        position: absolute;
-        z-index: 1;
-        bottom: 0%;
-        left: 0vw;
-    }
-    .title-container {
-        z-index: 2;
-    }
-}
-
 @media (max-width: 1200px) {
     .section-container {
         display: flex;
@@ -286,6 +268,44 @@
     /* MAKE INVISIBLE THE DESKTOP PART */
 
     .bottomDiv {
+        position: absolute;
+        width: 100%;
+        height: 34vh;
+        max-width: 100%;
+        background-color: #999d9e;
+        display: flex;
+        top: 30%;
+    }
+
+    .right {
+        display: none;
+    }
+
+    .left {
+        width: 50%;
+    }
+
+    .textPart {
+        background-color: #999d9e;
+        color: #ffffff;
+        width: 93%;
+        height: 30vh;
+        z-index: 1;
+        position: absolute;
+        margin-top: 3%;
+        margin-left: 55%;
+        border-radius: 20px;
+    }
+
+    .animated-title > div.text-top div span:first-child {
+        color: #525252;
+    }
+
+    .curve {
+        display: none;
+    }
+
+    .cover {
         display: none;
     }
 
@@ -346,18 +366,6 @@
         position: absolute;
     }
 
-    /* .section1 {
-        width: 65vw;
-        height: 101vh;
-        background-image: url(/assets/hugo.png);
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center;
-
-        z-index: 1;
-        bottom: 0vh;
-        left: 0vw;
-    } */
     .title-container {
         z-index: 2;
     }
@@ -365,6 +373,44 @@
     /* MAKE INVISIBLE THE DESKTOP PART */
 
     .bottomDiv {
+        position: absolute;
+        width: 100%;
+        height: 34vh;
+        max-width: 100%;
+        background-color: #999d9e;
+        display: flex;
+        top: 30%;
+    }
+
+    .right {
+        display: none;
+    }
+
+    .left {
+        width: 50%;
+    }
+
+    .textPart {
+        background-color: #999d9e;
+        color: #ffffff;
+        width: 93%;
+        height: 30vh;
+        z-index: 1;
+        position: absolute;
+        margin-top: 3%;
+        margin-left: 55%;
+        border-radius: 20px;
+    }
+
+    .animated-title > div.text-top div span:first-child {
+        color: #525252;
+    }
+
+    .curve {
+        display: none;
+    }
+
+    .cover {
         display: none;
     }
 
