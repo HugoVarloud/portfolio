@@ -8,7 +8,10 @@ const Home = () => {
   const selectedLang = useLanguageContext().i18n.language;
   return (
     <>
-      <h1 className='home-title'>Web Solutions for Modern Businesses</h1>
+      {/* <div>
+        <img src="/assets/hugo-ny.jpg" alt="photo" />
+      </div>
+      <h1 className='home-title'>Web Solutions <br/> for Modern <br/> Businesses</h1> */}
       <div className='home-wrapper'>
         <div className='home-container'>
           <section className="section1"></section>

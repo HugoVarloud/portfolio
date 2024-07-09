@@ -11,7 +11,7 @@
     width: 35%;
     position: absolute;
     text-align: left;
-    top: 27vh;
+    top: 25vh;
     color: white;
     left: 5%;
 }
@@ -28,7 +28,7 @@
     width: 93%;
 }
 
-.section1 {
+/* .section1 {
     width: 42vw;
     height: 95vh;
     background-image: url(/assets/7.png);
@@ -39,7 +39,7 @@
     z-index: 1;
     bottom: 1vh;
     left: 45vw;
-}
+} */
 
 /* CURVE BOTTOM PART START */
 
