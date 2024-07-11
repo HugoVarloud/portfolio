@@ -1,4 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:700');
+@font-face {
+  font-family: 'Akira Expanded';
+  src: url('/assets/fonts/Akira Expanded Demo') format('otf');
+}
 
 html {
   scroll-behavior: smooth;

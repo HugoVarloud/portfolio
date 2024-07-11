@@ -1,3 +1,8 @@
+@font-face {
+  font-family: 'Akira Expanded';
+  src: url('/assets/fonts/Akira Expanded Demo') format('otf');
+}
+
 html {
   scroll-behavior: smooth;
 }
