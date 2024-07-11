@@ -180,7 +180,7 @@
 }
  .animated-title {
 	 color: #ffffff;
-     font-family: 'Akira Expanded', sans-serif;
+     font-family: 'Akira Expanded', 'Menlo', 'poppins';
 	 height: 300px;
 	 left: 50%;
 	 position: absolute;
