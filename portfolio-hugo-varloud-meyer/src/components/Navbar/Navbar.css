@@ -3,7 +3,7 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Akira Expanded', sans-serif;
 }
 
 .translation-module {
@@ -50,7 +50,7 @@ body {
 }
 
 .title-container h1 {
-  font-size: 20px;
+  font-size: 18px;
   color: white;
   font-weight: 400;
 }
@@ -61,7 +61,7 @@ body {
   width: 48px;
   position: fixed;
   right: 1vw;
-  top: 1%;
+  top: 2%;
   z-index: 9;
   background-color: #999d9e;
   color: white;
@@ -140,7 +140,7 @@ body {
   }
 
   .menu-icon {
-    top: 1.5%;
+    top: 0.5%;
     right: 2%;
   }
 

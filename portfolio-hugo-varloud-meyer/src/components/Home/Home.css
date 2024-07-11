@@ -180,13 +180,13 @@
 }
  .animated-title {
 	 color: #ffffff;
-	 font-family: Roboto, Arial, sans-serif;
+     font-family: 'Akira Expanded', sans-serif;
 	 height: 300px;
 	 left: 50%;
 	 position: absolute;
 	 top: 60%;
 	 transform: translate(-50%, -50%);
-	 width: 300px;
+	 width: 350px;
 }
  .animated-title > div {
 	 height: 50%;
@@ -205,6 +205,9 @@
  .animated-title > div.text-top {
 	 border-bottom: 1px solid #ffffff;
 	 top: 0;
+     text-align: center;
+     display: flex;
+     justify-content: center;
 }
  .animated-title > div.text-top div {
 	 animation: showTopText 1s;
@@ -212,12 +215,17 @@
 	 animation-fill-mode: forwards;
 	 bottom: 0;
 	 transform: translate(0, 100%);
+     font-size: 18px;
 }
  .animated-title > div.text-top div span:first-child {
 	 color: #a8a8a8;
 }
  .animated-title > div.text-bottom {
 	 bottom: 0;
+     text-align: center;
+     display: flex;
+     justify-content: center;
+ 
 }
  .animated-title > div.text-bottom div {
 	 animation: showBottomText 0.5s;
@@ -225,6 +233,10 @@
 	 animation-fill-mode: forwards;
 	 top: 0;
 	 transform: translate(0, -100%);
+     text-align: center;
+     display: flex;
+     justify-content: center;
+     font-size: 18px;
 }
  
 /*  */

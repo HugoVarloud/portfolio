@@ -111,4 +111,10 @@
     .experienceSectionImg {
         display: none;
    }
+   .experienceSection h1 {
+        font-size: 40px;
+    }
+    .experienceSection h2 {
+        font-size: 40px;
+    }
 }
