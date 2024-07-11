@@ -12,7 +12,7 @@ html {
 }
 
 body {
-  font-family: 'Akira Expanded', sans-serif;
+  font-family: 'Akira Expanded', 'Menlo', 'poppins';
   height: 100%;
 }
 
