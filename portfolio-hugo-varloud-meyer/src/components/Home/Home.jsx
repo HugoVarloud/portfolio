@@ -35,7 +35,9 @@ const Home = () => {
                     </div>
                   </div>
                   <div className="text-bottom">
-                    <div>{t(`${selectedLang}.Home.ContactMe`)}</div>
+                    <div>
+                      <span>{t(`${selectedLang}.Home.ContactMe`)}</span>
+                    </div>
                   </div>
                 </div>
               </div>
