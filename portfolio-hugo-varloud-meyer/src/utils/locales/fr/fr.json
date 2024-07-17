@@ -1,31 +1,31 @@
 {
     "Menu": {
         "Home": "Accueil",
-        "Experience": "Expérience",
+        "Experience": "Experience",
         "Projects": "Projets",
         "Contacts": "Contacts"
     },
     "Home": {
-        "Occupation": "Développeur Full Stack",
-        "DesignEnthusiast": "Passionée d'UI/UX",
+        "Occupation": "Developpeur Full Stack",
+        "DesignEnthusiast": "Passionee d'UI/UX",
         "ContactMe": "Contactez Moi!"
     },
     "Experience": {
-        "Title": "Expérience",
-        "ENGIE": "2024 - Travail à l'évolution de leur plateforme B2C sur laquelle on retrouve les informations clients et les services et équipement proposé par l'entreprise.",
-        "SFR": "2021 - Développement d'un Saas ayant pour but de gérer les étiquettes et générer les produits, remises et plans de financement des 800 points de vente SFR.",
-        "EPITECH": "2021 - Diplôme d’Expert en technologies de l’information en ingénierie logicielle enregistré au RNCP de niveau 7.",
-        "ATIXIS": "2020 - Stage de fin d'étude dans une entreprise de pilotage de projet immobillier. Création d'un CRM custom pour répondre aux besoins métier de l'entreprise."
+        "Title": "Experience",
+        "ENGIE": "2024 - Travail a l'evolution de leur plateforme B2C sur laquelle on retrouve les informations clients et les services et equipement propose par l'entreprise.",
+        "SFR": "2021 - Developpement d'un Saas ayant pour but de gerer les etiquettes et generer les produits, remises et plans de financement des 800 points de vente SFR.",
+        "EPITECH": "2021 - Diplome d’Expert en technologies de l’information en ingenierie logicielle enregistre au RNCP de niveau 7.",
+        "ATIXIS": "2020 - Stage de fin d'etude dans une entreprise de pilotage de projet immobillier. Creation d'un CRM custom pour repondre aux besoins metier de l'entreprise."
     },
     "Contact": {
         "ServicesTitle": "Services",
         "ServiceListItem": {
             "WebDesign": "Design d'interface",
-            "FullstackDevelopment": "Développement Full Stack",
-            "Hosting": "Hébergement"
+            "FullstackDevelopment": "Developpement Full Stack",
+            "Hosting": "Hebergement"
         },
         "ContactCallTitle": "Contactez-moi",
-        "ContactCallText": "Libérez le potentiel de vos projets digitaux avec des solutions sur mesure conçues spécialement pour vous.",
+        "ContactCallText": "Liberez le potentiel de vos projets digitaux avec des solutions sur mesure conçues specialement pour vous.",
         "InfosTitle": "Contact",
         "Signature": " © 2024 un site de Hugo Varloud-Meyer "
     }
