@@ -1,8 +1,16 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:700');
 @font-face {
     font-family: 'Akira Expanded';
-    src: url('/assets/fonts/Akira Expanded Demo.woff2') format('woff2');
-  }
+    src: url('/assets/fonts/akira_bold-webfont.woff2') format('woff2');
+}
+@font-face {
+    font-family: 'Akira Bold';
+    src: url('/assets/fonts/akira_super_bold-webfont.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Akira Outline';
+  src: url('/assets/fonts/akira_outline-webfont.woff2') format('woff2');
+}
 
 .home-wrapper {
     max-width: 100%;
@@ -30,6 +38,10 @@
     margin-left: 1%;
     border-radius: 20px 20px 0%;
     width: 93%;
+}
+
+.outlined{
+    font-family: 'Akira Bold';
 }
 
 /* .section1 {
@@ -184,13 +196,13 @@
 }
  .animated-title {
 	 color: #ffffff;
-     font-family: 'Akira Expanded', 'Menlo', 'poppins';
+     font-family: 'Akira Bold', 'Menlo', 'poppins';
 	 height: 300px;
 	 left: 50%;
 	 position: absolute;
 	 top: 60%;
 	 transform: translate(-50%, -50%);
-	 width: 350px;
+     width: 385px;
 }
  .animated-title > div {
 	 height: 50%;

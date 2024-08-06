@@ -4,7 +4,7 @@ import React, {
   useState,
 } from "react";
 import { useTranslation } from "react-i18next";
-
+import './context.css'
 export const LanguageContext = createContext(undefined);
 
 export const LanguageContextProvider = ({ children }) => {
@@ -23,6 +23,7 @@ export const LanguageContextProvider = ({ children }) => {
 
   return (
     <LanguageContext.Provider
+      class="select-opened-label"
       value={{ t, i18n, onClickLanguageChange, languages, currentLanguage }}
     >
       {children}

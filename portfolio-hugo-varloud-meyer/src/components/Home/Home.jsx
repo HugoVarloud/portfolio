@@ -31,7 +31,7 @@ const Home = () => {
                   <div className="text-top">
                     <div>
                       <span>{t(`${selectedLang}.Home.Occupation`)}</span>
-                      <span>{t(`${selectedLang}.Home.DesignEnthusiast`)}</span>
+                      <span className='outlined'>{t(`${selectedLang}.Home.DesignEnthusiast`)}</span>
                     </div>
                   </div>
                   <div className="text-bottom">
