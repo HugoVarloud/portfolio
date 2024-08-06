@@ -44,6 +44,10 @@
     transition: all 0.4s;
     font-weight: 300;
 }
+.titleList {
+    font-size: 50px;
+    margin: 0px;
+}
 .modalContainer {
     height: 350px;
     width: 400px;
@@ -102,9 +106,8 @@
         font-size: 15px;
    }
     .titleList {
-        font-size: 35px;
-        margin: 0px;
-   }
+        font-size: 20px;
+    }
     .experienceDescription {
         width: 95%;
    }

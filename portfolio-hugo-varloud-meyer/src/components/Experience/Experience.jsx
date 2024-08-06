@@ -31,13 +31,13 @@ const Section = () => {
     <div className={styles.sectionContainer}>
       <section className={styles.experienceSection}>
         <h1 className={styles.titleExperience}>{t(`${selectedLang}.Experience.Title`)}</h1>
-        <div className={styles.body}>
+        <div>
           {
-            projects.map( (project, index) => {
+            projects.map( (project) => {
               return (
                 <div key={project.title} className={styles.project}>
                     <div>
-                      <h2 className={styles.titleList}>{project.title}</h2>
+                      <h3 className={styles.titleList}>{project.title}</h3>
                       <p className={styles.experienceDescription}>{t(`${selectedLang}.Experience.${project.title}`)}</p>
                     </div>
                     <div className={styles.experienceSectionImgContainer}>

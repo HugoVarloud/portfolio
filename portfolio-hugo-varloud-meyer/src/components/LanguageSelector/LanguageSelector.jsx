@@ -4,14 +4,14 @@ const LanguageSelector = () => {
   const { languages, onClickLanguageChange, currentLanguage } = useLanguageContext();
   return (
     <FormControl className="translation-module">
-      <InputLabel id="demo-select-small-label">{currentLanguage}</InputLabel>
+      <InputLabel>{currentLanguage}</InputLabel>
       <Select
-        className="select-opened-label"
+        className="select-lang"
         label={currentLanguage}
         onChange={onClickLanguageChange}
       >
               {Object.keys(languages).map((lng) => (
-                <MenuItem key={languages[lng].nativeName} value={lng} disabled={currentLanguage === lng}>
+                <MenuItem className="select-opened-label" key={languages[lng].nativeName} value={lng} disabled={currentLanguage === lng}>
                   {languages[lng].nativeName}
                 </MenuItem>
               ))}
