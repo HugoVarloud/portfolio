@@ -127,15 +127,15 @@ body {
   justify-content: space-between;
 }
 
+.translation-module {
+  top: -57vh;
+  left: -38vw;
+  width: 70px;
+}
+
 @media (max-width: 1125px) {
   .title-container {
     margin: 10px 25px;
-  }
-
-  .translation-module {
-    top: 30vh;
-    left: -43vw;
-    width: 70px;
   }
 
   .menu-icon {
@@ -148,36 +148,6 @@ body {
     right: 20px;
   }
 
-}
-
-@media (max-width: 825px) {
-  .translation-module {
-    left: -40vw;
-  }
-}
-
-@media (max-width: 520px) {
-  .translation-module {
-    left: -38vw;
-  }
-}
-
-@media (max-height: 700px) {
-  .translation-module {
-    top: 25vh;
-  }
-}
-
-@media (max-height: 545px) {
-  .translation-module {
-    top: 20vh;
-  }
-}
-
-.translation-module {
-  top: -57vh;
-  left: -45vw;
-  width: 70px;
 }
 
 .select-lang {
