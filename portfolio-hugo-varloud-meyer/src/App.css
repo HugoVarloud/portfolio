@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:700');
 @font-face {
-  font-family: 'Akira Bold';
+  font-family: 'Akira Expanded';
   src: url('/assets/fonts/akira_bold-webfont.woff2') format('woff2');
 }
 
@@ -16,7 +16,7 @@ html {
 }
 
 body {
-  font-family: 'Akira Bold', Menlo, poppins;
+  font-family: 'Akira Expanded', Menlo, poppins;
   height: 100%;
 }
 
