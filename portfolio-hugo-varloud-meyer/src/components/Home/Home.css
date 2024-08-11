@@ -4,10 +4,6 @@
     src: url('/assets/fonts/akira_bold-webfont.woff2') format('woff2');
 }
 @font-face {
-    font-family: 'Akira Bold';
-    src: url('/assets/fonts/akira_super_bold-webfont.woff2') format('woff2');
-}
-@font-face {
   font-family: 'Akira Outline';
   src: url('/assets/fonts/akira_outline-webfont.woff2') format('woff2');
 }
@@ -41,7 +37,7 @@
 }
 
 .outlined{
-    font-family: 'Akira Bold';
+    font-family: 'Akira Expanded';
 }
 
 /* .section1 {
@@ -196,11 +192,11 @@
 }
  .animated-title {
 	 color: #ffffff;
-     font-family: 'Akira Bold', 'Menlo', 'poppins';
+     font-family: 'Akira Expanded', 'Menlo', 'poppins';
 	 height: 300px;
 	 left: 50%;
 	 position: absolute;
-	 top: 60%;
+	 top: 50%;
 	 transform: translate(-50%, -50%);
      width: 350px;
 }
@@ -231,7 +227,7 @@
 	 animation-fill-mode: forwards;
 	 bottom: 0;
 	 transform: translate(0, 100%);
-     font-size: 18px;
+     font-size: 15px;
 }
  .animated-title > div.text-top div span:first-child {
 	 color: #a8a8a8;

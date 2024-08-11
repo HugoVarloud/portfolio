@@ -1,0 +1,133 @@
+{
+  "hash": "85de35b8",
+  "configHash": "24bfa184",
+  "lockfileHash": "964027bb",
+  "browserHash": "7d8000d4",
+  "optimized": {
+    "react": {
+      "src": "../../node_modules/react/index.js",
+      "file": "react.js",
+      "fileHash": "2ab92521",
+      "needsInterop": true
+    },
+    "react-dom/client": {
+      "src": "../../node_modules/react-dom/client.js",
+      "file": "react-dom_client.js",
+      "fileHash": "6f43c63d",
+      "needsInterop": true
+    },
+    "react-router-dom": {
+      "src": "../../node_modules/react-router-dom/dist/index.js",
+      "file": "react-router-dom.js",
+      "fileHash": "591d417a",
+      "needsInterop": false
+    },
+    "react-i18next": {
+      "src": "../../node_modules/react-i18next/dist/es/index.js",
+      "file": "react-i18next.js",
+      "fileHash": "0b174db0",
+      "needsInterop": false
+    },
+    "i18next": {
+      "src": "../../node_modules/i18next/dist/esm/i18next.js",
+      "file": "i18next.js",
+      "fileHash": "af76f324",
+      "needsInterop": false
+    },
+    "framer-motion": {
+      "src": "../../node_modules/framer-motion/dist/es/index.mjs",
+      "file": "framer-motion.js",
+      "fileHash": "99238550",
+      "needsInterop": false
+    },
+    "react-use": {
+      "src": "../../node_modules/react-use/esm/index.js",
+      "file": "react-use.js",
+      "fileHash": "974ac19e",
+      "needsInterop": false
+    },
+    "hamburger-react": {
+      "src": "../../node_modules/hamburger-react/dist-esm/index.js",
+      "file": "hamburger-react.js",
+      "fileHash": "b041b744",
+      "needsInterop": false
+    },
+    "react-icons/bi": {
+      "src": "../../node_modules/react-icons/bi/index.mjs",
+      "file": "react-icons_bi.js",
+      "fileHash": "ebbfddb2",
+      "needsInterop": false
+    },
+    "react-icons/fi": {
+      "src": "../../node_modules/react-icons/fi/index.mjs",
+      "file": "react-icons_fi.js",
+      "fileHash": "7e08ff52",
+      "needsInterop": false
+    },
+    "react-icons/pi": {
+      "src": "../../node_modules/react-icons/pi/index.mjs",
+      "file": "react-icons_pi.js",
+      "fileHash": "f6553d4e",
+      "needsInterop": false
+    },
+    "react-icons/io5": {
+      "src": "../../node_modules/react-icons/io5/index.mjs",
+      "file": "react-icons_io5.js",
+      "fileHash": "b1c8d816",
+      "needsInterop": false
+    },
+    "@mui/icons-material/Facebook": {
+      "src": "../../node_modules/@mui/icons-material/Facebook.js",
+      "file": "@mui_icons-material_Facebook.js",
+      "fileHash": "787f3e42",
+      "needsInterop": true
+    },
+    "@mui/icons-material/LinkedIn": {
+      "src": "../../node_modules/@mui/icons-material/LinkedIn.js",
+      "file": "@mui_icons-material_LinkedIn.js",
+      "fileHash": "9181bea4",
+      "needsInterop": true
+    },
+    "@mui/icons-material/GitHub": {
+      "src": "../../node_modules/@mui/icons-material/GitHub.js",
+      "file": "@mui_icons-material_GitHub.js",
+      "fileHash": "4575c6c2",
+      "needsInterop": true
+    },
+    "@mui/icons-material/Instagram": {
+      "src": "../../node_modules/@mui/icons-material/Instagram.js",
+      "file": "@mui_icons-material_Instagram.js",
+      "fileHash": "f6eb1efc",
+      "needsInterop": true
+    },
+    "@mui/material": {
+      "src": "../../node_modules/@mui/material/index.js",
+      "file": "@mui_material.js",
+      "fileHash": "9537c9b3",
+      "needsInterop": false
+    }
+  },
+  "chunks": {
+    "chunk-PEH4OUYE": {
+      "file": "chunk-PEH4OUYE.js"
+    },
+    "chunk-6DLK3GTV": {
+      "file": "chunk-6DLK3GTV.js"
+    },
+    "chunk-OHTMQGRK": {
+      "file": "chunk-OHTMQGRK.js"
+    },
+    "chunk-FBRNPY62": {
+      "file": "chunk-FBRNPY62.js"
+    },
+    "chunk-UQGHGLBT": {
+      "file": "chunk-UQGHGLBT.js"
+    },
+    "chunk-UM3JHGVO": {
+      "file": "chunk-UM3JHGVO.js"
+    },
+    "chunk-CEQRFMJQ": {
+      "file": "chunk-CEQRFMJQ.js"
+    }
+  }
+}
