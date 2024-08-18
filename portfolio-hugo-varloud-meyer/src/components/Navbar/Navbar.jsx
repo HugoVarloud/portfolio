@@ -1,6 +1,5 @@
 import React, { useRef, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import { useClickAway } from "react-use";
 import "./Navbar.css";
 import { Squash as Hamburger } from "hamburger-react";
 import { BiHomeAlt2 } from "react-icons/bi";
@@ -15,7 +14,6 @@ const Navbar = () => {
   const [isOpen, setOpen] = useState(false);
   const ref = useRef(null);
   const selectedLang = useLanguageContext().i18n.language;
-  useClickAway(ref, () => setOpen(false));
   const routes = [
     {
       title: "Home",

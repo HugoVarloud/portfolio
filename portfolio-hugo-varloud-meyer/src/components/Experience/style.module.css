@@ -28,14 +28,14 @@
 .project:last-of-type {
     border-bottom: 1px solid #c9c9c9;
 }
-.project:hover h2 {
+.project:hover h3 {
     transform: translateX(-10px);
 }
 .project:hover p {
     transform: translateX(10px);
 }
-.project h2 {
-    font-size: 60px;
+.project h3 {
+    font-size: 30px;
     margin: 0px;
     font-weight: 400;
     transition: all 0.4s;
@@ -118,9 +118,6 @@
         display: none;
    }
    .experienceSection h1 {
-        font-size: 40px;
-    }
-    .experienceSection h2 {
-        font-size: 40px;
+        font-size: 35px;
     }
 }
