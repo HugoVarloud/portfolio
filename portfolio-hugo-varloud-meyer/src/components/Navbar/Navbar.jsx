@@ -41,6 +41,9 @@ const Navbar = () => {
 
   return (
     <header className="navigation-menu">
+        {isOpen === true &&
+          <LanguageSelector></LanguageSelector>
+        }
       <nav className="navbar">
         <div className="title-container">
           <h1>© Code by Hugo</h1>
@@ -84,7 +87,6 @@ const Navbar = () => {
                     );
                   })}
                 </ul>
-                <LanguageSelector></LanguageSelector>
               </motion.div>
               </>
             )}
