@@ -94,6 +94,9 @@
     background-color: transparent;
 }
 @media (max-width: 900px) {
+    .titleExperience {
+        font-weight: 350;
+    }
     .sectionContainer {
         width: 100vw;
    }
@@ -106,7 +109,7 @@
         font-size: 15px;
    }
     .titleList {
-        font-size: 20px;
+        font-size: 30px;
     }
     .experienceDescription {
         width: 95%;
