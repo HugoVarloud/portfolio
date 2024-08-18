@@ -128,9 +128,10 @@ body {
 }
 
 .translation-module {
-  top: -57vh;
-  left: -38vw;
+  top: 10px;
+  left: 10px;
   width: 70px;
+  z-index: 10;
 }
 
 @media (max-width: 1125px) {
