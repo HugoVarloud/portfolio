@@ -1,5 +1,4 @@
-Project Title
-Code By Hugo
+<h1>Code By Hugo</h1>
 
 Demo link:
 Access my site at https://code-by-hugo.netlify.app/
