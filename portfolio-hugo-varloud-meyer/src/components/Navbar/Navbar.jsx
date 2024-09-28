@@ -2,10 +2,6 @@ import React, { useRef, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import "./Navbar.css";
 import { Squash as Hamburger } from "hamburger-react";
-import { BiHomeAlt2 } from "react-icons/bi";
-import { FiSearch } from "react-icons/fi";
-import { PiChatCircleBold } from "react-icons/pi";
-import { IoPricetagsOutline } from "react-icons/io5";
 import LanguageSelector from "../LanguageSelector/LanguageSelector";
 import { t } from "i18next";
 import { useLanguageContext } from "../../context/languageContext";
@@ -17,23 +13,19 @@ const Navbar = () => {
   const routes = [
     {
       title: "Home",
-      href: "#accueil",
-      Icon: BiHomeAlt2,
+      href: "#accueil"
     },
     {
       title: "Experience",
-      href: "#experience",
-      Icon: FiSearch,
+      href: "#experience"
     },
     {
       title: "Projects",
-      href: "#projects",
-      Icon: IoPricetagsOutline,
+      href: "#projects"
     },
     {
       title: "Contacts",
-      href: "#contacts",
-      Icon: PiChatCircleBold,
+      href: "#contacts"
     },
   ];
 
