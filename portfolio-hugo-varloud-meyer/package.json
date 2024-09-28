@@ -17,6 +17,7 @@
     "@mui/lab": "^5.0.0-alpha.170",
     "@mui/material": "^5.15.14",
     "@sveltejs/adapter-netlify": "^4.2.0",
+    "flag-icons": "^7.2.3",
     "framer-motion": "^11.1.9",
     "hamburger-react": "^2.5.1",
     "i18next": "^23.11.5",

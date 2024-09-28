@@ -7,29 +7,29 @@ const slider1 = [
       src: "/assets/site1.jpeg"  
     },
     {
-      src: "/assets/site2.jpeg"  
+      src: "/assets/site2.png"  
     },
     {
-      src: "/assets/site4.png"
+      src: "/assets/site7.png"
     },
     {
-      src: "/assets/site3.webp"
+      src: "/assets/site6.png"
     }
-]
-
-const slider2 = [
-  {
-    src: "/assets/site7.png"  
-  },
-  {
-    src: "/assets/site6.webp"  
-  },
-  {
-    src: "/assets/site5.jpeg"
-  },
-  {
-    src: "/assets/site8.jpeg"
-  }
+  ]
+  
+  const slider2 = [
+    {
+      src: "/assets/site7.png"  
+    },
+    {
+      src: "/assets/site4.png"  
+    },
+    {
+      src: "/assets/site3.png"
+    },
+    {
+      src: "/assets/site44.png"
+    }
 ]
 
 const Section = () => {

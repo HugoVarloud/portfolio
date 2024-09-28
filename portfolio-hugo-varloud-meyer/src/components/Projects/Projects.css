@@ -39,9 +39,7 @@
     width: 80%;
     height: 80%;
 }
-.slidingImages .slider .project .imageContainer img {
-    object-fit: cover;
-}
+
 .slidingImages .circleContainer {
     background-color: red;
     position: relative;
