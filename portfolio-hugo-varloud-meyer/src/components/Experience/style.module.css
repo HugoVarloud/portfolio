@@ -8,12 +8,16 @@
 .experienceSectionImg {
     width: 100px;
 }
+.experienceSectionImgMobile{
+    display: none;
+}
 .experienceDescription {
     width: 400px;
     color: #aeaeae;
 }
 .titleExperience {
     font-weight: 400;
+    margin-left: 20px;
 }
 .project {
     display: flex;
@@ -95,6 +99,15 @@
 @media (max-width: 900px) {
     .titleExperience {
         font-weight: 350;
+        margin-left: 20px;
+    }
+    .experienceSectionImgMobile{
+        width: 45px;
+        display: flex;
+        margin-right: 20px;
+    }
+    .experienceSubTitle{
+        display: flex;
     }
     .sectionContainer {
         width: 100vw;

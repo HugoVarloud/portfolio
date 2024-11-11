@@ -37,7 +37,10 @@ const Section = () => {
               return (
                 <div key={project.title} className={styles.project}>
                     <div>
-                      <h3 className={styles.titleList}>{project.title}</h3>
+                      <div className={styles.experienceSubTitle}>
+                        <img className={styles.experienceSectionImgMobile} src={project.src} alt={project.title} />
+                        <h3 className={styles.titleList}>{project.title}</h3>
+                      </div>
                       <p className={styles.experienceDescription}>{t(`${selectedLang}.Experience.${project.title}`)}</p>
                     </div>
                     <div className={styles.experienceSectionImgContainer}>
