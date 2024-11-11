@@ -11,6 +11,7 @@ html {
   font-family: 'Akira Expanded', 'Menlo', 'poppins';
   line-height: 1.5;
   font-weight: 400;
+  width: 100vw;
 
   color-scheme: light dark;
   color: rgb(10, 10, 10);
@@ -33,7 +34,6 @@ a:hover {
 
 body {
   margin: 0;
-  place-items: center;
   min-width: 320px;
   min-height: 100vh;
 }

@@ -10,16 +10,16 @@ function App() {
     <>
       <div className="App">
         <Navbar/>
-        <div id="accueil" className="section" >
+        <div id="accueil" >
           <Home/>
         </div>
-        <div id="experience" className="section">
+        <div id="experience">
           <Experience/>
         </div>
-        <div id="projects" className="section">
+        <div id="projects">
           <Projects/>
         </div>
-        <div id="contacts" className="section">
+        <div id="contacts">
           <Footer/>
         </div>
       </div>
