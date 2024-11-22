@@ -58,8 +58,8 @@ body {
   height: 48px;
   width: 48px;
   position: fixed;
-  right: 1vw;
-  top: 2%;
+  right: 1%;
+  top: 2.5%;
   z-index: 9;
   background-color: #999d9e;
   color: white;
@@ -136,11 +136,6 @@ body {
 @media (max-width: 1125px) {
   .title-container {
     margin: 10px 25px;
-  }
-
-  .menu-icon {
-    top: 0.5%;
-    right: 2%;
   }
 
   .close-icon {
