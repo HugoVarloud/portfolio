@@ -10,7 +10,8 @@
 
 .home-section {
     height: 100vh;
-	background-color: #999d9e;
+	background: rgb(228,228,228);
+	background: radial-gradient(circle, rgba(228,228,228,1) 0%, rgba(128,128,128,1) 100%);
 }
 
 .title-container {
