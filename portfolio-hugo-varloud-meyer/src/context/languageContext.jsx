@@ -1,16 +1,13 @@
-import React, {
-  createContext,
-  useContext,
-  useState,
-} from "react";
+import { createContext, useContext, useState } from "react";
 import { useTranslation } from "react-i18next";
-import './context.css'
+import PropTypes from "prop-types";
+import "./context.css";
 export const LanguageContext = createContext(undefined);
 
 export const LanguageContextProvider = ({ children }) => {
   const languages = [
-    { code: 'en', name: 'English'},
-    { code: 'fr', name: 'French'}
+    { code: "en", name: "English" },
+    { code: "fr", name: "French" },
   ];
   const { t, i18n } = useTranslation();
   const [currentLanguage, setCurrentLanguage] = useState(i18n.language || "en");
@@ -21,13 +18,18 @@ export const LanguageContextProvider = ({ children }) => {
   };
 
   return (
-    <LanguageContext.Provider
-      class="select-opened-label"
-      value={{ t, i18n, onClickLanguageChange, languages, currentLanguage }}
-    >
-      {children}
-    </LanguageContext.Provider>
+    <div className="select-opened-label">
+      <LanguageContext.Provider
+        value={{ t, i18n, onClickLanguageChange, languages, currentLanguage }}
+      >
+        {children}
+      </LanguageContext.Provider>
+    </div>
   );
+};
+
+LanguageContextProvider.propTypes = {
+  children: PropTypes.node.isRequired,
 };
 
 export const useLanguageContext = () => useContext(LanguageContext);
