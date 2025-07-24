@@ -13,30 +13,28 @@ const Navbar = () => {
   const routes = [
     {
       title: "Home",
-      href: "#accueil"
+      href: "#accueil",
     },
     {
       title: "Experience",
-      href: "#experience"
+      href: "#experience",
     },
     {
       title: "Projects",
-      href: "#projects"
+      href: "#projects",
     },
     {
       title: "Contacts",
-      href: "#contacts"
+      href: "#contacts",
     },
   ];
 
   return (
     <header className="navigation-menu">
-        {isOpen === true &&
-          <LanguageSelector></LanguageSelector>
-        }
+      {isOpen === true && <LanguageSelector></LanguageSelector>}
       <nav className="navbar">
         <div className="title-container">
-          <h1>© Code by Hugo</h1>
+          <h1>Code by Hugo</h1>
         </div>
         <div ref={ref}>
           <div className="menu-icon">
@@ -45,39 +43,41 @@ const Navbar = () => {
           <AnimatePresence>
             {isOpen && (
               <>
-              <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                exit={{ opacity: 0 }}
-                transition={{ duration: 0.2 }}
-                className="openMenu"
-              >
-                <ul>
-                  {routes.map((route, idx) => {
-                    return (
-                      <motion.li
-                        initial={{ scale: 0, opacity: 0 }}
-                        animate={{ scale: 1, opacity: 1 }}
-                        transition={{
-                          type: "spring",
-                          stiffness: 260,
-                          damping: 20,
-                          delay: 0.1 + idx / 10,
-                        }}
-                        key={route.title}
-                      >
-                        <a
-                          onClick={() => setOpen(false)}
-                          href={route.href}
-                          className="menuItemName"
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                  transition={{ duration: 0.2 }}
+                  className="openMenu"
+                >
+                  <ul>
+                    {routes.map((route, idx) => {
+                      return (
+                        <motion.li
+                          initial={{ scale: 0, opacity: 0 }}
+                          animate={{ scale: 1, opacity: 1 }}
+                          transition={{
+                            type: "spring",
+                            stiffness: 260,
+                            damping: 20,
+                            delay: 0.1 + idx / 10,
+                          }}
+                          key={route.title}
                         >
-                          <span>{t(`${selectedLang}.Menu.${route.title}`)}</span>
-                        </a>
-                      </motion.li>
-                    );
-                  })}
-                </ul>
-              </motion.div>
+                          <a
+                            onClick={() => setOpen(false)}
+                            href={route.href}
+                            className="menuItemName"
+                          >
+                            <span>
+                              {t(`${selectedLang}.Menu.${route.title}`)}
+                            </span>
+                          </a>
+                        </motion.li>
+                      );
+                    })}
+                  </ul>
+                </motion.div>
               </>
             )}
           </AnimatePresence>
