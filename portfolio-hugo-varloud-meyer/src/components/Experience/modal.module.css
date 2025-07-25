@@ -1,0 +1,179 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap");
+
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  /* Permet le scroll sur mobile */
+  overflow-y: auto;
+}
+
+.modalContent {
+  background: #fff;
+  border-radius: 18px;
+  padding: 2.5rem 2rem 2rem 2rem; /* Plus d'espace sur les côtés et en bas */
+  max-width: 420px;
+  width: 95vw;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.18);
+  font-family: "Inter", Arial, sans-serif;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.2rem; /* Espace entre les éléments */
+}
+
+.logo {
+  margin-bottom: 1.2rem;
+}
+
+h2 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #222;
+  letter-spacing: 0.01em;
+  text-align: center;
+}
+
+.description {
+  color: #222;
+  font-family: Arial, Roboto, system-ui, sans-serif;
+  font-size: 1.08rem;
+  line-height: 1.7;
+  margin: 0.5rem 0 1.5rem 0;
+  letter-spacing: 0.01em;
+  text-align: center;
+}
+
+.techLogos {
+  margin-top: 1.2rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
+}
+
+.techIcon {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+  margin: 0 4px;
+  display: inline-block;
+  vertical-align: middle;
+  transition: transform 0.2s;
+}
+
+.techIcon:hover {
+  transform: scale(1.15);
+}
+
+.closeButton {
+  position: absolute;
+  top: 1.2rem;
+  right: 1.2rem;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: #333;
+  cursor: pointer;
+  z-index: 10;
+  transition: color 0.2s;
+  outline: none;
+}
+
+.closeButton:hover,
+.closeButton:active,
+.closeButton:focus {
+  color: #0aff85;
+  outline: none;
+}
+
+/* Responsive pour petits écrans */
+@media (max-width: 600px) {
+  .modalContent {
+    padding: 1rem;
+    max-width: 95vw;
+    width: 98vw;
+    max-height: 95vh;
+    font-size: 0.95rem;
+  }
+  .closeButton {
+    top: 0.5rem;
+    right: 0.7rem;
+    font-size: 2rem;
+  }
+}
+
+.logo {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto 1rem auto;
+  border-radius: 12px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+  background: #fff;
+}
+
+.modalDetails {
+  margin-top: 1rem;
+  font-style: italic;
+  color: #555;
+}
+.description {
+  color: #222;
+  font-family: Arial, Roboto, system-ui, sans-serif;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  margin: 1rem 0;
+  letter-spacing: 0.01em;
+}
+
+.techLogos {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+}
+
+.techIcon {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  margin: 0 8px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.techIcon:hover {
+  transform: scale(1.2);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    transform: scale(0.95);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}

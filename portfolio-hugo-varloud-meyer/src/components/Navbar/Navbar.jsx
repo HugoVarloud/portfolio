@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import { useRef, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import "./Navbar.css";
 import { Squash as Hamburger } from "hamburger-react";

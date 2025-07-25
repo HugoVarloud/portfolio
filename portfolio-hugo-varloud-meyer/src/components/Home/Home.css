@@ -12,7 +12,7 @@
   position: relative;
   height: 100vh;
   overflow: hidden;
-  background: url("/src/assets/montain.jpg") center/cover no-repeat;
+  background: url("/assets/montain.jpg") center/cover no-repeat;
   box-shadow: 0 3px 6px 0px rgba(0, 0, 0, 0.45);
   z-index: 1;
 }

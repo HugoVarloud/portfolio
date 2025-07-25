@@ -1,9 +1,8 @@
-import React from "react";
 import "./Footer.css";
-import FacebookIcon from '@mui/icons-material/Facebook';
-import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import GitHubIcon from '@mui/icons-material/GitHub';
-import InstagramIcon from '@mui/icons-material/Instagram';
+import FacebookIcon from "@mui/icons-material/Facebook";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import GitHubIcon from "@mui/icons-material/GitHub";
+import InstagramIcon from "@mui/icons-material/Instagram";
 import { t } from "i18next";
 import { useLanguageContext } from "../../context/languageContext";
 
@@ -13,23 +12,23 @@ const Footer = () => {
     {
       icon: <FacebookIcon className="fa fa-facebook" />,
       url: "https://www.facebook.com/hugo.varloudmeyer/",
-      class: "btn facebook"
+      class: "btn facebook",
     },
     {
       icon: <GitHubIcon className="fa fa-github" />,
       url: "https://github.com/HugoVarloud",
-      class: "btn github"
+      class: "btn github",
     },
     {
-      icon: <LinkedInIcon className="fa fa-linkedin"/>,
+      icon: <LinkedInIcon className="fa fa-linkedin" />,
       url: "https://www.linkedin.com/in/hugovarloud/",
-      class: "btn linkedin"
+      class: "btn linkedin",
     },
     {
       icon: <InstagramIcon className="fa fa-instagram" />,
       url: "https://www.instagram.com/meyer_hugo/",
-      class: "btn instagram"
-    }
+      class: "btn instagram",
+    },
   ];
 
   return (
@@ -40,15 +39,19 @@ const Footer = () => {
             <h3>{t(`${selectedLang}.Contact.ServicesTitle`)}</h3>
             <ul className="bottom-list">
               <li>{t(`${selectedLang}.Contact.ServiceListItem.WebDesign`)}</li>
-              <li>{t(`${selectedLang}.Contact.ServiceListItem.FullstackDevelopment`)}</li>
+              <li>
+                {t(
+                  `${selectedLang}.Contact.ServiceListItem.FullstackDevelopment`
+                )}
+              </li>
               <li>{t(`${selectedLang}.Contact.ServiceListItem.Hosting`)}</li>
             </ul>
           </div>
           <div className="bottom-list-container">
-              <h3>{t(`${selectedLang}.Contact.ContactCallTitle`)}</h3>
-              <ul className="bottom-list">
-                <li>{t(`${selectedLang}.Contact.ContactCallText`)}</li>
-              </ul>
+            <h3>{t(`${selectedLang}.Contact.ContactCallTitle`)}</h3>
+            <ul className="bottom-list">
+              <li>{t(`${selectedLang}.Contact.ContactCallText`)}</li>
+            </ul>
           </div>
           <div className="bottom-list-container">
             <h3>{t(`${selectedLang}.Contact.InfosTitle`)}</h3>
@@ -61,22 +64,29 @@ const Footer = () => {
           </div>
         </div>
         <div>
-        <div className="social-section">
-          <div className="social-btns">
-            {socialLinks.map((link, index) => (
-              <a target="_blank" key={index} className={link.class} href={link.url}>
-                {link.icon}
-              </a>
-            ))}
+          <div className="social-section">
+            <div className="social-btns">
+              {socialLinks.map((link, index) => (
+                <a
+                  target="_blank"
+                  key={index}
+                  className={link.class}
+                  href={link.url}
+                >
+                  {link.icon}
+                </a>
+              ))}
+            </div>
           </div>
-        </div>
-        <div className="footer-nav-list">
-          <nav>
-            <ul className="footer-list">
-              <li className="signature">{t(`${selectedLang}.Contact.Signature`)}</li>
-            </ul>
-          </nav>
-        </div>
+          <div className="footer-nav-list">
+            <nav>
+              <ul className="footer-list">
+                <li className="signature">
+                  {t(`${selectedLang}.Contact.Signature`)}
+                </li>
+              </ul>
+            </nav>
+          </div>
         </div>
       </footer>
     </>
