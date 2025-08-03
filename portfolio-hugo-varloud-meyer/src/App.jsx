@@ -32,7 +32,7 @@ function App() {
             }
           />
           <Route
-            path="/zen-coach-confidentialité"
+            path="/zen-coach-confidentialite"
             element={<Confidentialite />}
           />
         </Routes>
