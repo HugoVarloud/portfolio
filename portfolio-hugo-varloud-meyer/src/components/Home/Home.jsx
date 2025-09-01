@@ -7,7 +7,11 @@ const Home = () => {
   const selectedLang = useLanguageContext().i18n.language;
   return (
     <>
-      <section className="home-section">
+      <section
+        className="home-section"
+        role="main"
+        aria-label="Section d'accueil"
+      >
         <div className="animated-title">
           <div className="text-top">
             <div>
