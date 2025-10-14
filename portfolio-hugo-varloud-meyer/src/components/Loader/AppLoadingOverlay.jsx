@@ -3,14 +3,9 @@
  * @fileoverview Overlay qui gère l'état, monte à 0, écoute la progression, et fait le fade-out à 100%
  */
 
-import React, { useEffect, useState, useRef } from "react";
+import { useEffect, useState, useRef } from "react";
 import CircularLoader from "./CircularLoader.jsx";
 import "./CircularLoader.css";
-
-// Import du script de test en mode développement
-if (process.env.NODE_ENV === "development") {
-  import("./testCircularLoader.js");
-}
 
 /**
  * Hook pour détecter les préférences de mouvement réduit
