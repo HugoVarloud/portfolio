@@ -31,12 +31,14 @@ const Navbar = () => {
 
   return (
     <header className="navigation-menu">
-      {isOpen === true && <LanguageSelector></LanguageSelector>}
       <nav className="navbar">
         <div className="title-container">
           <h1>Code by Hugo</h1>
         </div>
-        <div ref={ref}>
+        <div className="language-container">
+          {isOpen === true && <LanguageSelector></LanguageSelector>}
+        </div>
+        <div className="hamburger-container" ref={ref}>
           <div className="menu-icon">
             <Hamburger toggled={isOpen} toggle={setOpen} size={25} />
           </div>

@@ -1,12 +1,12 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto:700');
+@import url("https://fonts.googleapis.com/css?family=Roboto:700");
 @font-face {
-  font-family: 'Akira Expanded';
-  src: url('/assets/fonts/akira_bold-webfont.woff2') format('woff2');
+  font-family: "Akira Expanded";
+  src: url("/assets/fonts/akira_bold-webfont.woff2") format("woff2");
 }
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Akira Expanded', Menlo, poppins;
+  font-family: "Akira Expanded", Menlo, poppins;
 }
 
 .navigation-menu ul {
@@ -39,31 +39,29 @@ body {
 }
 
 .navigation-menu ul li a:hover {
-  transform: scale(1.50);
+  transform: scale(1.5);
 }
 
 .title-container {
   margin: 25px 50px;
+  flex: 1;
 }
 
 .title-container h1 {
   font-size: 14px;
   color: white;
   font-weight: 400;
-  font-family: 'Akira Expanded';
+  font-family: "Akira Expanded";
 }
 
 .menu-icon {
   cursor: pointer;
-  height: 48px;
-  width: 48px;
-  position: fixed;
-  right: 1%;
-  top: 2.5%;
+  height: 40px;
+  width: 40px;
+  position: relative;
+  margin: 0;
   z-index: 9;
-  background-color: #999d9e;
   color: white;
-  border-radius: 30px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -74,10 +72,26 @@ body {
 .navbar {
   width: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   position: absolute;
   top: 0;
+}
+
+.language-container {
+  position: absolute;
+  left: 50px;
+  top: 25px;
+  z-index: 20;
+}
+
+.hamburger-container {
+  position: absolute;
+  right: 50px;
+  top: 25px;
+  z-index: 16;
+  display: flex;
+  align-items: center;
 }
 
 .openMenu {
@@ -122,10 +136,6 @@ body {
   margin-top: 22px;
 }
 
-.navbar {
-  justify-content: space-between;
-}
-
 .translation-module {
   top: 10px;
   left: 10px;
@@ -136,6 +146,16 @@ body {
 @media (max-width: 1125px) {
   .title-container {
     margin: 10px 25px;
+  }
+
+  .language-container {
+    left: 25px;
+    top: 10px;
+  }
+
+  .hamburger-container {
+    right: 25px;
+    top: 10px;
   }
 
   .close-icon {
