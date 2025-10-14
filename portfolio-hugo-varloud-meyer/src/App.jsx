@@ -5,10 +5,18 @@ import Experience from "./components/Experience/Experience";
 import Projects from "./components/Projects/Projects";
 import Footer from "./components/Footer/Footer";
 import Confidentialite from "./components/Confidentialite/Confidentialite";
+import AppLoadingOverlay from "./components/Loader/AppLoadingOverlay";
+import RouteLoader from "./components/Loader/RouteLoader";
 
 function App() {
   return (
     <>
+      {/* Nouveau loader circulaire pour le chargement initial */}
+      <AppLoadingOverlay brandName="Code by Hugo" />
+
+      {/* Mini-loader pour les transitions de route */}
+      <RouteLoader />
+
       <div className="App">
         <Navbar />
         <Routes>

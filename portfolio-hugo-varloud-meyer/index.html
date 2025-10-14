@@ -11,6 +11,67 @@
     <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Code by Hugo</title>
+
+    <!-- Preload des polices Akira critiques pour éviter le FOIT -->
+    <link
+      rel="preload"
+      href="/assets/fonts/akira_super_bold-webfont.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="/assets/fonts/akira_outline-webfont.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+
+    <!-- Preload de l'image hero pour améliorer le LCP -->
+    <link
+      rel="preload"
+      href="/assets/montain.jpg"
+      as="image"
+      fetchpriority="high"
+    />
+
+    <!-- Préchargement des traductions -->
+    <link
+      rel="preload"
+      href="/src/utils/locales/en/en.json"
+      as="fetch"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="/src/utils/locales/fr/fr.json"
+      as="fetch"
+      crossorigin
+    />
+
+    <!-- Styles critiques inline pour éviter le FOUC -->
+    <style>
+      /* Prévention du flash d'hydratation */
+      #root {
+        min-height: 100vh;
+      }
+
+      /* Font-display pour les polices Akira */
+      @font-face {
+        font-family: "Akira Bold";
+        src: url("/assets/fonts/akira_super_bold-webfont.woff2") format("woff2");
+        font-display: optional;
+        font-weight: 900;
+      }
+
+      @font-face {
+        font-family: "Akira Outline";
+        src: url("/assets/fonts/akira_outline-webfont.woff2") format("woff2");
+        font-display: optional;
+        font-weight: 400;
+      }
+    </style>
   </head>
   <body>
     <div id="root"></div>

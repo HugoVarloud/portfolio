@@ -1,0 +1,352 @@
+/**
+ * Styles CSS pour le système de loader circulaire
+ * @fileoverview Styles mobile-first avec thèmes clair/sombre et accessibilité
+ */
+
+/* Variables CSS pour les thèmes */
+:root {
+  /* Thème clair */
+  --loader-bg-light: rgba(11, 12, 14, 0.06);
+  --loader-text-light: #0b0c0e;
+  --loader-track-light: #e6e8eb;
+  --loader-accent-light: #0aff85;
+
+  /* Thème sombre */
+  --loader-bg-dark: #0b0c0e;
+  --loader-text-dark: #f2f4f8;
+  --loader-track-dark: #2a2d33;
+  --loader-accent-dark: #0aff85;
+
+  /* Variables communes */
+  --loader-transition: 0.3s ease-out;
+  --loader-safe-area-top: env(safe-area-inset-top, 0);
+  --loader-safe-area-bottom: env(safe-area-inset-bottom, 0);
+  --loader-safe-area-left: env(safe-area-inset-left, 0);
+  --loader-safe-area-right: env(safe-area-inset-right, 0);
+}
+
+/* Détection du thème */
+@media (prefers-color-scheme: light) {
+  :root {
+    --loader-bg: var(--loader-bg-light);
+    --loader-text: var(--loader-text-light);
+    --loader-track: var(--loader-track-light);
+    --loader-accent: var(--loader-accent-light);
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --loader-bg: var(--loader-bg-dark);
+    --loader-text: var(--loader-text-dark);
+    --loader-track: var(--loader-track-dark);
+    --loader-accent: var(--loader-accent-dark);
+  }
+}
+
+/* Fallback pour navigateurs sans support prefers-color-scheme */
+:root:not([data-theme]) {
+  --loader-bg: var(--loader-bg-dark);
+  --loader-text: var(--loader-text-dark);
+  --loader-track: var(--loader-track-dark);
+  --loader-accent: var(--loader-accent-dark);
+}
+
+/* Verrouillage du scroll pendant le chargement */
+body.is-loading {
+  overflow: hidden !important;
+  height: 100vh !important;
+}
+
+/* Overlay principal */
+.app-loading-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: var(--loader-bg);
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 1;
+  visibility: visible;
+  transition: opacity var(--loader-transition),
+    visibility var(--loader-transition);
+
+  /* Safe areas pour iOS/Android */
+  padding-top: var(--loader-safe-area-top);
+  padding-bottom: var(--loader-safe-area-bottom);
+  padding-left: var(--loader-safe-area-left);
+  padding-right: var(--loader-safe-area-right);
+}
+
+/* État fade-out */
+.app-loading-overlay.fade-out {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+/* Contenu central */
+.app-loading-overlay__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2.5rem;
+  text-align: center;
+  max-width: 500px;
+  padding: 2rem;
+  min-height: 100vh;
+  width: 100%;
+}
+
+/* Loader circulaire */
+.circular-loader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  width: 100%;
+  height: 100%;
+}
+
+.circular-loader__container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  width: 240px;
+  height: 240px;
+}
+
+/* SVG du cercle */
+.circular-loader__svg {
+  display: block;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+}
+
+/* Cercle de fond (track) */
+.circular-loader__track {
+  stroke: var(--loader-track);
+  opacity: 0.2;
+  stroke-linecap: round;
+}
+
+/* Cercle de progression */
+.circular-loader__progress {
+  stroke: var(--loader-accent);
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  filter: drop-shadow(0 0 12px rgba(10, 255, 133, 0.4));
+}
+
+/* Pourcentage au centre */
+.circular-loader__percentage {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: system-ui, -apple-system, "Segoe UI", "Roboto", "Inter",
+    sans-serif;
+  font-size: clamp(32px, 8vw, 42px);
+  font-weight: 600;
+  color: var(--loader-text);
+  font-variant-numeric: tabular-nums;
+  line-height: 1;
+  text-align: center;
+  min-width: 4ch;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 120px;
+  height: 120px;
+  margin: 0;
+  padding: 0;
+
+  /* Micro-interaction bounce */
+  transition: transform 0.2s ease-out;
+}
+
+.circular-loader__percentage.bounce {
+  transform: translate(-50%, -50%) translateY(-2px);
+}
+
+/* Message d'état */
+.circular-loader__status {
+  font-family: system-ui, -apple-system, "Segoe UI", "Roboto", "Inter",
+    sans-serif;
+  font-size: clamp(14px, 3.5vw, 16px);
+  font-weight: 400;
+  color: var(--loader-text);
+  opacity: 0.8;
+  text-align: center;
+  max-width: 280px;
+  line-height: 1.4;
+  margin-top: 1rem;
+}
+
+/* Branding discret */
+.app-loading-overlay__branding {
+  font-family: system-ui, -apple-system, "Segoe UI", "Roboto", "Inter",
+    sans-serif;
+  font-size: clamp(12px, 3vw, 14px);
+  font-weight: 400;
+  color: var(--loader-text);
+  opacity: 0.4;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+/* Bouton de secours */
+.app-loading-overlay__skip {
+  position: absolute;
+  bottom: calc(2rem + var(--loader-safe-area-bottom));
+  right: calc(2rem + var(--loader-safe-area-right));
+  background: transparent;
+  border: 1px solid var(--loader-track);
+  color: var(--loader-text);
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  font-family: system-ui, -apple-system, "Segoe UI", "Roboto", "Inter",
+    sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  cursor: pointer;
+  transition: all var(--loader-transition);
+  min-height: 44px; /* Touch target minimum */
+  min-width: 44px;
+  opacity: 0.6;
+}
+
+.app-loading-overlay__skip:hover {
+  opacity: 1;
+  background: var(--loader-accent);
+  color: white;
+  border-color: var(--loader-accent);
+}
+
+.app-loading-overlay__skip:focus {
+  outline: 2px solid var(--loader-accent);
+  outline-offset: 2px;
+}
+
+/* Support pour prefers-reduced-motion */
+@media (prefers-reduced-motion: reduce) {
+  .circular-loader__progress {
+    transition: none;
+  }
+
+  .circular-loader__percentage {
+    transition: none;
+  }
+
+  .circular-loader__percentage.bounce {
+    transform: translate(-50%, -50%);
+  }
+
+  .app-loading-overlay {
+    transition: none;
+  }
+
+  .app-loading-overlay__skip {
+    transition: none;
+  }
+}
+
+/* Responsive design */
+@media (max-width: 480px) {
+  .app-loading-overlay__content {
+    padding: 1rem;
+    gap: 1.5rem;
+  }
+
+  .circular-loader__container {
+    gap: 0.75rem;
+  }
+
+  .app-loading-overlay__skip {
+    bottom: calc(1rem + var(--loader-safe-area-bottom));
+    right: calc(1rem + var(--loader-safe-area-right));
+    padding: 0.4rem 0.8rem;
+    font-size: 13px;
+  }
+}
+
+@media (min-width: 768px) {
+  .app-loading-overlay__content {
+    gap: 2.5rem;
+  }
+
+  .circular-loader__container {
+    gap: 1.25rem;
+  }
+}
+
+/* États de chargement spécifiques */
+.circular-loader__status::before {
+  content: "";
+  display: inline-block;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: var(--loader-accent);
+  margin-right: 0.5rem;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 0.4;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .circular-loader__status::before {
+    animation: none;
+  }
+}
+
+/* Amélioration de l'accessibilité */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Focus visible pour les navigateurs modernes */
+.app-loading-overlay:focus-visible {
+  outline: 2px solid var(--loader-accent);
+  outline-offset: -2px;
+}
+
+/* Support pour les navigateurs plus anciens */
+@supports not (backdrop-filter: blur(10px)) {
+  .app-loading-overlay {
+    background: var(--loader-bg);
+  }
+}
+
+/* Support pour backdrop-filter si disponible */
+@supports (backdrop-filter: blur(10px)) {
+  .app-loading-overlay {
+    background: rgba(11, 12, 14, 0.8);
+    backdrop-filter: blur(10px);
+  }
+}
