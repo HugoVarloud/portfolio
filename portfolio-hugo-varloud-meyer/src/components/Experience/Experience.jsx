@@ -63,7 +63,7 @@ const Section = () => {
         <h1 className={styles.titleExperience}>
           {t(`${selectedLang}.Experience.Title`)}
         </h1>
-        <div>
+        <div className={styles.experienceSectionContainer}>
           {projects.map((project) => (
             <div
               key={project.title}

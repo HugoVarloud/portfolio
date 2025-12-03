@@ -12,7 +12,6 @@ const Modal = ({ project, onClose }) => {
           &times;
         </button>
         <img src={project.src} alt={project.title} className={styles.logo} />
-        <h2>{project.title}</h2>
         <p className={styles.description}>{project.description}</p>
 
         {project.techs && (
