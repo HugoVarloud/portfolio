@@ -36,7 +36,6 @@ const CircularLoader = ({
   // Configuration du cercle SVG (plus grand et plus fin)
   const radius = 100;
   const strokeWidth = 6;
-  const circumference = 2 * Math.PI * radius;
   const normalizedRadius = radius - strokeWidth * 2;
   const circumferenceNormalized = 2 * Math.PI * normalizedRadius;
 
@@ -149,7 +148,6 @@ const CircularLoader = ({
           width={radius * 2}
           height={radius * 2}
           viewBox={`0 0 ${radius * 2} ${radius * 2}`}
-          aria-hidden="true"
         >
           {/* Cercle de fond (track) */}
           <circle

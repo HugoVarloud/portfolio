@@ -1,6 +1,6 @@
 @font-face {
-  font-family: 'Akira Expanded';
-  src: url('/assets/fonts/akira_bold-webfont.woff2') format('woff2');
+  font-family: "Akira Expanded";
+  src: url("/assets/fonts/akira_bold-webfont.woff2") format("woff2");
 }
 
 html {
@@ -8,7 +8,7 @@ html {
 }
 
 :root {
-  font-family: 'Akira Expanded', 'Menlo', 'poppins';
+  font-family: "Akira Expanded", "Menlo", "poppins";
   line-height: 1.5;
   font-weight: 400;
   width: 100vw;
@@ -21,6 +21,10 @@ html {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  /* Variables pour le header fixe - MODIFIABLES ICI */
+  --header-height: 70px; /* Hauteur du header */
+  --logo-green-color: #0fa958; /* Couleur verte du logo */
 }
 
 a {
@@ -49,7 +53,7 @@ button {
   padding: 0.6em 1.2em;
   font-size: 1em;
   font-weight: 500;
-  font-family: 'Akira Bold', 'Menlo', 'poppins';
+  font-family: "Akira Bold", "Menlo", "poppins";
   background-color: #1a1a1a;
   cursor: pointer;
   transition: border-color 0.25s;
