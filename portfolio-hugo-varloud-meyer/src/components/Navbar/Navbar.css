@@ -60,7 +60,7 @@ body {
   width: 40px;
   position: relative;
   margin: 0;
-  z-index: 9;
+  z-index: 102;
   color: white;
   display: flex;
   justify-content: center;
@@ -69,27 +69,81 @@ body {
   user-select: none;
 }
 
+.navigation-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  transition: background-color 0.3s ease;
+  background-color: transparent;
+}
+
+.navigation-menu.scrolled {
+  background-color: white;
+}
+
+.navigation-menu.scrolled .title-container h1 {
+  color: #000;
+}
+
+.navigation-menu.scrolled .menu-icon {
+  color: #000;
+}
+
+.navigation-menu.scrolled .language-button {
+  background: rgba(0, 0, 0, 0.05);
+  border-color: rgba(0, 0, 0, 0.1);
+  color: rgba(0, 0, 0, 0.9);
+}
+
+.navigation-menu.scrolled .language-button:hover {
+  background: rgba(0, 0, 0, 0.1);
+  border-color: rgba(0, 0, 0, 0.2);
+}
+
+.navigation-menu.scrolled .language-dropdown {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.navigation-menu.scrolled .language-option {
+  color: rgba(0, 0, 0, 0.8);
+}
+
+.navigation-menu.scrolled .language-option:hover {
+  background: rgba(0, 0, 0, 0.05);
+  color: rgba(0, 0, 0, 1);
+}
+
+.navigation-menu.scrolled .language-option.focused {
+  background: rgba(0, 0, 0, 0.1);
+  color: rgba(0, 0, 0, 1);
+}
+
 .navbar {
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: absolute;
-  top: 0;
+  position: relative;
 }
 
 .language-container {
   position: absolute;
   left: 50px;
   top: 25px;
-  z-index: 20;
+  z-index: 103;
 }
 
 .hamburger-container {
   position: absolute;
   right: 50px;
   top: 25px;
-  z-index: 16;
+  z-index: 101;
   display: flex;
   align-items: center;
 }
@@ -108,7 +162,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  z-index: 8;
+  z-index: 99;
 }
 
 .navigation-menu ul li a {

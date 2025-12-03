@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useRef, useState, useEffect } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import "./Navbar.css";
 import { Squash as Hamburger } from "hamburger-react";
@@ -8,8 +8,22 @@ import { useLanguageContext } from "../../context/languageContext";
 
 const Navbar = () => {
   const [isOpen, setOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
   const ref = useRef(null);
   const selectedLang = useLanguageContext().i18n.language;
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 100) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
   const routes = [
     {
       title: "Home",
@@ -30,7 +44,7 @@ const Navbar = () => {
   ];
 
   return (
-    <header className="navigation-menu">
+    <header className={`navigation-menu ${isScrolled ? "scrolled" : ""}`}>
       <nav className="navbar">
         <div className="title-container">
           <h1>Code by Hugo</h1>
