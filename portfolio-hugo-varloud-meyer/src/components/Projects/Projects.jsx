@@ -1,34 +1,42 @@
-import React, { useEffect, useRef, useState } from "react";
+import { useRef } from "react";
 import "./Projects.css";
 import { useScroll, useTransform, motion } from "framer-motion";
 
 const slider1 = [
   {
     src: "/assets/site1.jpeg",
+    url: "#", // Remplacez par l'URL réelle du projet
   },
   {
     src: "/assets/site2.png",
+    url: "https://www.sfr.fr/", // Remplacez par l'URL réelle du projet
   },
   {
     src: "/assets/site7.png",
+    url: "https://www.atixis.com/", // Remplacez par l'URL réelle du projet
   },
   {
     src: "/assets/site6.png",
+    url: "https://www.instagram.com/lesfrancaises_restaurant/", // Remplacez par l'URL réelle du projet
   },
 ];
 
 const slider2 = [
   {
     src: "/assets/site7.png",
+    url: "https://notvenomous.com/?srsltid=AfmBOorV3Ipk7d_9pgoLe9vy43XKichkJIoU9p-6pqdVa60nTVFhMob5", // Remplacez par l'URL réelle du projet
   },
   {
     src: "/assets/site4.png",
+    url: "https://notvenomous.com/?srsltid=AfmBOorV3Ipk7d_9pgoLe9vy43XKichkJIoU9p-6pqdVa60nTVFhMob5", // Remplacez par l'URL réelle du projet
   },
   {
     src: "/assets/site3.png",
+    url: "https://www.engie-homeservices.fr/", // Remplacez par l'URL réelle du projet
   },
   {
     src: "/assets/site44.png",
+    url: "https://code-by-hugo.netlify.app/", // Remplacez par l'URL réelle du projet
   },
 ];
 
@@ -53,7 +61,24 @@ const Section = () => {
               style={{ backgroundColor: project.color }}
             >
               <div className="imageContainer">
-                <img className="webSiteImage" src={project.src} />
+                <img
+                  className="webSiteImage"
+                  src={project.src}
+                  alt={`Project ${index + 1}`}
+                />
+                <a
+                  href={project.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="viewProjectButton"
+                  onClick={(e) => {
+                    if (project.url === "#") {
+                      e.preventDefault();
+                    }
+                  }}
+                >
+                  View Project
+                </a>
               </div>
             </div>
           );
@@ -68,7 +93,24 @@ const Section = () => {
               style={{ backgroundColor: project.color }}
             >
               <div key={index} className="imageContainer">
-                <img className="webSiteImage" src={project.src} />
+                <img
+                  className="webSiteImage"
+                  src={project.src}
+                  alt={`Project ${index + 1}`}
+                />
+                <a
+                  href={project.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="viewProjectButton"
+                  onClick={(e) => {
+                    if (project.url === "#") {
+                      e.preventDefault();
+                    }
+                  }}
+                >
+                  View Project
+                </a>
               </div>
             </div>
           );
