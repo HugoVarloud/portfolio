@@ -2,6 +2,7 @@ import { Routes, Route } from "react-router-dom";
 import "./App.css";
 import Navbar from "./components/Navbar/Navbar";
 import Home from "./components/Home/Home";
+import About from "./components/About/About";
 import Experience from "./components/Experience/Experience";
 import Projects from "./components/Projects/Projects";
 import Footer from "./components/Footer/Footer";
@@ -27,6 +28,9 @@ function App() {
               <>
                 <div id="accueil">
                   <Home />
+                </div>
+                <div id="about">
+                  <About />
                 </div>
                 <div id="experience">
                   <Experience />
