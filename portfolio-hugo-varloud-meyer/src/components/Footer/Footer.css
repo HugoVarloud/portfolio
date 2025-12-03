@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;600&display=swap");
+
 .footer-menu {
   background-color: #1c1d20;
   display: flex;
@@ -18,7 +20,7 @@
 }
 
 /* SOCIAL SECTION STYLE */
-.social-section{
+.social-section {
   display: flex;
   flex-direction: column;
   flex: 1;
@@ -51,11 +53,18 @@
   color: #ffffff;
 }
 .social-btns .btn.instagram:before {
-  background:linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);
+  background: linear-gradient(
+    45deg,
+    #405de6,
+    #5851db,
+    #833ab4,
+    #c13584,
+    #e1306c,
+    #fd1d1d
+  );
 }
 .social-btns .btn.instagram .fa {
-  color:#e1306c;
-
+  color: #e1306c;
 }
 .social-btns .btn.linkedin:before {
   background-color: #0a66c2;
@@ -90,11 +99,11 @@
   position: relative;
   overflow: hidden;
   border-radius: 28%;
-  box-shadow: 0 5px 15px -5px rgba(0,0,0,0.1);
+  box-shadow: 0 5px 15px -5px rgba(0, 0, 0, 0.1);
   opacity: 0.99;
 }
 .social-btns .btn:before {
-  content: '';
+  content: "";
   width: 120%;
   height: 120%;
   position: absolute;
@@ -104,7 +113,6 @@
   font-size: 38px;
   vertical-align: middle;
 }
-
 
 /* END OF SOCIAL SECTION */
 
@@ -120,7 +128,6 @@
   font-size: 12px;
 }
 
-
 /* SIGNATURE */
 .signature {
   margin-right: 10px;
@@ -128,10 +135,13 @@
   color: #fff;
 }
 
-
 .bottom-list-container {
   width: 30%;
   margin: 30px;
+}
+
+.bottom-list-container h3 {
+  font-family: "Akira Expanded", "Menlo", "poppins";
 }
 
 .bottom-list {
@@ -140,7 +150,12 @@
   font-size: 10px;
 }
 
-.bottom-list a{
+.bottom-list li {
+  font-family: "Work Sans", sans-serif;
+  font-size: large;
+}
+
+.bottom-list a {
   color: #ffffff;
 }
 
@@ -148,15 +163,10 @@
   display: flex;
 }
 
-
-.bottom-text-section{
+.bottom-text-section {
   width: 60%;
   margin: auto;
 }
-
-
-
-
 
 /* MOBILE VERSION */
 @media (max-width: 800px) {
@@ -178,13 +188,12 @@
     height: 100vh;
   }
 
-  .social-btns .btn{
+  .social-btns .btn {
     width: 70px;
     height: 70px;
     line-height: 70px;
   }
 }
-
 
 @media (max-width: 450px) {
   .contact {
@@ -201,7 +210,7 @@
     font-size: 15px;
   }
 
-  .social-btns .btn{
+  .social-btns .btn {
     width: 70px;
     height: 70px;
     line-height: 70px;
