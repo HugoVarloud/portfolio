@@ -3,67 +3,105 @@
 .sectionContainer {
   display: flex;
   justify-content: center;
+  padding: 80px 0;
 }
+
 .experienceSection {
   width: 100%;
+  max-width: 1200px;
 }
+
 .experienceSectionImg {
   width: 100px;
+  height: auto;
+  object-fit: contain;
 }
+
 .experienceSectionImgMobile {
   display: none;
 }
+
 .experienceSectionContainer {
   width: 90%;
   margin: auto;
 }
 
 .experienceDescription {
-  width: 400px;
-  color: #aeaeae;
+  max-width: 600px;
+  color: #333333;
   font-family: "Work Sans", sans-serif;
   font-size: 1.15rem;
   font-weight: 400;
-  line-height: 1.6;
+  line-height: 1.8;
+  margin-top: 15px;
 }
+
 .titleExperience {
   font-weight: 400;
   margin-left: 20px;
+  margin-bottom: 60px;
   font-family: "Akira Expanded", "Menlo", "poppins";
+  font-size: 50px;
+  color: #000000;
 }
+
 .project {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  padding: 50px 100px 50px 100px;
+  align-items: flex-start;
+  padding: 40px 100px;
   border-top: 1px solid #c9c9c9;
   cursor: pointer;
-  transition: all 0.2s;
+  transition: all 0.3s ease;
+  gap: 40px;
 }
+
 .project:last-of-type {
   border-bottom: 1px solid #c9c9c9;
 }
-.project:hover h3 {
-  transform: translateX(-10px);
+
+.project:hover {
+  background-color: rgba(0, 0, 0, 0.02);
 }
+
+.project:hover h3 {
+  transform: translateX(10px);
+  color: #000000;
+}
+
 .project:hover p {
   transform: translateX(10px);
 }
+
 .project h3 {
   font-size: 30px;
   margin: 0px;
   font-weight: 400;
   transition: all 0.4s;
   font-family: "Akira Expanded", "Menlo", "poppins";
+  color: #000000;
 }
+
 .project p {
   transition: all 0.4s;
-  font-weight: 300;
+  font-weight: 400;
 }
+
 .titleList {
   font-size: 50px;
-  margin: 0px;
+  margin: 0 0 10px 0;
   font-family: "Akira Expanded", "Menlo", "poppins";
+  color: #000000;
+}
+
+.experienceSubTitle {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.experienceSectionImgContainer {
+  flex-shrink: 0;
 }
 .modalContainer {
   height: 350px;
@@ -112,43 +150,64 @@
   background-color: transparent;
 }
 @media (max-width: 900px) {
-  .titleExperience {
-    font-weight: 350;
-    margin-left: 20px;
+  .sectionContainer {
+    padding: 40px 0;
   }
+
+  .titleExperience {
+    font-weight: 400;
+    margin-left: 20px;
+    margin-bottom: 40px;
+    font-size: 35px;
+  }
+
   .experienceSectionImgMobile {
     width: 45px;
-    display: flex;
-    margin-right: 20px;
+    height: auto;
+    display: block;
+    object-fit: contain;
   }
+
   .experienceSubTitle {
     display: flex;
+    align-items: center;
+    gap: 15px;
   }
-  .sectionContainer {
-    width: 100vw;
-  }
+
   .project {
     display: flex;
-    padding: 10px 10px 10px 50px;
+    flex-direction: column;
+    padding: 30px 20px 30px 50px;
     border-top: 1px solid #c9c9c9;
     cursor: pointer;
-    transition: all 0.2s;
-    font-size: 15px;
+    transition: all 0.3s ease;
+    gap: 20px;
   }
+
+  .project:hover {
+    background-color: rgba(0, 0, 0, 0.02);
+  }
+
   .titleList {
     font-size: 30px;
+    margin: 0;
   }
+
   .experienceDescription {
-    width: 95%;
+    max-width: 100%;
+    width: 100%;
     font-family: "Work Sans", sans-serif;
-    font-size: 1.1rem;
+    font-size: 1rem;
     font-weight: 400;
-    line-height: 1.6;
+    line-height: 1.8;
+    margin-top: 10px;
   }
+
   .experienceSectionImg {
     display: none;
   }
-  .experienceSection h1 {
-    font-size: 35px;
+
+  .experienceSectionImgContainer {
+    display: none;
   }
 }
