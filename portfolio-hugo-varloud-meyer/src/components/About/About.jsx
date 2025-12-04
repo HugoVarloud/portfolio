@@ -40,19 +40,16 @@ const About = () => {
             <p
               className={styles.paragraph}
               dangerouslySetInnerHTML={{
-                __html: t(`${selectedLang}.About.Resume`),
+                __html: t(`${selectedLang}.About.Resume`).replace(
+                  "#CV_URL",
+                  t(`${selectedLang}.About.CVUrl`)
+                ),
               }}
             />
             <p
               className={styles.paragraph}
               dangerouslySetInnerHTML={{
                 __html: t(`${selectedLang}.About.CaseStudies`),
-              }}
-            />
-            <p
-              className={styles.paragraph}
-              dangerouslySetInnerHTML={{
-                __html: t(`${selectedLang}.About.Mentoring`),
               }}
             />
           </div>

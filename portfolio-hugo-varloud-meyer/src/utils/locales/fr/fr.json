@@ -17,9 +17,9 @@
     "Location": "Diplômé d'<strong>EPITECH</strong>, basé en <strong>France</strong> 🇫🇷.",
     "Mission": "J'aide les entreprises à transformer leurs <strong>idées business</strong> en <strong>produits digitaux haut de gamme</strong> qui laisseront leurs concurrents derrière et faciliteront la vie des utilisateurs.",
     "Experience": "J'ai travaillé dans différents secteurs d'activité tels que l'<strong>Énergie (ENGIE)</strong>, les <strong>Télécommunications (SFR)</strong>, l'<strong>Immobilier (Atixis)</strong>, etc., au sein de <strong>grandes entreprises</strong> et de <strong>startups/agences</strong>.",
-    "Resume": "Pour plus de détails sur mon expérience, consultez mon <strong>CV</strong>.",
-    "CaseStudies": "Pour des <strong>études de cas approfondies</strong>, n'hésitez pas à me contacter.",
-    "Mentoring": "J'aide également d'autres <strong>développeurs</strong> à construire et faire évoluer leur carrière."
+    "Resume": "Pour plus de détails sur mon expérience, consultez mon <strong><a href=\"#CV_URL\" class=\"cv-link\" target=\"_blank\" rel=\"noopener noreferrer\">CV</a></strong>.",
+    "CVUrl": "/assets/cv-hugo-varloud-fr.pdf",
+    "CaseStudies": "Pour des <strong>études de cas approfondies</strong>, n'hésitez pas à me contacter."
   },
   "Experience": {
     "Title": "Expérience",

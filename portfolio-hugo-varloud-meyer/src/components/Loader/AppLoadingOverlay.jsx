@@ -6,6 +6,7 @@
 import { useEffect, useState, useRef } from "react";
 import CircularLoader from "./CircularLoader.jsx";
 import "./CircularLoader.css";
+import { useLoadingContext } from "../../context/loadingContext";
 
 /**
  * Hook pour détecter les préférences de mouvement réduit
@@ -201,6 +202,7 @@ const AppLoadingOverlay = ({ config = {}, brandName = "Code by Hugo" }) => {
   const reducedMotion = useReducedMotion();
   const { progress, status, isLoading, showOverlay, finishLoading } =
     useLoadingProgress(config);
+  const { setLoadingComplete } = useLoadingContext();
   const overlayRef = useRef(null);
 
   // Gestion du scroll
@@ -220,8 +222,10 @@ const AppLoadingOverlay = ({ config = {}, brandName = "Code by Hugo" }) => {
   useEffect(() => {
     if (!isLoading && overlayRef.current) {
       overlayRef.current.style.pointerEvents = "none";
+      // Notifier que le chargement est terminé
+      setLoadingComplete();
     }
-  }, [isLoading]);
+  }, [isLoading, setLoadingComplete]);
 
   // Gestion des touches clavier
   const handleKeyDown = (event) => {

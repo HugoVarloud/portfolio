@@ -64,6 +64,20 @@
   color: #000000;
 }
 
+.aboutText .cv-link {
+  color: #000000;
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.aboutText .cv-link:hover {
+  color: #333333;
+  text-decoration-color: #666666;
+}
+
 @media (max-width: 900px) {
   .sectionContainer {
     padding: 40px 0;

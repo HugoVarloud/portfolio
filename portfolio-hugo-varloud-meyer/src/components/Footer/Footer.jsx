@@ -8,6 +8,7 @@ import { useLanguageContext } from "../../context/languageContext";
 
 const Footer = () => {
   const selectedLang = useLanguageContext().i18n.language;
+  const currentYear = new Date().getFullYear();
   const socialLinks = [
     {
       icon: <FacebookIcon className="fa fa-facebook" />,
@@ -82,7 +83,10 @@ const Footer = () => {
             <nav>
               <ul className="footer-list">
                 <li className="signature">
-                  {t(`${selectedLang}.Contact.Signature`)}
+                  {t(`${selectedLang}.Contact.Signature`).replace(
+                    "2024",
+                    currentYear.toString()
+                  )}
                 </li>
               </ul>
             </nav>
