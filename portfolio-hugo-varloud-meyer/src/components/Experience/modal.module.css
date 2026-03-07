@@ -56,26 +56,13 @@ h2 {
   text-align: center;
 }
 
-.techLogos {
+.techInline {
   margin-top: 1.2rem;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 16px;
-  justify-content: center;
-}
-
-.techIcon {
-  width: 48px;
-  height: 48px;
-  object-fit: contain;
-  margin: 0 4px;
-  display: inline-block;
-  vertical-align: middle;
-  transition: transform 0.2s;
-}
-
-.techIcon:hover {
-  transform: scale(1.15);
+  font-size: 0.8125rem;
+  color: #6b7280;
+  letter-spacing: 0.01em;
+  text-align: center;
+  line-height: 1.5;
 }
 
 .closeButton {
@@ -132,25 +119,9 @@ h2 {
   color: #555;
 }
 
-.techLogos {
-  margin-top: 1.5rem;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-  justify-content: center;
-}
-
-.techIcon {
-  width: 60px;
-  height: 60px;
-  object-fit: contain;
-  margin: 0 8px;
-  display: inline-block;
-  vertical-align: middle;
-}
-
-.techIcon:hover {
-  transform: scale(1.2);
+.techInline {
+  margin-top: 1.25rem;
+  font-size: 0.75rem;
 }
 
 @keyframes fadeIn {

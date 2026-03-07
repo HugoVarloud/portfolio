@@ -21,6 +21,9 @@
     "CVUrl": "/assets/cv-hugo-varloud-en.pdf",
     "CaseStudies": "For <strong>in-depth case studies</strong> please get in touch."
   },
+  "Projects": {
+    "ViewProject": "View Project"
+  },
   "Experience": {
     "Title": "Experience",
     "ENGIE": "2024 - Working on the development of Engie Home Service B2C platform, which includes customer information and the services and equipment offered by the company.",

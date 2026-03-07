@@ -1,6 +1,8 @@
 import { useRef } from "react";
 import "./Projects.css";
 import { useScroll, useTransform, motion } from "framer-motion";
+import { t } from "i18next";
+import { useLanguageContext } from "../../context/languageContext";
 
 const slider1 = [
   {
@@ -42,6 +44,7 @@ const slider2 = [
 
 const Section = () => {
   const container = useRef(null);
+  const selectedLang = useLanguageContext().i18n.language;
   const { scrollYProgress } = useScroll({
     target: container,
     offset: ["start end", "end start"],
@@ -77,7 +80,7 @@ const Section = () => {
                     }
                   }}
                 >
-                  View Project
+                  {t(`${selectedLang}.Projects.ViewProject`)}
                 </a>
               </div>
             </div>
@@ -109,7 +112,7 @@ const Section = () => {
                     }
                   }}
                 >
-                  View Project
+                  {t(`${selectedLang}.Projects.ViewProject`)}
                 </a>
               </div>
             </div>

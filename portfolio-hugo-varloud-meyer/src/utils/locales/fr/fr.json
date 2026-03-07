@@ -21,6 +21,9 @@
     "CVUrl": "/assets/cv-hugo-varloud-fr.pdf",
     "CaseStudies": "Pour des <strong>études de cas approfondies</strong>, n'hésitez pas à me contacter."
   },
+  "Projects": {
+    "ViewProject": "Voir le projet"
+  },
   "Experience": {
     "Title": "Expérience",
     "ENGIE": "2024 - Travail à l'évolution de leur plateforme B2C sur laquelle on retrouve les informations clients et les services et équipements que propose l'entreprise.",
