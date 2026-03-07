@@ -34,7 +34,8 @@
 }
 
 .animated-title > div.text-top div span:first-child {
-  color: #000000;
+  color: #ffffff;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.35);
 }
 
 @keyframes showTopText {
@@ -108,7 +109,8 @@
 }
 
 .animated-title > div.text-top div span:first-child {
-  color: #0aff85;
+  color: #ffffff;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.35);
 }
 
 .animated-title > div.text-bottom {

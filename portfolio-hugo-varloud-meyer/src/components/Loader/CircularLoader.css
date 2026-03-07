@@ -9,13 +9,13 @@
   --loader-bg-light: rgba(11, 12, 14, 0.06);
   --loader-text-light: #0b0c0e;
   --loader-track-light: #e6e8eb;
-  --loader-accent-light: #0aff85;
+  --loader-accent-light: #007AFF;
 
   /* Thème sombre */
   --loader-bg-dark: #0b0c0e;
   --loader-text-dark: #f2f4f8;
   --loader-track-dark: #2a2d33;
-  --loader-accent-dark: #0aff85;
+  --loader-accent-dark: #007AFF;
 
   /* Variables communes */
   --loader-transition: 0.3s ease-out;
