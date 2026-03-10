@@ -49,7 +49,7 @@ body {
 
 .title-container h1 {
   font-size: 14px;
-  color: white;
+  color: var(--color-nav-text);
   font-weight: 400;
   font-family: "Akira Expanded";
 }
@@ -61,7 +61,7 @@ body {
   position: relative;
   margin: 0;
   z-index: 102;
-  color: white;
+  color: var(--color-nav-text);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -76,52 +76,85 @@ body {
   width: 100%;
   z-index: 100;
   transition: background-color 0.3s ease;
-  background-color: transparent;
+  background-color: var(--color-nav-bg);
 }
 
 .navigation-menu.scrolled {
-  background-color: white;
+  background-color: var(--color-nav-bg-scrolled);
+}
+
+.navigation-menu .title-container h1 {
+  color: var(--color-nav-text);
 }
 
 .navigation-menu.scrolled .title-container h1 {
-  color: #000;
+  color: var(--color-nav-text-scrolled);
+}
+
+.navigation-menu .menu-icon {
+  color: var(--color-nav-text);
 }
 
 .navigation-menu.scrolled .menu-icon {
-  color: #000;
+  color: var(--color-nav-text-scrolled);
+}
+
+.navigation-menu .theme-toggle {
+  color: var(--color-nav-text);
+  background: transparent;
+  border: none;
+  padding: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  transition: color 0.25s ease, background-color 0.2s ease;
+}
+
+.navigation-menu .theme-toggle:hover {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.navigation-menu.scrolled .theme-toggle {
+  color: var(--color-nav-text-scrolled);
+}
+
+.navigation-menu.scrolled .theme-toggle:hover {
+  background: var(--color-border);
 }
 
 .navigation-menu.scrolled .language-button {
-  background: rgba(0, 0, 0, 0.05);
-  border-color: rgba(0, 0, 0, 0.1);
-  color: rgba(0, 0, 0, 0.9);
+  background: var(--color-bg-secondary);
+  border-color: var(--color-border);
+  color: var(--color-text);
 }
 
 .navigation-menu.scrolled .language-button:hover {
-  background: rgba(0, 0, 0, 0.1);
-  border-color: rgba(0, 0, 0, 0.2);
+  background: var(--color-border);
+  border-color: var(--color-text-secondary);
 }
 
 .navigation-menu.scrolled .language-dropdown {
-  background: rgba(255, 255, 255, 0.95);
+  background: var(--color-card);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+  border: 1px solid var(--color-border);
+  box-shadow: 0 20px 40px var(--color-overlay);
 }
 
 .navigation-menu.scrolled .language-option {
-  color: rgba(0, 0, 0, 0.8);
+  color: var(--color-text-secondary);
 }
 
 .navigation-menu.scrolled .language-option:hover {
-  background: rgba(0, 0, 0, 0.05);
-  color: rgba(0, 0, 0, 1);
+  background: var(--color-bg-secondary);
+  color: var(--color-text);
 }
 
 .navigation-menu.scrolled .language-option.focused {
-  background: rgba(0, 0, 0, 0.1);
-  color: rgba(0, 0, 0, 1);
+  background: var(--color-border);
+  color: var(--color-text);
 }
 
 .navbar {
@@ -139,6 +172,30 @@ body {
   z-index: 103;
 }
 
+.theme-toggle {
+  position: absolute;
+  right: 100px;
+  top: 25px;
+  z-index: 101;
+  outline: none;
+  border: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.theme-toggle:focus {
+  outline: none;
+}
+
+.theme-toggle:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 2px var(--color-accent);
+}
+
+.theme-toggle:active {
+  outline: none;
+  border: none;
+}
+
 .hamburger-container {
   position: absolute;
   right: 50px;
@@ -150,7 +207,7 @@ body {
 
 .openMenu {
   position: fixed;
-  background-color: rgba(153, 157, 158, 0.2);
+  background-color: var(--color-nav-menu-bg);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   width: 100%;
@@ -166,7 +223,7 @@ body {
 }
 
 .navigation-menu ul li a {
-  color: #ffffff;
+  color: var(--color-nav-text);
 }
 
 .nav-elements {
@@ -209,6 +266,11 @@ body {
     top: 10px;
   }
 
+  .theme-toggle {
+    right: 82px;
+    top: 10px;
+  }
+
   .hamburger-container {
     right: 25px;
     top: 10px;
@@ -221,9 +283,9 @@ body {
 }
 
 .select-lang {
-  background-color: rgb(255, 255, 255);
+  background-color: var(--color-card);
 }
 
 .select-opened-label {
-  background-color: rgb(255, 255, 255);
+  background-color: var(--color-bg);
 }

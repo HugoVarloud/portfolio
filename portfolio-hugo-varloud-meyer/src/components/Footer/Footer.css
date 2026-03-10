@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;600&display=swap");
 
 .footer-menu {
-  background-color: #1c1d20;
+  background-color: var(--color-footer-bg);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -9,7 +9,7 @@
   background-position: center;
   background-size: cover;
   text-align: center;
-  color: #fff;
+  color: var(--color-footer-text);
   justify-content: space-between;
 }
 
@@ -132,7 +132,7 @@
 .signature {
   margin-right: 10px;
   margin-left: 10px;
-  color: #fff;
+  color: var(--color-footer-text);
 }
 
 .bottom-list-container {
@@ -156,7 +156,7 @@
 }
 
 .bottom-list a {
-  color: #ffffff;
+  color: var(--color-footer-text);
 }
 
 .bottom-section-summup {

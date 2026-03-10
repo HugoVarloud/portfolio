@@ -25,9 +25,23 @@
   --loader-safe-area-right: env(safe-area-inset-right, 0);
 }
 
-/* Détection du thème */
+/* Détection du thème : priorité à data-theme (toggle), sinon préférence système */
+[data-theme="light"] {
+  --loader-bg: var(--loader-bg-light);
+  --loader-text: var(--loader-text-light);
+  --loader-track: var(--loader-track-light);
+  --loader-accent: var(--loader-accent-light);
+}
+
+[data-theme="dark"] {
+  --loader-bg: var(--loader-bg-dark);
+  --loader-text: var(--loader-text-dark);
+  --loader-track: var(--loader-track-dark);
+  --loader-accent: var(--loader-accent-dark);
+}
+
 @media (prefers-color-scheme: light) {
-  :root {
+  :root:not([data-theme]) {
     --loader-bg: var(--loader-bg-light);
     --loader-text: var(--loader-text-light);
     --loader-track: var(--loader-track-light);
@@ -36,20 +50,12 @@
 }
 
 @media (prefers-color-scheme: dark) {
-  :root {
+  :root:not([data-theme]) {
     --loader-bg: var(--loader-bg-dark);
     --loader-text: var(--loader-text-dark);
     --loader-track: var(--loader-track-dark);
     --loader-accent: var(--loader-accent-dark);
   }
-}
-
-/* Fallback pour navigateurs sans support prefers-color-scheme */
-:root:not([data-theme]) {
-  --loader-bg: var(--loader-bg-dark);
-  --loader-text: var(--loader-text-dark);
-  --loader-track: var(--loader-track-dark);
-  --loader-accent: var(--loader-accent-dark);
 }
 
 /* Verrouillage du scroll pendant le chargement */

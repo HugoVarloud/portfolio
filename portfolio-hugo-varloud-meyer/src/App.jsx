@@ -10,10 +10,12 @@ import Confidentialite from "./components/Confidentialite/Confidentialite";
 import AppLoadingOverlay from "./components/Loader/AppLoadingOverlay";
 import RouteLoader from "./components/Loader/RouteLoader";
 import { LoadingProvider } from "./context/loadingContext";
+import { ThemeProvider } from "./context/themeContext";
 
 function App() {
   return (
-    <LoadingProvider>
+    <ThemeProvider>
+      <LoadingProvider>
       {/* Nouveau loader circulaire pour le chargement initial */}
       <AppLoadingOverlay brandName="Code by Hugo" />
 
@@ -51,7 +53,8 @@ function App() {
           />
         </Routes>
       </div>
-    </LoadingProvider>
+      </LoadingProvider>
+    </ThemeProvider>
   );
 }
 

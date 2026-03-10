@@ -28,7 +28,7 @@
 
 .experienceDescription {
   max-width: 600px;
-  color: #333333;
+  color: var(--color-text-secondary);
   font-family: "Work Sans", sans-serif;
   font-size: 1.15rem;
   font-weight: 400;
@@ -42,7 +42,7 @@
   margin-bottom: 60px;
   font-family: "Akira Expanded", "Menlo", "poppins";
   font-size: 50px;
-  color: #000000;
+  color: var(--color-text);
 }
 
 .project {
@@ -50,23 +50,23 @@
   justify-content: space-between;
   align-items: flex-start;
   padding: 40px 100px;
-  border-top: 1px solid #c9c9c9;
+  border-top: 1px solid var(--color-border);
   cursor: pointer;
   transition: all 0.3s ease;
   gap: 40px;
 }
 
 .project:last-of-type {
-  border-bottom: 1px solid #c9c9c9;
+  border-bottom: 1px solid var(--color-border);
 }
 
 .project:hover {
-  background-color: rgba(0, 0, 0, 0.02);
+  background-color: var(--color-bg-secondary);
 }
 
 .project:hover h3 {
   transform: translateX(10px);
-  color: #000000;
+  color: var(--color-text);
 }
 
 .project:hover p {
@@ -79,7 +79,7 @@
   font-weight: 400;
   transition: all 0.4s;
   font-family: "Akira Expanded", "Menlo", "poppins";
-  color: #000000;
+  color: var(--color-text);
 }
 
 .project p {
@@ -91,7 +91,7 @@
   font-size: 50px;
   margin: 0 0 10px 0;
   font-family: "Akira Expanded", "Menlo", "poppins";
-  color: #000000;
+  color: var(--color-text);
 }
 
 .experienceSubTitle {
@@ -107,7 +107,7 @@
   height: 350px;
   width: 400px;
   position: absolute;
-  background-color: white;
+  background-color: var(--color-card);
   overflow: hidden;
   pointer-events: none;
   display: flex;
@@ -178,14 +178,14 @@
     display: flex;
     flex-direction: column;
     padding: 30px 20px 30px 50px;
-    border-top: 1px solid #c9c9c9;
+    border-top: 1px solid var(--color-border);
     cursor: pointer;
     transition: all 0.3s ease;
     gap: 20px;
   }
 
   .project:hover {
-    background-color: rgba(0, 0, 0, 0.02);
+    background-color: var(--color-bg-secondary);
   }
 
   .titleList {

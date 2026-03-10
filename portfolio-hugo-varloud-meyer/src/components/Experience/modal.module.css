@@ -7,7 +7,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.45);
+  background: var(--color-overlay);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -18,7 +18,7 @@
 }
 
 .modalContent {
-  background: #fff;
+  background: var(--color-card);
   border-radius: 18px;
   padding: 2.5rem 2rem 2rem 2rem; /* Plus d'espace sur les côtés et en bas */
   max-width: 420px;
@@ -40,13 +40,13 @@ h2 {
   font-size: 1.4rem;
   font-weight: 600;
   margin-bottom: 0.5rem;
-  color: #222;
+  color: var(--color-text);
   letter-spacing: 0.01em;
   text-align: center;
 }
 
 .description {
-  color: #222;
+  color: var(--color-text);
   font-family: "Work Sans", sans-serif;
   font-size: 1.15rem;
   font-weight: 400;
@@ -59,7 +59,7 @@ h2 {
 .techInline {
   margin-top: 1.2rem;
   font-size: 0.8125rem;
-  color: #6b7280;
+  color: var(--color-text-secondary);
   letter-spacing: 0.01em;
   text-align: center;
   line-height: 1.5;
@@ -91,7 +91,7 @@ h2 {
 .closeButton:hover,
 .closeButton:active,
 .closeButton:focus {
-  color: #48484a;
+  color: var(--color-text);
   outline: none;
 }
 
@@ -119,13 +119,13 @@ h2 {
   margin: 0 auto 1rem auto;
   border-radius: 12px;
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
-  background: #fff;
+  background: var(--color-card);
 }
 
 .modalDetails {
   margin-top: 1rem;
   font-style: italic;
-  color: #555;
+  color: var(--color-text-secondary);
 }
 
 .techInline {
