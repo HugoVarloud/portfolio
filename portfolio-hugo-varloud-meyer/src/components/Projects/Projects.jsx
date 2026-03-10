@@ -55,8 +55,9 @@ const Section = () => {
   const height = useTransform(scrollYProgress, [0, 0.9], [50, 0]);
   return (
     <div ref={container} className="slidingImages">
-      <motion.div style={{ x: x1 }} className="slider">
-        {slider1.map((project, index) => {
+      <div className="sliderWrapper sliderWrapperFirst">
+        <motion.div style={{ x: x1 }} className="slider">
+          {slider1.map((project, index) => {
           return (
             <div
               key={index}
@@ -86,7 +87,8 @@ const Section = () => {
             </div>
           );
         })}
-      </motion.div>
+        </motion.div>
+      </div>
       <motion.div style={{ x: x2 }} className="slider">
         {slider2.map((project, index) => {
           return (
