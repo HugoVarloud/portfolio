@@ -1,4 +1,11 @@
-import { Box, Typography, Container, Paper, Divider, Link } from "@mui/material";
+import {
+  Box,
+  Typography,
+  Container,
+  Paper,
+  Divider,
+  Link,
+} from "@mui/material";
 import { styled } from "@mui/material/styles";
 
 const StyledPaper = styled(Paper)(({ theme }) => ({
@@ -62,9 +69,9 @@ const Confidentialite = () => {
           <Body>
             La présente politique décrit comment l&apos;application mobile Zen
             Coach (respiration guidée, citations, notifications, abonnement
-            freemium) traite les informations en lien avec son utilisation.
-            Elle vise à être transparente au regard des exigences des
-            développeurs sur Google Play concernant les données utilisateur.
+            freemium) traite les informations en lien avec son utilisation. Elle
+            vise à être transparente au regard des exigences des développeurs
+            sur Google Play concernant les données utilisateur.
           </Body>
 
           <Divider sx={{ my: 3, borderColor: "var(--color-border)" }} />
@@ -96,13 +103,14 @@ const Confidentialite = () => {
                 mb: 1,
               }}
             >
-              <strong>Données stockées localement sur l&apos;appareil</strong>{" "}
-              : préférences (par exemple langue, réglages de l&apos;application),
+              <strong>Données stockées localement sur l&apos;appareil</strong> :
+              préférences (par exemple langue, réglages de l&apos;application),
               contenus mis en cache, et informations liées au statut premium ou
               aux achats tels que conservés par le système ou le stockage local
-              de l&apos;application (par exemple identifiants ou état d&apos;achat
-              géré côté appareil). Ces données restent sur votre téléphone sauf
-              indication contraire explicite dans l&apos;application.
+              de l&apos;application (par exemple identifiants ou état
+              d&apos;achat géré côté appareil). Ces données restent sur votre
+              téléphone sauf indication contraire explicite dans
+              l&apos;application.
             </Typography>
             <Typography
               component="li"
@@ -113,10 +121,10 @@ const Confidentialite = () => {
               }}
             >
               <strong>Achats intégrés (in-app)</strong> : les paiements et la
-              gestion des abonnements passent par{" "}
-              <strong>Google Play</strong>. Google traite les données nécessaires
-              au paiement et à la facturation selon ses propres règles (voir
-              section « Achats via Google Play »).
+              gestion des abonnements passent par <strong>Google Play</strong>.
+              Google traite les données nécessaires au paiement et à la
+              facturation selon ses propres règles (voir section « Achats via
+              Google Play »).
             </Typography>
             <Typography
               component="li"
@@ -128,13 +136,13 @@ const Confidentialite = () => {
             >
               <strong>Notifications</strong> : si vous activez les
               notifications, le système Android peut traiter des métadonnées
-              techniques associées à l&apos;envoi des rappels ou messages
-              (selon votre version d&apos;Android et vos réglages).
+              techniques associées à l&apos;envoi des rappels ou messages (selon
+              votre version d&apos;Android et vos réglages).
             </Typography>
           </Box>
           <Body>
-            Nous ne vendons pas vos données personnelles à des tiers au titre
-            de cette politique.
+            Nous ne vendons pas vos données personnelles à des tiers au titre de
+            cette politique.
           </Body>
 
           <Divider sx={{ my: 3, borderColor: "var(--color-border)" }} />
@@ -149,8 +157,8 @@ const Confidentialite = () => {
             </strong>{" "}
             (par exemple fréquence cardiaque, oxygénation) et{" "}
             <strong>
-              n&apos;enregistre pas de données de santé via des API du type Health
-              Connect
+              n&apos;enregistre pas de données de santé via des API du type
+              Health Connect
             </strong>{" "}
             ou équivalent pour constituer un dossier santé sur nos systèmes.
           </Body>
@@ -162,15 +170,16 @@ const Confidentialite = () => {
             vers des serveurs que nous exploitons pour constituer un dossier
             santé. L&apos;usage principal décrit ici ne requiert pas de compte
             utilisateur sur nos serveurs ; les traitements liés aux achats par
-            Google Play sont précisés dans la section « Achats via Google Play ».
+            Google Play sont précisés dans la section « Achats via Google Play
+            ».
           </Body>
 
           <Divider sx={{ my: 3, borderColor: "var(--color-border)" }} />
 
           <SectionTitle>Permissions de l&apos;application</SectionTitle>
           <Body>
-            Selon les fonctionnalités et la version d&apos;Android, Zen Coach peut
-            demander notamment :
+            Selon les fonctionnalités et la version d&apos;Android, Zen Coach
+            peut demander notamment :
           </Body>
           <Box component="ul" sx={{ pl: 3, mb: 2 }}>
             <Typography
@@ -191,7 +200,8 @@ const Confidentialite = () => {
                 mb: 1,
               }}
             >
-              la <strong>vibration</strong> pour les retours haptiques éventuels ;
+              la <strong>vibration</strong> pour les retours haptiques éventuels
+              ;
             </Typography>
             <Typography
               component="li"
@@ -208,7 +218,8 @@ const Confidentialite = () => {
           </Box>
           <Body>
             Vous pouvez retirer ces autorisations dans les paramètres Android de
-            votre appareil ; certaines fonctions peuvent alors être indisponibles.
+            votre appareil ; certaines fonctions peuvent alors être
+            indisponibles.
           </Body>
 
           <Divider sx={{ my: 3, borderColor: "var(--color-border)" }} />
@@ -230,8 +241,8 @@ const Confidentialite = () => {
           <Body>
             Les informations relatives aux achats gérées par{" "}
             <strong>Google Play</strong> peuvent être conservées par Google
-            conformément à ses propres règles, indépendamment de la désinstallation
-            de l&apos;application.
+            conformément à ses propres règles, indépendamment de la
+            désinstallation de l&apos;application.
           </Body>
 
           <Divider sx={{ my: 3, borderColor: "var(--color-border)" }} />
@@ -239,8 +250,9 @@ const Confidentialite = () => {
           <SectionTitle>Suppression des données et droits</SectionTitle>
           <Body>
             Pour effacer les données locales de l&apos;application sans
-            désinstaller immédiatement l&apos;app, vous pouvez utiliser le chemin
-            habituel sur Android (libellés pouvant varier selon la version) :
+            désinstaller immédiatement l&apos;app, vous pouvez utiliser le
+            chemin habituel sur Android (libellés pouvant varier selon la
+            version) :
           </Body>
           <Box
             component="blockquote"
@@ -259,18 +271,18 @@ const Confidentialite = () => {
           </Box>
           <Body>
             Vous pouvez aussi <strong>désinstaller</strong> l&apos;application
-            pour supprimer les données associées à l&apos;app sur l&apos;appareil
-            (sous réserve des points ci-dessus concernant les sauvegardes et
-            Google Play).
+            pour supprimer les données associées à l&apos;app sur
+            l&apos;appareil (sous réserve des points ci-dessus concernant les
+            sauvegardes et Google Play).
           </Body>
           <Body>
             Pour toute demande concernant vos données ou l&apos;exercice de vos
             droits (accès, rectification, suppression lorsque applicable, etc.),
             vous pouvez nous écrire à l&apos;adresse suivante :{" "}
-            <strong>hugo.varloud@gmail.com</strong>. Nous nous efforçons de répondre
-            dans un délai raisonnable, en principe sous <strong>30 jours</strong>{" "}
-            ouvrés, sauf obligation légale différente ou complexité particulière
-            de la demande.
+            <strong>hugo.varloud@gmail.com</strong>. Nous nous efforçons de
+            répondre dans un délai raisonnable, en principe sous{" "}
+            <strong>30 jours</strong> ouvrés, sauf obligation légale différente
+            ou complexité particulière de la demande.
           </Body>
 
           <Divider sx={{ my: 3, borderColor: "var(--color-border)" }} />
@@ -278,9 +290,10 @@ const Confidentialite = () => {
           <SectionTitle>Achats via Google Play</SectionTitle>
           <Body>
             Le traitement des paiements, des abonnements et des informations de
-            facturation associés aux achats sur Google Play relève des conditions
-            et de la politique de confidentialité de Google, en complément de la
-            présente politique. Vous pouvez consulter notamment :
+            facturation associés aux achats sur Google Play relève des
+            conditions et de la politique de confidentialité de Google, en
+            complément de la présente politique. Vous pouvez consulter notamment
+            :
           </Body>
           <Box component="ul" sx={{ pl: 3, mb: 2 }}>
             <Typography
