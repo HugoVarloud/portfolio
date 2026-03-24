@@ -6,8 +6,8 @@ import { useLanguageContext } from "../../context/languageContext";
 
 const slider1 = [
   {
-    src: "/assets/site1.jpeg",
-    url: "#", // Remplacez par l'URL réelle du projet
+    src: "/assets/site1.png",
+    url: "https://code-by-hugo.netlify.app/", // Remplacez par l'URL réelle du projet
   },
   {
     src: "/assets/site2.png",
@@ -38,7 +38,7 @@ const slider2 = [
   },
   {
     src: "/assets/site44.png",
-    url: "https://code-by-hugo.netlify.app/", // Remplacez par l'URL réelle du projet
+    url: "https://zencoachapp.netlify.app/",
   },
 ];
 
@@ -58,35 +58,35 @@ const Section = () => {
       <div className="sliderWrapper sliderWrapperFirst">
         <motion.div style={{ x: x1 }} className="slider">
           {slider1.map((project, index) => {
-          return (
-            <div
-              key={index}
-              className="project"
-              style={{ backgroundColor: project.color }}
-            >
-              <div className="imageContainer">
-                <img
-                  className="webSiteImage"
-                  src={project.src}
-                  alt={`Project ${index + 1}`}
-                />
-                <a
-                  href={project.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="viewProjectButton"
-                  onClick={(e) => {
-                    if (project.url === "#") {
-                      e.preventDefault();
-                    }
-                  }}
-                >
-                  {t(`${selectedLang}.Projects.ViewProject`)}
-                </a>
+            return (
+              <div
+                key={index}
+                className="project"
+                style={{ backgroundColor: project.color }}
+              >
+                <div className="imageContainer">
+                  <img
+                    className="webSiteImage"
+                    src={project.src}
+                    alt={`Project ${index + 1}`}
+                  />
+                  <a
+                    href={project.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="viewProjectButton"
+                    onClick={(e) => {
+                      if (project.url === "#") {
+                        e.preventDefault();
+                      }
+                    }}
+                  >
+                    {t(`${selectedLang}.Projects.ViewProject`)}
+                  </a>
+                </div>
               </div>
-            </div>
-          );
-        })}
+            );
+          })}
         </motion.div>
       </div>
       <motion.div style={{ x: x2 }} className="slider">
