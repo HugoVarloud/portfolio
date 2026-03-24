@@ -1,4 +1,5 @@
 import { useRef, useState, useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import { AnimatePresence, motion } from "framer-motion";
 import "./Navbar.css";
 import { Squash as Hamburger } from "hamburger-react";
@@ -8,9 +9,12 @@ import { useLanguageContext } from "../../context/languageContext";
 import { useTheme } from "../../context/themeContext";
 
 const Navbar = () => {
+  const location = useLocation();
   const [isOpen, setOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const ref = useRef(null);
+  /** Hors page d'accueil, le fond est clair : même style barre que « scrolled » (texte lisible). */
+  const navSolid = isScrolled || location.pathname !== "/";
   const selectedLang = useLanguageContext().i18n.language;
   const { theme, toggleTheme } = useTheme();
 
@@ -50,7 +54,7 @@ const Navbar = () => {
   ];
 
   return (
-    <header className={`navigation-menu ${isScrolled ? "scrolled" : ""}`}>
+    <header className={`navigation-menu ${navSolid ? "scrolled" : ""}`}>
       <nav className="navbar">
         <div className="title-container">
           <h1>Code by Hugo</h1>

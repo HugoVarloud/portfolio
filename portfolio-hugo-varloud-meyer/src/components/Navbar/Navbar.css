@@ -226,6 +226,11 @@ body {
   color: var(--color-nav-text);
 }
 
+/* Barre opaque (scroll ou page hors accueil) : liens du menu plein écran lisibles sur fond clair / sombre */
+.navigation-menu.scrolled ul li a {
+  color: var(--color-text);
+}
+
 .nav-elements {
   position: absolute;
   right: 0;
