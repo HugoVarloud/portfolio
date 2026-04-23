@@ -32,11 +32,7 @@ export const criticalAssets = {
   ],
 
   // Sélecteurs CSS pour animations critiques
-  animatedSelectors: [
-    ".animated-title",
-    ".animated-title .text-top div",
-    ".animated-title .text-bottom div",
-  ],
+  animatedSelectors: [".home-panel", ".home-panel__inner"],
 
   // Routes à précharger en arrière-plan
   routesToPreload: [
@@ -143,7 +139,7 @@ export const a11yConfig = {
  * @type {Object}
  */
 export const animationConfig = {
-  // Durée des transitions CSS (cohérente avec .animated-title)
+  // Durée des transitions CSS (cohérente avec .home-panel)
   transitionDuration: "1s",
 
   // Easing utilisé (cohérent avec le portfolio)
