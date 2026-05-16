@@ -1,6 +1,7 @@
 import { useCallback, useEffect, useMemo } from "react";
 import { useTranslation } from "react-i18next";
 import { useLanguageContext } from "../../context/languageContext";
+import CloseIcon from "@mui/icons-material/Close";
 import { formatTechDisplay } from "../../utils/formatTechDisplay";
 import styles from "./modal.module.css";
 
@@ -63,38 +64,56 @@ const Modal = ({ project, onClose }) => {
         aria-modal="true"
         aria-labelledby={titleAria}
       >
-        <button
-          type="button"
-          className={styles.closeButton}
-          onClick={onClose}
-          aria-label="Fermer"
-        >
-          ✕
-        </button>
+        <article className={`${styles.bentoPanel} ${styles.heroPanel}`}>
+          <button
+            type="button"
+            className={styles.closeButton}
+            onClick={(e) => {
+              e.stopPropagation();
+              onClose();
+            }}
+            aria-label="Fermer"
+          >
+            <CloseIcon fontSize="small" aria-hidden="true" />
+          </button>
+          <header className={styles.header}>
+            <p className={styles.eyebrow}>
+              {t(`${lang}.Experience.Title`, { defaultValue: "Experience" })}
+            </p>
+            <h2 id={titleAria} className={styles.title}>
+              {project.title}
+            </h2>
+          </header>
+        </article>
 
-        <header className={styles.header}>
-          <p className={styles.eyebrow}>Experience</p>
-          <h2 id={titleAria} className={styles.title}>
-            {project.title}
-          </h2>
-        </header>
+        <div className={styles.modalRow}>
+          <article
+            className={`${styles.bentoPanel} ${styles.logoPanel}`}
+            aria-label="Entreprise"
+          >
+            <img
+              src={project.src}
+              alt={`Logo ${project.title}`}
+              className={styles.previewLogo}
+            />
+          </article>
 
-        <section className={styles.previewSection} aria-label="Entreprise">
-          <img src={project.src} alt={`Logo ${project.title}`} className={styles.previewLogo} />
-        </section>
+          <article
+            className={`${styles.bentoPanel} ${styles.stackPanel}`}
+            aria-label="Stack technique"
+          >
+            <h3 className={styles.sectionTitle}>Stack</h3>
+            <div className={styles.techList}>
+              {techItems.map((tech) => (
+                <span key={tech.key} className={styles.techChip}>
+                  {tech.label}
+                </span>
+              ))}
+            </div>
+          </article>
+        </div>
 
-        <section className={styles.stackSection} aria-label="Stack technique">
-          <h3 className={styles.sectionTitle}>Stack</h3>
-          <div className={styles.techList}>
-            {techItems.map((tech) => (
-              <span key={tech.key} className={styles.techChip}>
-                {tech.label}
-              </span>
-            ))}
-          </div>
-        </section>
-
-        <section className={styles.contentSection}>
+        <article className={`${styles.bentoPanel} ${styles.contentPanel}`}>
           <h3 className={styles.sectionTitle}>Overview</h3>
           <div className={styles.narrative}>
             {narrativeLines.map((line, index) => (
@@ -103,7 +122,7 @@ const Modal = ({ project, onClose }) => {
               </p>
             ))}
           </div>
-        </section>
+        </article>
       </div>
     </div>
   );
