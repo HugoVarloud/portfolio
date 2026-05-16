@@ -9,12 +9,19 @@
   "Home": {
     "Occupation": "Développeur Full Stack",
     "DesignEnthusiast": "Passionné d'IA",
-    "ContactMe": "Contactez-Moi !"
+    "ContactMe": "Contactez-moi",
+    "ContactEyebrow": "Un projet en tête ?",
+    "HeroLead": "Développeur Full Stack",
+    "HeroHighlight": "produits digitaux",
+    "HeroConnector": "—",
+    "HeroAccent": "IA / DATA",
+    "HeroBusiness": "& business",
+    "Bio": "Orienté business et multidisciplinaire, je transforme des idées en produits web, mobile et applicatifs performants. Diplômé d'EPITECH, en télétravail partout en Europe."
   },
   "About": {
     "Title": "À propos",
     "MainText": "<strong>Développeur Full Stack</strong> orienté <strong>business</strong> et <strong>multidisciplinaire</strong>, spécialisé dans le développement <strong>web, mobile et d'applications</strong> depuis 2020.",
-    "Location": "Diplômé d'<strong>EPITECH</strong>, basé en <strong>France</strong> 🇫🇷.",
+    "Location": "Diplômé d'<strong>EPITECH</strong>, en <strong>télétravail</strong> partout en Europe.",
     "Mission": "J'aide les entreprises à transformer leurs <strong>idées business</strong> en <strong>produits digitaux haut de gamme</strong> qui laisseront leurs concurrents derrière et faciliteront la vie des utilisateurs.",
     "Experience": "J'ai travaillé dans différents secteurs d'activité tels que l'<strong>Énergie (ENGIE)</strong>, les <strong>Télécommunications (SFR)</strong>, l'<strong>Immobilier (Atixis)</strong>, etc., au sein de <strong>grandes entreprises</strong> et de <strong>startups/agences</strong>.",
     "Resume": "Pour plus de détails sur mon expérience, consultez mon <strong><a href=\"#CV_URL\" class=\"cv-link\" target=\"_blank\" rel=\"noopener noreferrer\">CV</a></strong>.",

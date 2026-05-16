@@ -87,12 +87,20 @@ body {
   color: var(--color-nav-text);
 }
 
+.navigation-menu.home-top .title-container h1 {
+  color: var(--color-nav-text-home-top);
+}
+
 .navigation-menu.scrolled .title-container h1 {
   color: var(--color-nav-text-scrolled);
 }
 
 .navigation-menu .menu-icon {
   color: var(--color-nav-text);
+}
+
+.navigation-menu.home-top .menu-icon {
+  color: var(--color-nav-text-home-top);
 }
 
 .navigation-menu.scrolled .menu-icon {
@@ -110,6 +118,10 @@ body {
   justify-content: center;
   border-radius: 10px;
   transition: color 0.25s ease, background-color 0.2s ease;
+}
+
+.navigation-menu.home-top .theme-toggle {
+  color: var(--color-nav-text-home-top);
 }
 
 .navigation-menu .theme-toggle:hover {
