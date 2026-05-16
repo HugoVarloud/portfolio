@@ -33,11 +33,56 @@ html {
   --color-nav-bg-scrolled: #ffffff;
   --color-nav-text: #ffffff;
   --color-nav-text-scrolled: #000000;
+  --color-nav-text-home-top: #000000;
   --color-section-bg: #ffffff;
   --color-footer-bg: #1c1d20;
   --color-footer-text: #ffffff;
   --color-nav-menu-bg: rgba(153, 157, 158, 0.2);
-  --theme-transition: background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease;
+  --color-home-bg: #f3f4f6;
+  --color-home-card-bg: #ffffff;
+  --color-home-card-border: #e6e8ed;
+  --color-home-card-shadow: rgba(15, 23, 42, 0.08);
+  --color-home-eyebrow: #4b5563;
+  --color-home-title: #0f172a;
+  --color-home-subtitle: #334155;
+  --color-home-feature-title: #111827;
+  --color-home-feature-text: #4b5563;
+  --color-home-feature-icon: #000000;
+  --color-home-cta-bg: #ffffff;
+  --color-home-cta-text: #0f172a;
+  --color-home-cta-border: #0f172a;
+  --color-home-cta-bg-hover: #0f172a;
+  --color-home-cta-text-hover: #ffffff;
+  --color-home-bento-hero-bg: var(--color-home-card-bg);
+  --color-home-bento-hero-glow: radial-gradient(
+    ellipse 85% 65% at 18% -5%,
+    rgba(0, 122, 255, 0.14) 0%,
+    rgba(15, 169, 88, 0.1) 38%,
+    transparent 68%
+  );
+  --color-home-bento-headline-bold: var(--color-home-title);
+  --color-home-bento-gradient-text: linear-gradient(
+    90deg,
+    var(--logo-green-color) 0%,
+    var(--color-accent) 100%
+  );
+  --color-home-bento-bio-bg: var(--color-home-card-bg);
+  --color-home-bento-bio-glow: linear-gradient(
+    125deg,
+    rgba(15, 169, 88, 0.14) 0%,
+    rgba(0, 122, 255, 0.1) 32%,
+    transparent 58%
+  );
+  --color-home-bento-bio-text: var(--color-text-secondary);
+  --color-home-bento-contact-bg: var(--color-home-card-bg);
+  --color-home-bento-contact-text: var(--color-home-title);
+  --color-home-bento-contact-eyebrow: var(--color-home-eyebrow);
+  --color-home-bento-contact-border-hover: var(--color-accent);
+  --color-home-bento-contact-icon-hover: var(--color-accent);
+  --color-home-bento-contact-bg-hover: rgba(0, 122, 255, 0.06);
+  --color-home-bento-photo-bg: var(--color-bg-secondary);
+  --theme-transition: background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease,
+    box-shadow 0.25s ease;
 
   --header-height: 70px;
   --logo-green-color: #0fa958;
@@ -58,10 +103,54 @@ html {
   --color-nav-bg-scrolled: rgba(28, 28, 30, 0.92);
   --color-nav-text: #ffffff;
   --color-nav-text-scrolled: #f2f4f8;
+  --color-nav-text-home-top: #f2f4f8;
   --color-section-bg: #0b0c0e;
   --color-footer-bg: #000000;
   --color-footer-text: #f2f4f8;
   --color-nav-menu-bg: rgba(0, 0, 0, 0.6);
+  --color-home-bg: var(--color-bg);
+  --color-home-card-bg: #141519;
+  --color-home-card-border: rgba(255, 255, 255, 0.12);
+  --color-home-card-shadow: rgba(0, 0, 0, 0.35);
+  --color-home-eyebrow: #a1a1aa;
+  --color-home-title: #f2f4f8;
+  --color-home-subtitle: #cbd5e1;
+  --color-home-feature-title: #f2f4f8;
+  --color-home-feature-text: #a1a1aa;
+  --color-home-feature-icon: #f2f4f8;
+  --color-home-cta-bg: #141519;
+  --color-home-cta-text: #f2f4f8;
+  --color-home-cta-border: rgba(255, 255, 255, 0.24);
+  --color-home-cta-bg-hover: #f2f4f8;
+  --color-home-cta-text-hover: #0b0c0e;
+  --color-home-bento-hero-bg: var(--color-home-card-bg);
+  --color-home-bento-hero-glow: radial-gradient(
+    ellipse 90% 70% at 22% -8%,
+    rgba(10, 132, 255, 0.28) 0%,
+    rgba(15, 169, 88, 0.16) 40%,
+    transparent 72%
+  );
+  --color-home-bento-headline-bold: var(--color-home-title);
+  --color-home-bento-gradient-text: linear-gradient(
+    90deg,
+    #3ecf8e 0%,
+    var(--color-accent) 100%
+  );
+  --color-home-bento-bio-bg: var(--color-home-card-bg);
+  --color-home-bento-bio-glow: linear-gradient(
+    125deg,
+    rgba(15, 169, 88, 0.22) 0%,
+    rgba(10, 132, 255, 0.18) 34%,
+    transparent 62%
+  );
+  --color-home-bento-bio-text: var(--color-text-secondary);
+  --color-home-bento-contact-bg: var(--color-bg-secondary);
+  --color-home-bento-contact-text: var(--color-home-title);
+  --color-home-bento-contact-eyebrow: var(--color-home-eyebrow);
+  --color-home-bento-contact-border-hover: var(--color-accent);
+  --color-home-bento-contact-icon-hover: var(--color-accent);
+  --color-home-bento-contact-bg-hover: rgba(10, 132, 255, 0.14);
+  --color-home-bento-photo-bg: var(--color-bg-secondary);
 }
 
 :root {

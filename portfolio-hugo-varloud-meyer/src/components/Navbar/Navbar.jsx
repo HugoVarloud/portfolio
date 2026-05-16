@@ -54,7 +54,7 @@ const Navbar = () => {
   ];
 
   return (
-    <header className={`navigation-menu ${navSolid ? "scrolled" : ""}`}>
+    <header className={`navigation-menu ${navSolid ? "scrolled" : "home-top"}`}>
       <nav className="navbar">
         <div className="title-container">
           <h1>Code by Hugo</h1>
