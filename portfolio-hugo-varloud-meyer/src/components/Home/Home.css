@@ -8,7 +8,7 @@
 .home-section {
   min-height: 100svh;
   box-sizing: border-box;
-  padding: clamp(14px, 2.2vw, 28px);
+  padding: var(--layout-gutter);
   padding-top: calc(var(--header-height) + clamp(8px, 1.4vw, 16px));
   background: var(--color-home-bg);
   display: flex;
@@ -22,7 +22,7 @@
   grid-template-rows: minmax(0, 1.18fr) minmax(0, 0.82fr);
   gap: clamp(14px, 1.8vw, 20px);
   align-items: stretch;
-  max-width: 1400px;
+  max-width: var(--layout-max-width);
   width: 100%;
   min-height: calc(100svh - var(--header-height) - clamp(28px, 4.4vw, 56px));
   margin: 0 auto;
@@ -306,7 +306,7 @@
 
 @media (max-width: 640px) {
   .home-section {
-    padding: 12px;
+    padding: var(--layout-gutter);
     padding-top: calc(var(--header-height) + 8px);
   }
 
