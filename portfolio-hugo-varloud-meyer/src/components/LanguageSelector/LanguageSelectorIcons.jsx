@@ -42,7 +42,6 @@ const getLanguageIcon = (code, clipIdSuffix = "") => {
 const LanguageSelectorIcons = ({ className = "" }) => {
   const { languages, onClickLanguageChange, currentLanguage } =
     useLanguageContext();
-  const isMenuVariant = className.includes("language-selector-icons--menu");
   const clipSuffix = useId().replace(/:/g, "");
 
   const [isOpen, setIsOpen] = useState(false);
@@ -104,8 +103,6 @@ const LanguageSelectorIcons = ({ className = "" }) => {
   };
 
   useEffect(() => {
-    if (isMenuVariant) return;
-
     const handleClickOutside = (event) => {
       if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
         setIsOpen(false);
@@ -115,37 +112,7 @@ const LanguageSelectorIcons = ({ className = "" }) => {
 
     document.addEventListener("mousedown", handleClickOutside);
     return () => document.removeEventListener("mousedown", handleClickOutside);
-  }, [isMenuVariant]);
-
-  if (isMenuVariant) {
-    return (
-      <div
-        className={`language-selector-icons language-selector-icons--menu language-selector-icons--menu-${currentLanguage} ${className}`.trim()}
-        role="listbox"
-        aria-label="Choisir la langue"
-      >
-        {languages.map((language) => (
-          <button
-            key={language.code}
-            type="button"
-            role="option"
-            aria-selected={currentLanguage === language.code}
-            className={`language-menu-segment ${
-              currentLanguage === language.code ? "is-active" : ""
-            }`}
-            onClick={() => onClickLanguageChange(language.code)}
-          >
-            <span className="language-svg-icon">
-              {getLanguageIcon(language.code, `-${language.code}-${clipSuffix}`)}
-            </span>
-            <span className="language-name-icons">
-              {language.name || language.code.toUpperCase()}
-            </span>
-          </button>
-        ))}
-      </div>
-    );
-  }
+  }, []);
 
   return (
     <div className={`language-selector-icons ${className}`.trim()} ref={dropdownRef}>

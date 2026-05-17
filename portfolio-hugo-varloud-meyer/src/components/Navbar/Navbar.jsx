@@ -141,6 +141,16 @@ const Navbar = () => {
     };
   }, [isOpen]);
 
+  useEffect(() => {
+    const desktopNav = window.matchMedia("(min-width: 1051px)");
+    const closeOnDesktop = () => {
+      if (desktopNav.matches) setOpen(false);
+    };
+    closeOnDesktop();
+    desktopNav.addEventListener("change", closeOnDesktop);
+    return () => desktopNav.removeEventListener("change", closeOnDesktop);
+  }, []);
+
   const closeMenu = () => setOpen(false);
 
   const handleAnchorClick = useCallback(
@@ -219,18 +229,25 @@ const Navbar = () => {
                   {t(`${selectedLang}.MobileMenu.Preferences`)}
                 </p>
                 <div className="header-mobile-settings">
-                  <div className="header-mobile-setting-card">
-                    <span className="header-mobile-setting__label">
-                      {t(`${selectedLang}.MobileMenu.Language`)}
-                    </span>
-                    <LanguageSelectorIcons className="language-selector-icons--menu" />
-                  </div>
-                  <div className="header-mobile-setting-card">
-                    <span className="header-mobile-setting__label">
-                      {t(`${selectedLang}.MobileMenu.Theme`)}
-                    </span>
-                    <ThemeTogglePill theme={theme} setTheme={setTheme} />
-                  </div>
+                  <motion.div
+                    className="header-mobile-settings-grid"
+                    initial={{ opacity: 0, y: 6 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.2 }}
+                  >
+                    <div className="header-mobile-setting-card">
+                      <span className="header-mobile-setting__label">
+                        {t(`${selectedLang}.MobileMenu.Language`)}
+                      </span>
+                      <LanguageSelectorIcons className="language-selector-icons--menu" />
+                    </div>
+                    <div className="header-mobile-setting-card">
+                      <span className="header-mobile-setting__label">
+                        {t(`${selectedLang}.MobileMenu.Theme`)}
+                      </span>
+                      <ThemeTogglePill theme={theme} setTheme={setTheme} />
+                    </div>
+                  </motion.div>
                 </div>
               </section>
 
