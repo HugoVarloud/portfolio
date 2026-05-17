@@ -3,9 +3,10 @@ import { useTranslation } from "react-i18next";
 import { useLanguageContext } from "../../context/languageContext";
 import { useLoadingContext } from "../../context/loadingContext";
 import NorthEastIcon from "@mui/icons-material/NorthEast";
+import { scrollToSection } from "../../utils/scrollAnchor";
 
 const scrollToContact = () => {
-  document.getElementById("contacts")?.scrollIntoView({ behavior: "smooth" });
+  scrollToSection("contacts");
 };
 
 const Home = () => {

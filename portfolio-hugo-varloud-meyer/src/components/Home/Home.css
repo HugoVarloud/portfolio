@@ -40,7 +40,7 @@
 .home-bento__bio,
 .home-bento__contact,
 .home-bento__photo {
-  border-radius: clamp(18px, 2vw, 24px);
+  border-radius: var(--radius-bento);
   overflow: hidden;
   min-height: 0;
   box-sizing: border-box;
@@ -147,6 +147,7 @@
 .home-bento__contact {
   grid-column: 2;
   grid-row: 2;
+  position: relative;
   display: grid;
   grid-template-columns: 1fr auto;
   grid-template-rows: auto 1fr;
@@ -154,23 +155,60 @@
   gap: 12px;
   width: 100%;
   padding: clamp(16px, 2vw, 28px);
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
   text-align: left;
   cursor: pointer;
   background: var(--color-home-bento-contact-bg);
   color: var(--color-home-bento-contact-text);
-  transition: transform 0.2s ease, border-color 0.2s ease, background-color 0.2s ease,
-    box-shadow 0.2s ease;
+  border: 1px solid var(--color-home-card-border);
+  -webkit-tap-highlight-color: transparent;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.home-bento__contact::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--color-home-bento-contact-glow);
+  pointer-events: none;
+  opacity: 0.85;
+  transition: opacity 0.2s ease;
 }
 
 .home-bento__contact:hover {
   transform: translateY(-2px);
-  border-color: var(--color-home-bento-contact-border-hover);
-  background: var(--color-home-bento-contact-bg-hover);
+  border-color: var(--color-home-card-border);
+  background: var(--color-home-bento-contact-bg);
   box-shadow: 0 16px 32px var(--color-home-card-shadow);
+}
+
+.home-bento__contact:hover::before {
+  opacity: 1;
 }
 
 .home-bento__contact:hover .home-bento__contact-icon {
   color: var(--color-home-bento-contact-icon-hover);
+}
+
+.home-bento__contact:focus,
+.home-bento__contact:focus-visible,
+.home-bento__contact:active {
+  outline: none;
+  border-color: var(--color-home-card-border);
+}
+
+.home-bento__contact:focus-visible {
+  transform: translateY(-2px);
+  box-shadow: 0 16px 32px var(--color-home-card-shadow);
+}
+
+.home-bento__contact-eyebrow,
+.home-bento__contact-icon,
+.home-bento__contact-title {
+  position: relative;
+  z-index: 1;
 }
 
 .home-bento__contact-eyebrow {
