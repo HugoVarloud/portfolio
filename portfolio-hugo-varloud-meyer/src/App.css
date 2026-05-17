@@ -14,6 +14,15 @@ html {
   transition: var(--theme-transition);
 }
 
+/* Ancres de section — offset pour le header fixe */
+#accueil,
+#about,
+#experience,
+#projects,
+#contacts {
+  scroll-margin-top: var(--scroll-anchor-offset);
+}
+
 body {
   font-family: "Akira Expanded", Menlo, poppins;
 }

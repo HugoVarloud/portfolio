@@ -49,7 +49,8 @@
   min-width: 120px;
   height: 40px;
   position: relative;
-  overflow: hidden;
+  overflow: visible;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .language-button-icons::before {
@@ -192,6 +193,27 @@
   background: rgba(255, 255, 255, 0.15);
   color: rgba(255, 255, 255, 1);
   box-shadow: none;
+}
+
+/* Menu mobile — dropdown aligné sous le bouton */
+.language-selector-icons--menu {
+  display: block;
+  width: 100%;
+}
+
+.language-selector-icons--menu .language-button-icons {
+  width: 100%;
+  min-width: 0;
+  height: auto;
+  padding: 4px 0 0;
+  overflow: visible;
+}
+
+.language-selector-icons--menu .language-dropdown-icons {
+  top: calc(100% + 6px);
+  left: 0;
+  right: 0;
+  width: 100%;
 }
 
 /* Responsive Design */

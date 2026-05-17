@@ -2,7 +2,7 @@ import { useLanguageContext } from "../../context/languageContext";
 import { useState, useRef, useEffect } from "react";
 import "./LanguageSelectorIcons.css";
 
-const LanguageSelectorIcons = () => {
+const LanguageSelectorIcons = ({ className = "" }) => {
   const { languages, onClickLanguageChange, currentLanguage } =
     useLanguageContext();
   const [isOpen, setIsOpen] = useState(false);
@@ -116,7 +116,7 @@ const LanguageSelectorIcons = () => {
   };
 
   return (
-    <div className="language-selector-icons" ref={dropdownRef}>
+    <div className={`language-selector-icons ${className}`.trim()} ref={dropdownRef}>
       <button
         ref={buttonRef}
         className={`language-button-icons ${isOpen ? "open" : ""}`}

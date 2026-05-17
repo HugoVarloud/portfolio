@@ -6,6 +6,12 @@
     "Projects": "Projets",
     "Contacts": "Contacts"
   },
+  "MobileMenu": {
+    "Navigation": "Navigation",
+    "Preferences": "Préférences",
+    "Language": "Langue",
+    "Theme": "Thème"
+  },
   "Home": {
     "Occupation": "Développeur Full Stack",
     "DesignEnthusiast": "Passionné d'IA",

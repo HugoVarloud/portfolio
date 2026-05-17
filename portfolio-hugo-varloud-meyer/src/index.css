@@ -5,6 +5,7 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: var(--scroll-anchor-offset);
 }
 
 /* ========== Thème clair (défaut) ========== */
@@ -77,15 +78,34 @@ html {
   --color-home-bento-contact-bg: var(--color-home-card-bg);
   --color-home-bento-contact-text: var(--color-home-title);
   --color-home-bento-contact-eyebrow: var(--color-home-eyebrow);
-  --color-home-bento-contact-border-hover: var(--color-accent);
-  --color-home-bento-contact-icon-hover: var(--color-accent);
-  --color-home-bento-contact-bg-hover: rgba(0, 122, 255, 0.06);
+  --color-home-bento-contact-glow: linear-gradient(
+    125deg,
+    rgba(15, 169, 88, 0.1) 0%,
+    rgba(0, 122, 255, 0.08) 38%,
+    transparent 62%
+  );
+  --color-home-bento-contact-icon-hover: var(--color-home-title);
   --color-home-bento-photo-bg: var(--color-bg-secondary);
   --theme-transition: background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease,
     box-shadow 0.25s ease;
 
-  --header-height: 70px;
+  --header-height: 88px;
+  --scroll-anchor-extra: 20px;
+  --scroll-anchor-offset: calc(var(--header-height) + var(--scroll-anchor-extra));
+  --radius-bento: clamp(18px, 2vw, 24px);
   --logo-green-color: #0fa958;
+
+  /* Header pill bar */
+  --color-header-bar-bg: rgba(255, 255, 255, 0.88);
+  --color-header-bar-border: rgba(0, 0, 0, 0.06);
+  --color-header-bar-shadow: 0 4px 24px rgba(15, 23, 42, 0.08);
+  --color-header-brand-text: #0f172a;
+  --color-header-nav-text: #9ca3af;
+  --color-header-nav-text-hover: #4b5563;
+  --color-header-nav-active-text: #111827;
+  --color-header-nav-active-bg: #ffffff;
+  --color-header-toggle-track: #e8eaef;
+  --color-header-toggle-thumb: #ffffff;
 }
 
 /* ========== Thème sombre ========== */
@@ -147,10 +167,24 @@ html {
   --color-home-bento-contact-bg: var(--color-bg-secondary);
   --color-home-bento-contact-text: var(--color-home-title);
   --color-home-bento-contact-eyebrow: var(--color-home-eyebrow);
-  --color-home-bento-contact-border-hover: var(--color-accent);
-  --color-home-bento-contact-icon-hover: var(--color-accent);
-  --color-home-bento-contact-bg-hover: rgba(10, 132, 255, 0.14);
+  --color-home-bento-contact-glow: linear-gradient(
+    125deg,
+    rgba(15, 169, 88, 0.16) 0%,
+    rgba(10, 132, 255, 0.12) 38%,
+    transparent 62%
+  );
+  --color-home-bento-contact-icon-hover: var(--color-home-title);
   --color-home-bento-photo-bg: var(--color-bg-secondary);
+  --color-header-bar-bg: rgba(28, 28, 30, 0.92);
+  --color-header-bar-border: rgba(255, 255, 255, 0.1);
+  --color-header-bar-shadow: 0 4px 24px rgba(0, 0, 0, 0.35);
+  --color-header-brand-text: #f2f4f8;
+  --color-header-nav-text: #71717a;
+  --color-header-nav-text-hover: #a1a1aa;
+  --color-header-nav-active-text: #f2f4f8;
+  --color-header-nav-active-bg: rgba(255, 255, 255, 0.1);
+  --color-header-toggle-track: rgba(255, 255, 255, 0.08);
+  --color-header-toggle-thumb: rgba(255, 255, 255, 0.14);
 }
 
 :root {
