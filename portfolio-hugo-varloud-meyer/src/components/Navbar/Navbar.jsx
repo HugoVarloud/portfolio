@@ -41,7 +41,7 @@ const MoonIcon = () => (
 );
 
 const ThemeTogglePill = ({ theme, setTheme }) => (
-  <div className="theme-toggle-pill" role="group" aria-label="Thème">
+  <div className={`theme-toggle-pill theme-toggle-pill--${theme}`} role="group" aria-label="Thème">
     <button
       type="button"
       className={`theme-toggle-pill__btn ${theme === "light" ? "is-active" : ""}`}

@@ -372,74 +372,60 @@
   color: var(--color-header-nav-text);
 }
 
-.header-mobile-setting-card .language-selector-icons {
+/* Switch thème mobile : curseur ovale glissant */
+.header-mobile-setting-card .theme-toggle-pill {
   position: relative;
   width: 100%;
-  display: block;
-}
-
-.header-mobile-setting-card .language-button-icons {
-  width: 100%;
+  display: flex;
+  height: 44px;
+  padding: 4px;
+  margin-top: 4px;
   box-sizing: border-box;
-  justify-content: flex-start;
-  padding: 4px 0 0;
-  background: transparent;
-  border: none;
-  border-radius: 0;
-  min-width: 0;
-  height: auto;
-  overflow: visible;
+  border-radius: 999px;
+  isolation: isolate;
 }
 
-.header-mobile-setting-card .language-dropdown-icons {
+.header-mobile-setting-card .theme-toggle-pill::before {
+  content: "";
   position: absolute;
-  top: 100%;
-  left: 0;
-  right: 0;
-  width: 100%;
-  margin-top: 6px;
-  min-width: 0;
-  box-sizing: border-box;
+  top: 4px;
+  left: 4px;
+  width: calc(50% - 4px);
+  height: calc(100% - 8px);
+  border-radius: 999px;
+  background: var(--color-header-toggle-thumb);
+  box-shadow: 0 1px 4px rgba(15, 23, 42, 0.12);
+  transition: left 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  pointer-events: none;
+  z-index: 0;
 }
 
-.header-mobile-setting-card .theme-toggle-pill {
-  align-self: flex-start;
-  margin-top: 2px;
+.header-mobile-setting-card .theme-toggle-pill--dark::before {
+  left: calc(50%);
 }
 
-/* Language overrides inside mobile panel */
-.header-mobile-setting-card .language-button-icons {
-  color: var(--color-header-nav-text-hover);
+.header-mobile-setting-card .theme-toggle-pill__btn {
+  position: relative;
+  z-index: 1;
+  flex: 1;
+  width: auto;
+  height: 100%;
+  border-radius: 999px;
+  background: transparent !important;
+  box-shadow: none !important;
 }
 
-.header-mobile-setting-card .language-button-icons:focus,
-.header-mobile-setting-card .language-button-icons:focus-visible,
-.header-mobile-setting-card .language-button-icons:active {
-  outline: none;
-  box-shadow: none;
+.header-mobile-setting-card .theme-toggle-pill__btn:not(.is-active) {
+  color: var(--color-header-nav-text);
 }
 
-.header-mobile-setting-card .language-option-icons:focus,
-.header-mobile-setting-card .language-option-icons:focus-visible,
-.header-mobile-setting-card .language-option-icons:active {
-  outline: none;
-  box-shadow: none;
-}
-
-.header-mobile-setting-card .language-dropdown-icons {
-  background: var(--color-home-card-bg);
-  border: 1px solid var(--color-home-card-border);
-  box-shadow: 0 12px 26px var(--color-home-card-shadow);
+.header-mobile-setting-card .theme-toggle-pill__btn.is-active {
+  color: var(--color-header-nav-active-text);
 }
 
 @media (max-width: 380px) {
   .header-mobile-settings {
     grid-template-columns: 1fr;
-  }
-
-  .header-mobile-setting-card .theme-toggle-pill {
-    align-self: stretch;
-    justify-content: center;
   }
 }
 
