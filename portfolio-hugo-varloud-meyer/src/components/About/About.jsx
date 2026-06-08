@@ -6,7 +6,7 @@ const About = () => {
   const selectedLang = useLanguageContext().i18n.language;
 
   return (
-    <div className={styles.sectionContainer}>
+    <div id="about" className={styles.sectionContainer}>
       <section className={styles.aboutSection}>
         <h1 className={styles.titleAbout}>
           {t(`${selectedLang}.About.Title`)}

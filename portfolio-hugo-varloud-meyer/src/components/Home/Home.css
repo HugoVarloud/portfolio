@@ -160,6 +160,7 @@
   font-weight: inherit;
   text-align: left;
   cursor: pointer;
+  text-decoration: none;
   background: var(--color-home-bento-contact-bg);
   color: var(--color-home-bento-contact-text);
   border: 1px solid var(--color-home-card-border);

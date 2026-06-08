@@ -58,7 +58,7 @@ const Section = () => {
   const [selectedProject, setSelectedProject] = useState(null);
 
   return (
-    <div className={styles.sectionContainer}>
+    <div id="experience" className={styles.sectionContainer}>
       <section className={styles.experienceSection}>
         <h1 className={styles.titleExperience}>
           {t(`${selectedLang}.Experience.Title`)}

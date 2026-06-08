@@ -1,4 +1,4 @@
-import { useRef, useState, useEffect, useCallback } from "react";
+import { useRef, useState, useEffect } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { Squash as Hamburger } from "hamburger-react";
 import { t } from "i18next";
@@ -6,11 +6,6 @@ import "./Navbar.css";
 import LanguageSelectorIcons from "../LanguageSelector/LanguageSelectorIcons";
 import { useLanguageContext } from "../../context/languageContext";
 import { useTheme } from "../../context/themeContext";
-import {
-  getScrollAnchorOffset,
-  scrollToSection,
-  syncHeaderHeight,
-} from "../../utils/scrollAnchor";
 
 const routes = [
   { title: "Home", href: "#accueil", id: "accueil" },
@@ -63,75 +58,81 @@ const ThemeTogglePill = ({ theme, setTheme }) => (
   </div>
 );
 
+const getHeaderOffset = () => {
+  const height = parseFloat(
+    getComputedStyle(document.documentElement).getPropertyValue("--header-height")
+  );
+  return Number.isFinite(height) ? height : 88;
+};
+
+/** Section qui occupe la zone juste sous le header. */
+const getActiveSection = () => {
+  const anchorY = getHeaderOffset() + 1;
+
+  for (let i = routes.length - 1; i >= 0; i--) {
+    const section = document.getElementById(routes[i].id);
+    if (!section) continue;
+    const rect = section.getBoundingClientRect();
+    if (rect.top <= anchorY && rect.bottom > anchorY) {
+      return routes[i].id;
+    }
+  }
+
+  return routes[0].id;
+};
+
 const Navbar = () => {
   const [isOpen, setOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("accueil");
   const ref = useRef(null);
+  const pendingNavRef = useRef(null);
   const selectedLang = useLanguageContext().i18n.language;
   const { theme, setTheme } = useTheme();
 
   useEffect(() => {
+    const header = document.querySelector(".site-header");
     const bar = document.querySelector(".header-bar");
-    if (!bar) return;
+    if (!bar || !header) return;
 
-    syncHeaderHeight();
-    const ro = new ResizeObserver(syncHeaderHeight);
-    ro.observe(bar);
-    window.addEventListener("resize", syncHeaderHeight);
-
-    return () => {
-      ro.disconnect();
-      window.removeEventListener("resize", syncHeaderHeight);
-    };
-  }, []);
-
-  useEffect(() => {
-    const sections = routes
-      .map((route) => document.getElementById(route.id))
-      .filter(Boolean);
-    if (!sections.length) return;
-
-    let observer;
-
-    const setupObserver = () => {
-      observer?.disconnect();
-      const offset = getScrollAnchorOffset();
-      observer = new IntersectionObserver(
-        (entries) => {
-          const visible = entries
-            .filter((entry) => entry.isIntersecting)
-            .sort((a, b) => b.intersectionRatio - a.intersectionRatio);
-          if (visible[0]?.target?.id) {
-            setActiveSection(visible[0].target.id);
-          }
-        },
-        {
-          rootMargin: `-${offset}px 0px -55% 0px`,
-          threshold: [0, 0.15, 0.35],
-        }
+    const updateHeaderHeight = () => {
+      const height = Math.ceil(
+        bar.getBoundingClientRect().bottom - header.getBoundingClientRect().top
       );
-      sections.forEach((section) => observer.observe(section));
+      document.documentElement.style.setProperty("--header-height", `${height}px`);
     };
 
-    setupObserver();
-    window.addEventListener("resize", setupObserver);
+    updateHeaderHeight();
+    const observer = new ResizeObserver(updateHeaderHeight);
+    observer.observe(bar);
+    window.addEventListener("resize", updateHeaderHeight);
 
     return () => {
-      observer?.disconnect();
-      window.removeEventListener("resize", setupObserver);
+      observer.disconnect();
+      window.removeEventListener("resize", updateHeaderHeight);
     };
   }, []);
 
   useEffect(() => {
-    const scrollToHash = () => {
-      const hash = window.location.hash.slice(1);
-      if (!hash || !routes.some((route) => route.id === hash)) return;
-      scrollToSection(hash, { smooth: false });
+    const syncActiveSection = () => setActiveSection(getActiveSection());
+
+    const onScroll = () => {
+      if (pendingNavRef.current) return;
+      syncActiveSection();
     };
 
-    scrollToHash();
-    window.addEventListener("hashchange", scrollToHash);
-    return () => window.removeEventListener("hashchange", scrollToHash);
+    const onScrollEnd = () => {
+      pendingNavRef.current = null;
+      syncActiveSection();
+    };
+
+    syncActiveSection();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    window.addEventListener("scrollend", onScrollEnd);
+
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+      window.removeEventListener("scrollend", onScrollEnd);
+    };
   }, []);
 
   useEffect(() => {
@@ -151,48 +152,24 @@ const Navbar = () => {
     return () => desktopNav.removeEventListener("change", closeOnDesktop);
   }, []);
 
-  const closeMenu = () => setOpen(false);
-
-  const handleAnchorClick = useCallback(
-    (event, href) => {
-      event.preventDefault();
-      const sectionId = href.replace("#", "");
-      if (!sectionId) return;
-
-      closeMenu();
-      window.history.pushState(null, "", href);
-
-      requestAnimationFrame(() => {
-        requestAnimationFrame(() => scrollToSection(sectionId));
-      });
-    },
-    []
-  );
+  const onNavClick = (sectionId) => {
+    pendingNavRef.current = sectionId;
+    setActiveSection(sectionId);
+    setOpen(false);
+    setTimeout(() => {
+      if (pendingNavRef.current === sectionId) {
+        pendingNavRef.current = null;
+        setActiveSection(getActiveSection());
+      }
+    }, 800);
+  };
 
   return (
     <header className={`site-header${isOpen ? " site-header--menu-open" : ""}`}>
       <nav className="header-bar" aria-label="Navigation principale">
-        <a
-          href="#accueil"
-          className="header-brand"
-          onClick={(e) => handleAnchorClick(e, "#accueil")}
-        >
+        <a href="#accueil" className="header-brand">
           <span className="header-brand__text">CODE BY HUGO</span>
         </a>
-
-        <ul className="header-nav">
-          {routes.map((route) => (
-            <li key={route.title}>
-              <a
-                href={route.href}
-                className={`header-nav__link ${activeSection === route.id ? "is-active" : ""}`}
-                onClick={(e) => handleAnchorClick(e, route.href)}
-              >
-                {t(`${selectedLang}.Menu.${route.title}`)}
-              </a>
-            </li>
-          ))}
-        </ul>
 
         <div className="header-actions">
           <LanguageSelectorIcons />
@@ -214,7 +191,7 @@ const Navbar = () => {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.2 }}
-            onClick={closeMenu}
+            onClick={() => setOpen(false)}
           >
             <motion.div
               className="header-mobile-panel"
@@ -266,7 +243,7 @@ const Navbar = () => {
                       <a
                         href={route.href}
                         className={`header-mobile-nav__link ${activeSection === route.id ? "is-active" : ""}`}
-                        onClick={(e) => handleAnchorClick(e, route.href)}
+                        onClick={() => onNavClick(route.id)}
                       >
                         <span className="header-mobile-nav__index">
                           {String(idx + 1).padStart(2, "0")}

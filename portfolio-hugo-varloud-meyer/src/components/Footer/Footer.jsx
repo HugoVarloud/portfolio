@@ -34,7 +34,7 @@ const Footer = () => {
 
   return (
     <>
-      <footer className="footer-menu">
+      <footer id="contacts" className="footer-menu">
         <div className="contact">
           <div className="bottom-list-container">
             <h3>{t(`${selectedLang}.Contact.ServicesTitle`)}</h3>

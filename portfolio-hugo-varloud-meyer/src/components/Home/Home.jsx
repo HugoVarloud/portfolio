@@ -3,11 +3,6 @@ import { useTranslation } from "react-i18next";
 import { useLanguageContext } from "../../context/languageContext";
 import { useLoadingContext } from "../../context/loadingContext";
 import NorthEastIcon from "@mui/icons-material/NorthEast";
-import { scrollToSection } from "../../utils/scrollAnchor";
-
-const scrollToContact = () => {
-  scrollToSection("contacts");
-};
 
 const Home = () => {
   const { t } = useTranslation();
@@ -15,7 +10,7 @@ const Home = () => {
   const { isFadeOutComplete } = useLoadingContext();
 
   return (
-    <section className="home-section" role="main" aria-label="Section d'accueil">
+    <section id="accueil" className="home-section" role="main" aria-label="Section d'accueil">
       <div
         className={`home-bento ${isFadeOutComplete ? "home-bento--visible" : ""}`}
       >
@@ -51,10 +46,9 @@ const Home = () => {
           <p>{t(`${selectedLang}.Home.Bio`)}</p>
         </article>
 
-        <button
-          type="button"
+        <a
+          href="#contacts"
           className="home-bento__contact"
-          onClick={scrollToContact}
           aria-label={t(`${selectedLang}.Home.ContactMe`)}
         >
           <span className="home-bento__contact-eyebrow">
@@ -64,7 +58,7 @@ const Home = () => {
           <span className="home-bento__contact-title">
             {t(`${selectedLang}.Home.ContactMe`)}
           </span>
-        </button>
+        </a>
       </div>
     </section>
   );

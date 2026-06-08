@@ -5,7 +5,15 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: var(--scroll-anchor-offset);
+  scroll-padding-top: var(--header-height);
+}
+
+#accueil,
+#about,
+#experience,
+#projects,
+#contacts {
+  scroll-margin-top: var(--header-height);
 }
 
 /* ========== Thème clair (défaut) ========== */
@@ -90,8 +98,6 @@ html {
     box-shadow 0.25s ease;
 
   --header-height: 88px;
-  --scroll-anchor-extra: 20px;
-  --scroll-anchor-offset: calc(var(--header-height) + var(--scroll-anchor-extra));
   --radius-bento: clamp(18px, 2vw, 24px);
   --layout-max-width: 1400px;
   --layout-gutter: clamp(14px, 2.2vw, 28px);

@@ -4,23 +4,10 @@
   src: url("/assets/fonts/akira_bold-webfont.woff2") format("woff2");
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
 .App {
   background-color: var(--color-bg);
   min-height: 100vh;
   transition: var(--theme-transition);
-}
-
-/* Ancres de section — offset pour le header fixe */
-#accueil,
-#about,
-#experience,
-#projects,
-#contacts {
-  scroll-margin-top: var(--scroll-anchor-offset);
 }
 
 body {

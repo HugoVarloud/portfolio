@@ -29,21 +29,11 @@ function App() {
             path="/"
             element={
               <>
-                <div id="accueil">
-                  <Home />
-                </div>
-                <div id="about">
-                  <About />
-                </div>
-                <div id="experience">
-                  <Experience />
-                </div>
-                <div id="projects">
-                  <Projects />
-                </div>
-                <div id="contacts">
-                  <Footer />
-                </div>
+                <Home />
+                <About />
+                <Experience />
+                <Projects />
+                <Footer />
               </>
             }
           />

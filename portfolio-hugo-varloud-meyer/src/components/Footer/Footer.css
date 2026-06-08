@@ -11,11 +11,11 @@
   text-align: center;
   color: var(--color-footer-text);
   justify-content: space-between;
+  padding-top: 200px;
 }
 
 .contact {
   display: flex;
-  margin-top: 200px;
   margin-bottom: 200px;
 }
 
